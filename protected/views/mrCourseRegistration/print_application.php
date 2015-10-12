@@ -224,9 +224,9 @@ p .small{
         </td>  
         <td class="app_details" style="padding-left: 0px !important;" > 
             <table style="width: 100%; border:0">
-                <tr><td> 95Z-12432</td></tr>   
-                <tr><td>&nbsp;</td></tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td><?php echo $model[0]['cirtificate_no'];?></td></tr>   
+                <tr><td><?php echo $model[0]['cirtificate_grade'];?></td></tr>
+                <tr><td><?php echo $model[0]['cirtificate_issued_from'];?></td></tr>
             </table>          
         </td>  
     </tr> 

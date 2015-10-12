@@ -178,13 +178,35 @@ $form=$this->beginWidget('CActiveForm', array(
         </td>  
     </tr>
     
- 
-	
     <tr>
         <td class="srl">11</td>    
         <td class="app_label"> Route of entry to profession </td>  
         <td class="app_details"><?php echo $profession_type; ?> </td>  
     </tr> 
+	
+	
+	<!-- NEW ADD-->
+	<tr>
+        <td class="srl">12</td>    
+        <td class="app_label"> Certificate held 
+            <table style="width: 100px; float: right; border:0">
+                <tbody><tr><td>No.</td></tr>   
+                <tr><td>Grade</td></tr>
+                <tr><td>Where issued</td></tr>
+            </tbody></table>
+        </td>  
+        <td class="app_details" style="padding-left: 0px !important;"> 
+            <table style="width: 100%; border:0">
+                <tbody>
+				<tr><td> <input type="text" name="cirtificate_no" maxlength="20" style="height:22px;"> </td></tr>   
+                <tr><td><input type="text" name="cirtificate_grade" maxlength="50" style="height:22px;"></td></tr>
+                <tr><td><input type="text" name="cirtificate_issue" maxlength="50" style="height:22px;"></td></tr>
+				</tbody>
+			</table>          
+        </td>  
+    </tr>
+	
+	
     
 </table>
 

@@ -64,8 +64,8 @@
 <script>
 
 jQuery(document).ready(function(){
-        // binds form submission and fields to the validation engine
-        jQuery("#mr-signature-form").validationEngine();
-});
+			// binds form submission and fields to the validation engine
+			jQuery("#mr-signature-form").validationEngine();
+		});
     
 </script>

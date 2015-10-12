@@ -114,6 +114,10 @@ class MrCourseRegistrationController extends Controller
             $chq_no=$_POST['chq_no'];
             $chq_details=$_POST['chq_details'];
             $recept_no=$_POST['recept_no'];
+			
+			$cirtificate_no=$_POST['cirtificate_no'];
+			$cirtificate_grade=$_POST['cirtificate_grade'];
+			$cirtificate_issue=$_POST['cirtificate_issue'];
             
             $last_sign_off=date("Y-m-d",strtotime($_POST['last_sign_off']));
             $last_immigration=date("Y-m-d",strtotime($_POST['last_immigration']));        
@@ -138,11 +142,14 @@ class MrCourseRegistrationController extends Controller
             `attach_indos` ,           
             `last_sign_off`,
             `last_immigration`,
-            `details_during_reg`
+            `details_during_reg`,
+			`cirtificate_no`,
+			`cirtificate_grade`,
+			`cirtificate_issued_from`
             )
             VALUES (
             '$course_id',  '$class_id',  '$student_id', '$image_name' , '$attach_photo' , '$attach_passport' , '$attach_cdc' , '$attach_coc' , '$attach_indos' 
-            ,'$last_sign_off',  '$last_immigration' , '$json_student_data'   
+            ,'$last_sign_off',  '$last_immigration' , '$json_student_data' ,'$cirtificate_no','$cirtificate_grade','$cirtificate_issue'  
             )";          
 
             Yii::app()->db->createCommand($sql)->execute();

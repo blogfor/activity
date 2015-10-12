@@ -118,6 +118,4 @@ class MrCourseRegistration extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        
-      
 }
