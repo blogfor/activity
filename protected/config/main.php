@@ -7,8 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Marine Education Charitable Trust',
-	'theme' => 'marine',
+	'name'=>'Activity',
+	'theme' => 'activity',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
