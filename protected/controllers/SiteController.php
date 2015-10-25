@@ -1,5 +1,4 @@
 <?php
-
 class SiteController extends Controller
 {
 	/**
@@ -29,29 +28,12 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-            $this->layout='admin';
-            $model=new LoginForm;
-
-            if(isset($_SESSION['superUser']))
-            {
-                $this->redirect(array('dashboard'));
-            }
-            
-            if(isset($_POST) && isset($_POST['userlogin']))
-            {
-                if($_POST['userlogin']==trim('admin') && $_POST['userpassword']==trim('admin'))
-                {                   
-                    $_SESSION['superUser']=1;
-                    $this->redirect(array('dashboard'));
-                    exit;
-                }
-                else
-                    Yii::app()->user->setFlash('loginMessage', "Please enter proper user name / password");
-            }
-            
+            Yii::app()->theme = 'activity';
+           
 	    $this->render('index');
 	}
 	
+        
 	public function actionDashboard()
 	{           
             $this->layout='adminmain';             
