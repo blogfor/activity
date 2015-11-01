@@ -38,7 +38,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="site-logo"><a href="index.html"><img src="<?php echo $baseUrl; ?>/images/logo.png" alt="Activety"></a></div>
+                        <div class="site-logo"><a href="index.html"><img src="<?php echo $baseUrl; ?>/images/Logo1.png" alt="Activety"></a></div>
 
                         <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
                             <ul class="nav-menu clearfix">

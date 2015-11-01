@@ -16,6 +16,14 @@
                 <?php echo CHtml::link('<i class="fa fa-dashboard fa-fw"></i> Dashboard', array('admin/dashboard'), array('class' => '')); ?>
 
             </li>
+             <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Banners', array('atBanner/admin'), array('class' => '')); ?>
+
+            </li>
+             <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Site Settings', array('atSiteSettings/admin'), array('class' => '')); ?>
+
+            </li>
             
 <!--            <li>
                 <?php echo CHtml::link('<i class="fa fa-list"></i> Site Contacts', array('mcContactus/admin'), array('class' => '')); ?>
@@ -29,10 +37,7 @@
                 <?php echo CHtml::link('<i class="fa fa-wrench fa-fw"></i> Site Settings', array('mcSiteSettings/admin'), array('class' => '')); ?>
 
             </li>
-            <li>
-                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Banners', array('mcBanner/admin'), array('class' => '')); ?>
-
-            </li>
+           
 
 
             <li>
