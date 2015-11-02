@@ -73,14 +73,19 @@ class AtPagesController extends Controller
 
 		if(isset($_POST['AtPages']))
 		{
-                    $page_slug=str_replace(" ",'_',$_POST['AtPages']['page_name']);
+                    $page_slug=str_replace(" ",'_',strtolower($_POST['AtPages']['page_name']));
                     
                     $resultArray = Yii::app()->db->createCommand("SELECT COUNT(*) AS CNT FROM at_pages WHERE page_slug='".$page_slug."'")->queryRow();
                         $_POST['AtPages']['page_slug']=$page_slug.(($resultArray['CNT']>1)?($resultArray['CNT']+1):'');
+                       
 			$model->attributes=$_POST['AtPages'];
                         
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                              Yii::app()->user->setFlash('successPages', 'Page has been created.');
+                            $this->redirect(array('update','id'=>$model->id));
+                        
+                        }
 		}
 
 		$this->render('create',array(
@@ -106,7 +111,11 @@ class AtPagesController extends Controller
 		{
 			$model->attributes=$_POST['AtPages'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                              Yii::app()->user->setFlash('successPages', 'Page has been updated.');
+                            $this->redirect(array('update','id'=>$model->id));
+                            
+                        }
 		}
 
 		$this->render('update',array(
@@ -124,7 +133,7 @@ class AtPagesController extends Controller
              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
 		$this->loadModel($id)->delete();
-
+  Yii::app()->user->setFlash('successPages', 'Page has been deleted.');
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));

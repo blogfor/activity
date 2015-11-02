@@ -28,7 +28,7 @@ class AtPages extends CActiveRecord {
         return array(
             array('page_name', 'length', 'max' => 255),
             array('page_name,page_description', 'required'),
-            array('page_description, created, modified', 'safe'),
+            array('page_description, created, modified , page_slug', 'safe'),
             array('modified', 'default',
                 'value' => date("Y-m-d H:i:s"),
                 'setOnEmpty' => false, 'on' => 'update'),

@@ -245,23 +245,3 @@ WHERE a.`status`=1 and pmig.mail_content_id=".$mailContentID." and group_type='M
 
 
  }
- 
- /*
-  * $link = Capture original link 
-  * Return formated link for SaaS
-  */
- function cmMailLinkGenerate($link)
- {
- /*
- * tid = is random md5 key for any link
- *  mprout = The link e.g. project view page
- * mpunit = the app id 
- * Both of the above are encrypted by base64 encode. 
- */
-    $generatedLink=APP_WEBURL.'mailprocessunit/index.php?tid='.md5(rand(56,5856566)).'&mprout='.  base64_encode($link).'&mpunit='.  base64_encode($_SESSION['apps']['api_key']); 
-    
-    return $generatedLink;
-     
- }
- 
-}
