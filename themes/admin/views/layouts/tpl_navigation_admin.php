@@ -20,6 +20,26 @@
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Banners', array('atBanner/admin'), array('class' => '')); ?>
 
             </li>
+            <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Activity', array('atActivity/admin'), array('class' => '')); ?>
+
+            </li>
+             <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Mail Content', array('atMailContent/admin'), array('class' => '')); ?>
+
+            </li>
+             <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Pages', array('atPages/admin'), array('class' => '')); ?>
+
+            </li>
+             <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Transaction', array('atPayment/admin'), array('class' => '')); ?>
+
+            </li>
+            <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> How it works', array('atHowItWorks/admin'), array('class' => '')); ?>
+
+            </li>
              <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Site Settings', array('atSiteSettings/admin'), array('class' => '')); ?>
 

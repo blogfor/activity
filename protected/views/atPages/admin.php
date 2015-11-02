@@ -2,15 +2,15 @@
 /* @var $this AtPagesController */
 /* @var $model AtPages */
 
-$this->breadcrumbs=array(
-	'At Pages'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List AtPages', 'url'=>array('index')),
-	array('label'=>'Create AtPages', 'url'=>array('create')),
-);
+//$this->breadcrumbs=array(
+//	'At Pages'=>array('index'),
+//	'Manage',
+//);
+//
+//$this->menu=array(
+//	array('label'=>'List AtPages', 'url'=>array('index')),
+//	array('label'=>'Create AtPages', 'url'=>array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -25,33 +25,52 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Manage Pages</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
 
-<h1>Manage At Pages</h1>
+<div class="row">
+    <div class="col-lg-2" style="float: right;">
+        <?php echo CHtml::link('Add Page', array('atPages/create'), array('class' => '')); ?>
+    </div>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+    <div class="col-lg-12">
+        <?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
+        <div class="search-form" style="display:none">
+            <?php
+            $this->renderPartial('_search', array(
+                'model' => $model,
+            ));
+            ?>
+        </div><!-- search-form -->
+        <div class="panel-body">
+            <div class="dataTable_wrapper">
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'at-pages-grid',
+               <?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'mr-students-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	 'itemsCssClass' => 'table table-striped table-bordered table-hover',
 	'columns'=>array(
 		'id',
 		'page_name',
-		'page_description',
+		'page_slug',
 		'created',
 		'modified',
+		
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 )); ?>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

@@ -9263,3 +9263,27 @@ Stack trace:
 REQUEST_URI=/activity/themes/abound/img/icons/update.png
 HTTP_REFERER=http://localhost/activity/atSiteSettings/admin
 ---
+2015/11/02 17:13:07 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:17:39 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:18:00 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:18:19 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:21:54 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:24:47 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:24:55 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
+2015/11/02 17:25:27 [warning] [application] Failed to set unsafe attribute "page_slug" of "AtPages".
+in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (80)
+in E:\xampp\htdocs\activity\index.php (13)
