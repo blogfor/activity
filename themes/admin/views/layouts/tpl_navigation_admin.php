@@ -40,6 +40,10 @@
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> How it works', array('atHowItWorks/admin'), array('class' => '')); ?>
 
             </li>
+            <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Kids Activities', array('atKidsActivities/admin'), array('class' => '')); ?>
+
+            </li>
              <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Site Settings', array('atSiteSettings/admin'), array('class' => '')); ?>
 

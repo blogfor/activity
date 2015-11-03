@@ -1,6 +1,6 @@
 <?php
 
-class AtHowItWorksController extends Controller
+class AtKidsActivitiesController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -51,7 +51,7 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionView($id)
 	{
-             Yii::app()->theme = 'admin';
+              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -64,23 +64,22 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionCreate()
 	{
-            
-             Yii::app()->theme = 'admin';
+              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
-		$model=new AtHowItWorks;
+		$model=new AtKidsActivities;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['AtHowItWorks']))
+		if(isset($_POST['AtKidsActivities']))
 		{
                     $rnd = rand(0,9999);  // generate random number between 0-9999
-           $model->attributes=$_POST['AtHowItWorks'];
+           $model->attributes=$_POST['AtKidsActivities'];
  
-            $uploadedFile=CUploadedFile::getInstance($model,'hwt_image');
+            $uploadedFile=CUploadedFile::getInstance($model,'kids_image');
             $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
            if(!empty($uploadedFile))
-            $model->hwt_image = $fileName;
+            $model->kids_image = $fileName;
 			
 			if($model->save())
                         {     
@@ -108,23 +107,23 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-             Yii::app()->theme = 'admin';
+              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['AtHowItWorks']))
+		if(isset($_POST['AtKidsActivities']))
 		{
 			 $rnd = rand(0,9999);  // generate random number between 0-9999
-                         $_POST['Banner']['hwt_image'] = $model->hwt_image;
-           $model->attributes=$_POST['AtHowItWorks'];
+                         $_POST['AtKidsActivities']['kids_image'] = $model->kids_image;
+           $model->attributes=$_POST['AtKidsActivities'];
  
-            $uploadedFile=CUploadedFile::getInstance($model,'hwt_image');
+            $uploadedFile=CUploadedFile::getInstance($model,'kids_image');
             $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
             if(!empty($uploadedFile))
-            $model->hwt_image = $fileName;
+            $model->kids_image = $fileName;
 			
 			if($model->save())
                         {     if(!empty($uploadedFile))
@@ -153,6 +152,8 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+              Yii::app()->theme = 'admin';
+		$this->layout='adminmain';
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -165,9 +166,9 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionIndex()
 	{
-             Yii::app()->theme = 'admin';
+              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
-		$dataProvider=new CActiveDataProvider('AtHowItWorks');
+		$dataProvider=new CActiveDataProvider('AtKidsActivities');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -178,12 +179,12 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionAdmin()
 	{
-             Yii::app()->theme = 'admin';
+              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
-		$model=new AtHowItWorks('search');
+		$model=new AtKidsActivities('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['AtHowItWorks']))
-			$model->attributes=$_GET['AtHowItWorks'];
+		if(isset($_GET['AtKidsActivities']))
+			$model->attributes=$_GET['AtKidsActivities'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -194,12 +195,12 @@ class AtHowItWorksController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return AtHowItWorks the loaded model
+	 * @return AtKidsActivities the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=AtHowItWorks::model()->findByPk($id);
+		$model=AtKidsActivities::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -207,11 +208,11 @@ class AtHowItWorksController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param AtHowItWorks $model the model to be validated
+	 * @param AtKidsActivities $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='at-how-it-works-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='at-kids-activities-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

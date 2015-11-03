@@ -1,25 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "at_banner".
+ * This is the model class for table "at_kids_activities".
  *
- * The followings are the available columns in table 'at_banner':
+ * The followings are the available columns in table 'at_kids_activities':
  * @property integer $id
- * @property string $banner_title
- * @property string $banner_description
- * @property string $banner_link
- * @property integer $banner_order
- * @property string $status
- * @property string $added
+ * @property string $kids_name
+ * @property string $kids_description
+ * @property string $kids_image
+ * @property string $created
  * @property string $modified
  */
-class AtBanner extends CActiveRecord {
+class AtKidsActivities extends CActiveRecord {
 
     /**
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'at_banner';
+        return 'at_kids_activities';
     }
 
     /**
@@ -29,21 +27,19 @@ class AtBanner extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('banner_order', 'numerical', 'integerOnly' => true),
-            array('banner_title,banner_image,banner_description', 'required'),
-            array('banner_title,banner_image', 'length', 'max' => 255),
-            array('status', 'length', 'max' => 1),
-            array('banner_description, banner_link, added, modified', 'safe'),
-            array('banner_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
-            array('modified', 'default',
-                'value' => date("Y-m-d H:i:s"),
-                'setOnEmpty' => false, 'on' => 'update'),
-            array('added,modified', 'default',
-                'value' => date("Y-m-d H:i:s"),
-                'setOnEmpty' => false, 'on' => 'insert'),
+            array('kids_name, kids_image', 'length', 'max' => 255),
+            array('kids_description, created, modified', 'safe'),
+            array('kids_name, kids_image,kids_description', 'required'),
+            array('hwt_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
+             array('modified','default',
+                      'value'=>date("Y-m-d H:i:s"),
+                      'setOnEmpty'=>false,'on'=>'update'),
+                   array('created,modified','default',
+                      'value'=>date("Y-m-d H:i:s"),
+                      'setOnEmpty'=>false,'on'=>'insert'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, banner_title, banner_description, banner_link, banner_order, status,banner_image, added, modified', 'safe', 'on' => 'search'),
+            array('id, kids_name, kids_description, kids_image, created, modified', 'safe', 'on' => 'search'),
         );
     }
 
@@ -63,13 +59,10 @@ class AtBanner extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'id' => 'ID',
-            'banner_title' => 'Banner Title',
-            'banner_description' => 'Banner Description',
-            'banner_link' => 'Banner Link',
-            'banner_order' => 'Banner Order',
-            'banner_image' => 'Banner Image',
-            'status' => 'Status',
-            'added' => 'Added',
+            'kids_name' => 'Title',
+            'kids_description' => 'Description',
+            'kids_image' => 'Image',
+            'created' => 'Created',
             'modified' => 'Modified',
         );
     }
@@ -92,13 +85,10 @@ class AtBanner extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('id', $this->id);
-        $criteria->compare('banner_title', $this->banner_title, true);
-        $criteria->compare('banner_image', $this->banner_image, true);
-        $criteria->compare('banner_description', $this->banner_description, true);
-        $criteria->compare('banner_link', $this->banner_link, true);
-        $criteria->compare('banner_order', $this->banner_order);
-        $criteria->compare('status', $this->status, true);
-        $criteria->compare('added', $this->added, true);
+        $criteria->compare('kids_name', $this->kids_name, true);
+        $criteria->compare('kids_description', $this->kids_description, true);
+        $criteria->compare('kids_image', $this->kids_image, true);
+        $criteria->compare('created', $this->created, true);
         $criteria->compare('modified', $this->modified, true);
 
         return new CActiveDataProvider($this, array(
@@ -110,7 +100,7 @@ class AtBanner extends CActiveRecord {
      * Returns the static model of the specified AR class.
      * Please note that you should have this exact method in all your CActiveRecord descendants!
      * @param string $className active record class name.
-     * @return AtBanner the static model class
+     * @return AtKidsActivities the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);

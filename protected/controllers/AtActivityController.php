@@ -73,9 +73,25 @@ class AtActivityController extends Controller
 
 		if(isset($_POST['AtActivity']))
 		{
-			$model->attributes=$_POST['AtActivity'];
+                    
+                    $rnd = rand(0,9999);  // generate random number between 0-9999
+          $model->attributes=$_POST['AtActivity'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'activity_image');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+           if(!empty($uploadedFile))
+            $model->activity_image = $fileName;
+                    
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                            if(!empty($uploadedFile)){
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
+                          
+                         }
+                            Yii::app()->user->setFlash('successActivity', 'Activity has been created.');
+				$this->redirect(array('admin','id'=>$model->id));
+                        }
 		}
 
 		$this->render('create',array(
@@ -99,9 +115,25 @@ class AtActivityController extends Controller
 
 		if(isset($_POST['AtActivity']))
 		{
-			$model->attributes=$_POST['AtActivity'];
+                    
+                    $rnd = rand(0,9999);  // generate random number between 0-9999
+          $model->attributes=$_POST['AtActivity'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'activity_image');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+           if(!empty($uploadedFile))
+            $model->activity_image = $fileName;
+                    
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                            if(!empty($uploadedFile)){
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
+                          
+                         }
+                            Yii::app()->user->setFlash('successActivity', 'Activity has been created.');
+				$this->redirect(array('admin','id'=>$model->id));
+                        }
 		}
 
 		$this->render('update',array(

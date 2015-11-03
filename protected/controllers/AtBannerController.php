@@ -73,9 +73,28 @@ class AtBannerController extends Controller
 
 		if(isset($_POST['AtBanner']))
 		{
-			$model->attributes=$_POST['AtBanner'];
+                    
+                    $rnd = rand(0,9999);  // generate random number between 0-9999
+          $model->attributes=$_POST['AtBanner'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'banner_image');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+           if(!empty($uploadedFile))
+            $model->banner_image = $fileName;
+                    
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {
+                            if(!empty($uploadedFile)){
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
+                           $MyImageCom = new ImageComponent();  
+                           $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                           $MyImageCom->resize(1680,840);//width,height,Red,Green,Blue
+                           $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                         }
+                            Yii::app()->user->setFlash('successBanner', 'Banner has been created.');
+				$this->redirect(array('admin','id'=>$model->id));
+                        }
 		}
 
 		$this->render('create',array(
@@ -100,8 +119,30 @@ class AtBannerController extends Controller
 		if(isset($_POST['AtBanner']))
 		{
 			$model->attributes=$_POST['AtBanner'];
+                        
+			 $rnd = rand(0,9999);  // generate random number between 0-9999
+                         $_POST['AtBanner']['banner_image'] = $model->banner_image;
+           $model->attributes=$_POST['AtHowItWorks'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'banner_image');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            if(!empty($uploadedFile))
+            $model->banner_image = $fileName;
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {     if(!empty($uploadedFile))
+                                {
+                                $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
+                                $MyImageCom = new ImageComponent();  
+                                $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                                $MyImageCom->resize(1680,840);//width,height,Red,Green,Blue
+                                $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                                }
+                        
+                             Yii::app()->user->setFlash('successBanner', 'Banner has been updated.');
+			$this->redirect(array('update','id'=>$model->id));
+                        }
+		
 		}
 
 		$this->render('update',array(
@@ -180,4 +221,34 @@ class AtBannerController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        public function gridStatus($row)
+    {
+          
+        if($row['status']=='Y') return '<a href="javascript:void(0);" onclick="javascript:statusChange('.$row['id'].')"><span class="label label-info" id="span-id-'.$row['id'].'">Yes</span></a>';
+        
+        if($row['status']=='N') return '<a href="javascript:void(0);" onclick="javascript:statusChange('.$row['id'].')"><span class="label label-warning" id="span-id-'.$row['id'].'">No</span></a>';
+    }
+    
+     public function actionStatuschange()
+    {
+        $model=new AtBanner('search');
+		$model->unsetAttributes();  // clear any default values
+        
+        if($_POST['id']!='')
+        {
+            $sql="UPDATE at_banner SET status=if(status='Y','N','Y') WHERE id='".$_POST['id']."'";
+            Yii::app()->db->createCommand($sql)->execute();
+            
+            echo 1;
+           Yii::app()->end();
+        }
+        else
+        {
+           echo 0;
+           Yii::app()->end();
+        }
+    }
+    
+    
 }
