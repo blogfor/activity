@@ -9440,3 +9440,34 @@ REQUEST_URI=/activity/atPages/admin
 in E:\xampp\htdocs\activity\protected\views\atPages\admin.php (104)
 in E:\xampp\htdocs\activity\protected\controllers\AtPagesController.php (161)
 in E:\xampp\htdocs\activity\index.php (14)
+2015/11/02 20:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "atHowItWork/admin".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atHowItWork/adm...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/atHowItWork/admin
+HTTP_REFERER=http://localhost/activity/atHowItWorks/update/2
+---
+2015/11/02 21:43:48 [error] [php] Object of class Directory could not be converted to string (E:\xampp\htdocs\activity\protected\controllers\AtHowItWorksController.php:71)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(286): AtHowItWorksController->runAction()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(265): AtHowItWorksController->runActionWithFilters()
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtHowItWorksController->run()
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atHowItWorks/create
+in E:\xampp\htdocs\activity\protected\controllers\AtHowItWorksController.php (71)
+in E:\xampp\htdocs\activity\index.php (14)
+2015/11/02 21:49:13 [error] [php] Non-static method ImageComponent::prepare() should not be called statically, assuming $this from incompatible context (E:\xampp\htdocs\activity\protected\controllers\AtHowItWorksController.php:87)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(286): AtHowItWorksController->runAction()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(265): AtHowItWorksController->runActionWithFilters()
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtHowItWorksController->run()
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atHowItWorks/create
+in E:\xampp\htdocs\activity\protected\controllers\AtHowItWorksController.php (87)
+in E:\xampp\htdocs\activity\index.php (14)

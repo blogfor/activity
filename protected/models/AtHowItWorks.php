@@ -30,7 +30,15 @@ class AtHowItWorks extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('hwt_name, hwt_image', 'length', 'max'=>255),
+                        array('hwt_name, hwt_description', 'required'),
 			array('hwt_description, created, modified', 'safe'),
+                         array('hwt_image', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'),
+                    array('modified','default',
+                      'value'=>date("Y-m-d H:i:s"),
+                      'setOnEmpty'=>false,'on'=>'update'),
+                   array('created,modified','default',
+                      'value'=>date("Y-m-d H:i:s"),
+                      'setOnEmpty'=>false,'on'=>'insert'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, hwt_name, hwt_description, hwt_image, created, modified', 'safe', 'on'=>'search'),
@@ -55,9 +63,9 @@ class AtHowItWorks extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'hwt_name' => 'Hwt Name',
-			'hwt_description' => 'Hwt Description',
-			'hwt_image' => 'Hwt Image',
+			'hwt_name' => 'Title',
+			'hwt_description' => 'Description',
+			'hwt_image' => 'Image',
 			'created' => 'Created',
 			'modified' => 'Modified',
 		);

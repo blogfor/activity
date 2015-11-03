@@ -64,6 +64,7 @@ class AtHowItWorksController extends Controller
 	 */
 	public function actionCreate()
 	{
+            
              Yii::app()->theme = 'admin';
 		$this->layout='adminmain';
 		$model=new AtHowItWorks;
@@ -73,9 +74,26 @@ class AtHowItWorksController extends Controller
 
 		if(isset($_POST['AtHowItWorks']))
 		{
-			$model->attributes=$_POST['AtHowItWorks'];
+                    $rnd = rand(0,9999);  // generate random number between 0-9999
+           $model->attributes=$_POST['AtHowItWorks'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'hwt_image');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+           if(!empty($uploadedFile))
+            $model->hwt_image = $fileName;
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {     
+                         if(!empty($uploadedFile)){
+                            $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
+                           $MyImageCom = new ImageComponent();  
+                           $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                           $MyImageCom->resize(140,140);//width,height,Red,Green,Blue
+                           $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                         }
+                            Yii::app()->user->setFlash('successPages', 'Page has been created.');
+				$this->redirect(array('update','id'=>$model->id));
+                        }
 		}
 
 		$this->render('create',array(
@@ -99,9 +117,28 @@ class AtHowItWorksController extends Controller
 
 		if(isset($_POST['AtHowItWorks']))
 		{
-			$model->attributes=$_POST['AtHowItWorks'];
+			 $rnd = rand(0,9999);  // generate random number between 0-9999
+                         $_POST['Banner']['hwt_image'] = $model->hwt_image;
+           $model->attributes=$_POST['AtHowItWorks'];
+ 
+            $uploadedFile=CUploadedFile::getInstance($model,'hwt_image');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            if(!empty($uploadedFile))
+            $model->hwt_image = $fileName;
+			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        {     if(!empty($uploadedFile))
+                                {
+                                $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
+                                $MyImageCom = new ImageComponent();  
+                                $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                                $MyImageCom->resize(140,140);//width,height,Red,Green,Blue
+                                $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$fileName);
+                                }
+                        
+                             Yii::app()->user->setFlash('successPages', 'Page has been updated.');
+			$this->redirect(array('update','id'=>$model->id));
+                        }
 		}
 
 		$this->render('update',array(
