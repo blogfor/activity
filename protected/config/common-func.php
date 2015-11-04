@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 define("FROMEMAIL", "mcm@mymediacentermanager.com");
 define("SEARCHWITHLIKE", true);
 define("DASHBOARDPAGINATIONLIMIT", 10);
