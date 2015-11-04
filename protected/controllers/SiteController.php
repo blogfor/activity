@@ -175,4 +175,33 @@ class SiteController extends Controller
                      $this->redirect(array('index'));
                      exit;
 	}
+        
+        public function actionSitelogin()
+        {
+        
+            if(isset($_POST['user_name']) && isset($_POST['user_password'])){
+                
+                $sql_login=" SELECT * FROM at_users u"
+                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".$_POST['user_password']."'  ";
+                $QueryDataReg = Yii::app()->db->createCommand($sql_login)->queryRow();
+              
+                $_SESSION['user_name']=$QueryDataReg['username'];
+                $_SESSION['user_firstname']=$QueryDataReg['firstname'];
+                
+                echo $_SESSION['user_name'];
+            }
+        }
+        
+        public function actionSitelogout()
+        {
+            session_destroy();
+        }
+        
+        
+        public function actionSiteregistration()
+        {
+           print_r($_POST);
+            
+        }
+        
 }
