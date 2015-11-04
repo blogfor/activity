@@ -3,7 +3,7 @@
 -- Server version:               5.5.8 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-11-04 21:48:07
+-- Date/time:                    2015-11-04 22:51:10
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -220,10 +220,12 @@ CREATE TABLE IF NOT EXISTS `at_users` (
   `username` varchar(256) NOT NULL COMMENT 'User Name',
   `password` varchar(256) NOT NULL COMMENT 'Password',
   `email` varchar(256) NOT NULL COMMENT 'Email',
+  `profilepic` varchar(256) NOT NULL COMMENT 'Email',
   `firstname` varchar(256) NOT NULL DEFAULT '' COMMENT 'First Name',
   `lastname` varchar(256) NOT NULL DEFAULT '' COMMENT 'Last Name',
   `address1` text NOT NULL COMMENT 'Address',
   `sex` enum('M','F') NOT NULL DEFAULT 'M' COMMENT 'Sex',
+  `user_type` enum('Partner','Customer') NOT NULL DEFAULT 'Customer' COMMENT 'Sex',
   `office_phone` varchar(100) NOT NULL DEFAULT '' COMMENT 'Office Phone',
   `home_phone` varchar(100) NOT NULL DEFAULT '' COMMENT 'Home Phone',
   `zipcode` int(10) NOT NULL COMMENT 'Zip Code',
@@ -240,8 +242,26 @@ CREATE TABLE IF NOT EXISTS `at_users` (
 
 -- Dumping data for table activity.at_users: ~1 rows (approximately)
 /*!40000 ALTER TABLE `at_users` DISABLE KEYS */;
-INSERT INTO `at_users` (`id`, `username`, `password`, `email`, `firstname`, `lastname`, `address1`, `sex`, `office_phone`, `home_phone`, `zipcode`, `create_at`, `lastvisit_at`, `superuser`, `status`, `createdby`, `modifiedby`) VALUES
-	(1, 'admin', 'admin', 'admin@gmail.com', '', '', 'Kolkata', 'M', '', '', 712233, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0);
+INSERT INTO `at_users` (`id`, `username`, `password`, `email`, `profilepic`, `firstname`, `lastname`, `address1`, `sex`, `user_type`, `office_phone`, `home_phone`, `zipcode`, `create_at`, `lastvisit_at`, `superuser`, `status`, `createdby`, `modifiedby`) VALUES
+	(1, 'admin', 'admin', 'admin@gmail.com', '', '', '', 'Kolkata', 'M', 'Customer', '', '', 712233, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0);
 /*!40000 ALTER TABLE `at_users` ENABLE KEYS */;
+
+
+-- Dumping structure for table activity.at_users_child
+DROP TABLE IF EXISTS `at_users_child`;
+CREATE TABLE IF NOT EXISTS `at_users_child` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `user_id` int(11) NOT NULL DEFAULT '0' COMMENT 'ID',
+  `child_name` varchar(255) DEFAULT NULL COMMENT 'ID',
+  `child_age` varchar(255) DEFAULT NULL COMMENT 'ID',
+  `added` datetime DEFAULT NULL COMMENT 'ID',
+  `modified` datetime DEFAULT NULL COMMENT 'ID',
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- Dumping data for table activity.at_users_child: ~0 rows (approximately)
+/*!40000 ALTER TABLE `at_users_child` DISABLE KEYS */;
+/*!40000 ALTER TABLE `at_users_child` ENABLE KEYS */;
 /*!40014 SET FOREIGN_KEY_CHECKS=1 */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
