@@ -121,48 +121,8 @@
         <!-- Menu Button -->
         <span id="menu-call" class="tficon-menu invisible"></span>
         <!--/ Menu Button -->
-
-        <!-- Logo & Menu -->
-        <div class="header invisible">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="site-logo"><a href="index.html"><img src="<?php echo $baseUrl; ?>/images/Logo1.png" alt="Activety"></a></div>
-
-                        <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-                            <ul class="nav-menu clearfix">
-                                <li class="active"><a href="#"><span>HOME</span></a></li>
-                                <li><a href="#"><span>USER INFO</span></a></li>
-                                <li><a href="#"><span>Registration </span></a></li>
-                                <li><a href="#"><span>Subscription</span></a></li>
-                                <li>
-                                    <a href="#">Activity</a>
-                                    <ul>
-                                        <li><a href="#"><span>Services</span></a></li>
-                                        <li><a href="#"><span>Services</span></a></li>
-                                        <li><a href="#"><span>Services</span></a></li>
-                                        <li><a href="#"><span>Services</span></a></li>
-                                        <li><a href="#"><span>Services</span></a></li>
-                                        <li>
-                                            <a href="#">Services</a>
-                                            <ul>
-                                                <li><a href="#"><span>Services</span></a></li>
-                                                <li><a href="#"><span>Services</span></a></li>
-                                            </ul>
-                                        </li>
-                                        
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html"><span>Location</span></a></li>
-                                <li><a href="contact.html"><span>Booking </span></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ Logo & Menu -->
+ <?php require_once('tpl_navigation.php') ?>
+        
     </header>
     <!--/ Header -->
     
