@@ -9599,3 +9599,334 @@ Stack trace:
 REQUEST_URI=/activity/themes/activity/js/jquery.validationEngine-en.js
 HTTP_REFERER=http://localhost/activity/
 ---
+2015/11/06 19:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about_us".' in E:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('about_us')
+#1 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('about_us')
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/about_us')
+#3 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/pages/about_us
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/06 19:56:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/06 19:57:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/06 19:58:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/
+---
+2015/11/06 19:59:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/
+---
+2015/11/06 19:59:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/06 20:00:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/06 20:04:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:05:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('page')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/page/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/page/about_us
+---
+2015/11/06 20:06:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page".' in E:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('page')
+#1 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('page')
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/page/abou...')
+#3 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/pages/page/about_us
+---
+2015/11/06 20:06:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:06:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('')
+#1 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('')
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages//about_us')
+#3 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/pages//about_us
+---
+2015/11/06 20:06:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about_us".' in E:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('about_us')
+#1 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('about_us')
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/about_us')
+#3 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/pages/about_us
+---
+2015/11/06 20:07:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in E:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('')
+#1 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('')
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages//about_us')
+#3 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/pages//about_us
+---
+2015/11/06 20:07:13 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:07:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/1
+---
+2015/11/06 20:08:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/1
+---
+2015/11/06 20:08:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view/abou...')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view/about_us
+---
+2015/11/06 20:12:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\xampp\htdocs\activity\framework\web\CController.php:336
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('view')
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/view')
+#5 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#7 {main}
+REQUEST_URI=/activity/pages/view?slug=about_us
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/06 20:12:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about_us".' in E:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('about_us')
+#1 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('about_us')
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('pages/about_us')
+#3 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/pages/about_us
+HTTP_REFERER=http://localhost/activity/
+---

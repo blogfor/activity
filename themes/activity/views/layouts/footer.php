@@ -27,10 +27,10 @@
                 <h4> COMPANY </h4>
 
                 <ul>
-                    <li><a href="#">About Us </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'about_us')); ?>">About Us </a></li>
 
                     <li><a href="#"> Blog </a></li>
-                    <li><a href="#"> Press </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/press'); ?>"> Press </a></li>
                 </ul>
 
 
@@ -42,9 +42,9 @@
                 <h4> LEARN MORE </h4>
 
                 <ul>
-                    <li><a href="#"> FAQ </a></li>
-                    <li><a href="#"> Terms </a></li>
-                    <li><a href="#"> Privacy and Security </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/faq'); ?>"> FAQ </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/terms'); ?>"> Terms </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/privacy_and_security'); ?>"> Privacy and Security </a></li>
 
                 </ul>
 
@@ -56,7 +56,7 @@
                 <h4> PARTNERS </h4>
 
                 <ul>
-                    <li><a href="#"> Interested in
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/interested_in_____________________________partnership'); ?>"> Interested in
                             Partnership? </a></li>
 
                 </ul>
