@@ -9,7 +9,7 @@
         <?php
         $baseUrl = Yii::app()->theme->baseUrl;
         $cs = Yii::app()->getClientScript();
-        Yii::app()->clientScript->registerCoreScript('jquery');
+        //Yii::app()->clientScript->registerCoreScript('jquery');
         ?>
 
  <!-- Core CSS -->
@@ -28,22 +28,26 @@
     <!-------- masanary css ---------------->
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/main.css" /> 
-
+        
+    <script src="<?php echo $baseUrl; ?>/js/libs/jquery-1.11.0.min.js"></script>
     <!-- Modernizr Library -->
     <script src="<?php echo $baseUrl; ?>/js/libs/modernizr.min.js"></script>
     
     </head>
     <body>
-
+        <div id="page" class="hfeed site">
+            <?php require_once('header.php') ?>
 <?php
 echo $content;
 ?>
+            <?php require_once('footer.php') ?>
+            </div>
 <!-- #page -->
 
 <!-- JS Placed at the end of the document for faster page loading -->
 
 <!-- Libs -->
-<script src="<?php echo $baseUrl; ?>/js/libs/jquery-1.11.0.min.js"></script>
+
 <script src="<?php echo $baseUrl; ?>/js/libs/jquery-ui-1.10.4.min.js"></script>
 <script src="<?php echo $baseUrl; ?>/js/libs/bootstrap.min.js"></script>
 <!--[if lt IE 9]><script src="<?php echo $baseUrl; ?>/js/libs/respond.min.js"></script><![endif]-->
