@@ -28,9 +28,16 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+            
+            $queryHIW = "SELECT * FROM at_how_it_works ORDER BY id";
+            $resultHIW = Yii::app()->db->createCommand($queryHIW)->queryAll();
+            
+            $queryKA = "SELECT * FROM at_kids_activities ORDER BY id";
+            $resultKA = Yii::app()->db->createCommand($queryKA)->queryAll();
+            
             Yii::app()->theme = 'activity';
            
-	    $this->render('index');
+	    $this->render('index',array('resultHIW'=>$resultHIW,'resultKA'=>$resultKA));
 	}
 	
         

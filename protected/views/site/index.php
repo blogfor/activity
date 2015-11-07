@@ -319,61 +319,65 @@ $baseUrl = Yii::app()->theme->baseUrl;
           <div class="container">
             <h1> How it Works </h1>
           <div class="row">
+              
+              <?php 
+              foreach($resultHIW as $rHIW) {
+              ?>
+              
               <div class="col-sm-6 work">
                   <div class="media">
                       <div class="media-left media-middle">
-                        <a href="#">
-                          <img class="media-object" src="<?php echo $baseUrl; ?>/images/How1.png" alt="...">
+                        <a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'how_it_works')); ?>">
+                          <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rHIW['hwt_image'];?>" alt="<?php echo $rHIW['hwt_name'];?>">
                         </a>
                       </div>
                       <div class="media-body">
                         
-                          <p><strong>Find Activity -</strong> Search for a specific activity for your child or browse and discover new activities.  </p>
+                          <p><strong><?php echo $rHIW['hwt_name'];?> -</strong> <?php echo $rHIW['hwt_description'];?>  </p>
                       </div>
                   </div>
               </div>
-              <div class="col-sm-6 work">
-                  <div class="media">
-                      <div class="media-left media-middle">
-                        <a href="#">
-                          <img class="media-object" src="<?php echo $baseUrl; ?>/images/How2.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        
-                        <p> <strong>Select Activity - </strong>Select the activity for the available date and time. Review the details of the activity. </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-6 work">
-                  <div class="media">
-                      <div class="media-left media-middle">
-                        <a href="#">
-                          <img class="media-object" src="<?php echo $baseUrl; ?>/images/How3.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        
-                        <p><strong>Confirm Activity –</strong> Confirm the selected activity instantly. Registration is free.Free trial activities are free for all registered users and paying users can also access paid activities. </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-6 work">
-                  <div class="media">
-                      <div class="media-left media-middle">
-                        <a href="#">
-                          <img class="media-object" src="<?php echo $baseUrl; ?>/images/How4.png" alt="...">
-                        </a>
-                      </div>
-                      <div class="media-body">
-                        
-                        <p><strong>Email Confirmation –</strong> An email confirmation will be sent to your registered email and users can also review confirmed registrations on our site.  </p>
-                      </div>
-                  </div>
-              </div>
-             
+              
+              
+             <?php 
+              }
+              ?>
           </div>  
           </div>
         </section>
+        
+        
+          <section class="how_work"> 
+          <div class="container">
+            <h1> Discover New Kids Activities </h1>
+          <div class="row">
+              
+              <?php 
+              foreach($resultKA as $rKIA) {
+              ?>
+              
+              <div class="col-sm-6 work">
+                  <div class="media">
+                      <div class="media-left media-middle">
+                        <a href="javascript:void(0);">
+                          <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rKIA['kids_image'];?>" alt="<?php echo $rKIA['kids_name'];?>">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        
+                          <p><strong><?php echo $rKIA['kids_name'];?> -</strong> <?php echo $rKIA['kids_description'];?>  </p>
+                      </div>
+                  </div>
+              </div>
+              
+              
+             <?php 
+              }
+              ?>
+          </div>  
+          </div>
+        </section>
+        
+        
     </div>
     <!--/ Main -->
