@@ -214,7 +214,7 @@ class SiteController extends Controller
             }
                        
             
-            $sql=" INSERT INTO  `at_users` (
+            $sql=" INSERT INTO `at_users` (
             `firstname` ,
             `lastname` ,
             `email`          
@@ -222,21 +222,76 @@ class SiteController extends Controller
             VALUES (
             '$firstname',  '$lastname',  '$email' )";          
 
-            Yii::app()->db->createCommand($sql)->execute();
+            echo Yii::app()->db->createCommand($sql)->execute();
             
-            
+            //EMAIL=============================================================
             $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
             $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
             $headers="From: $firstname <{$email}>\r\n".
                     "Reply-To: {$email}\r\n".
                     "MIME-Version: 1.0\r\n".
                     "Content-Type: text/plain; charset=UTF-8";
-            $mail_body="HI";
-            mail($email,$subject,$mail_body,$headers);
-            echo "email_send";
-
+                    
             
+            $activation_link=Yii::app()->createUrl('/site/activateuser')."/?u=".  base64_encode($firstname."$".$email);
+            $mail_body="Hi ".$firstname."<br>";
+            $mail_body.="<br>Please click on activation link to activate your link.<br>";
+            $mail_body.="<br>Activation Link:".$activation_link;
+            
+            //mail($email,$subject,$mail_body,$headers);
+           
+            echo "email_send";
             
         }
+        
+        public function actionActivateuser()
+        {
+            $data=explode("$",  base64_decode($_REQUEST['u']));     
+            $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
+                        ." WHERE u.email='".$data[1]."' and u.firstname='".$data[0]."'  ";
+            $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_email)->queryRow();
+            
+            if((int)$QueryEmailDuplicate['tot_email']==1){
+                
+                $username=$data[1];
+                $password=$this->random_password();
+                $firstname=$data[0];
+                $email=$data[1];
+                
+                $sql_user=" UPDATE at_users u set username='".$username."', password='".$password."'"
+                         ." WHERE u.email='".$data[1]."' and u.firstname='".$data[0]."'  ";
+                
+                $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_user)->queryRow();
+            
+                //EMAIL=============================================================
+                $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
+                $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
+                $headers="From: $firstname <{$email}>\r\n".
+                        "Reply-To: {$email}\r\n".
+                        "MIME-Version: 1.0\r\n".
+                        "Content-Type: text/plain; charset=UTF-8";
+
+
+                $activation_link=Yii::app()->createUrl('/site/activateuser')."/?u=".  base64_encode($firstname."$".$email);
+                $mail_body="Hi ".$firstname."<br>";
+                $mail_body.="<br>Your login account details is below.<br>";
+                $mail_body.="<br>User Name:".$username;
+                $mail_body.="<br>Password:".$password;
+
+                //mail($email,$subject,$mail_body,$headers);
+                                
+            }
+            
+        }
+        
+        function random_password( $length = 8 ) {
+            $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+            $password = substr( str_shuffle( $chars ), 0, $length );
+            return $password;
+        }
+        
+        
+        
+        
         
 }

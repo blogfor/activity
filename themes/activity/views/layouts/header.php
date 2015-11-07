@@ -180,6 +180,7 @@ function site_registration()
       $("#email").focus();
       return;
   }
+  $(".reg-msg-error").html("");
   
     $.ajax({
         type: "POST",
