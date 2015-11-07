@@ -3389,6 +3389,7 @@ post----------------------------------*/
     padding: 12px 13px;
     width: 38px;
 	margin-right:7px !important;
+        margin-bottom: 5px !important;
 }
 .socail_icon ul li:hover{
 	border: 1px solid #4f81bd;
