@@ -15,10 +15,10 @@
                         <li>
                             <a href="#">LEARN MORE</a>
                             <ul>
-                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view/how_it_works'); ?>"><span>How it Works</span></a></li>
-                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view/faq'); ?>"><span>FAQ</span></a></li>
-                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view/terms'); ?>"><span>Terms</span></a></li>
-                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view/privacy_and_security'); ?>"><span>Privacy</span></a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'how_it_works')); ?>"><span>How it Works</span></a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'faq')); ?>"><span>FAQ</span></a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'terms')); ?>"><span>Terms</span></a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'privacy_and_security')); ?>"><span>Privacy</span></a></li>
 
 
                             </ul>

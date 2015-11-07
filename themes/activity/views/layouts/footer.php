@@ -30,7 +30,7 @@
                     <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'about_us')); ?>">About Us </a></li>
 
                     <li><a href="#"> Blog </a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/press'); ?>"> Press </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'press')); ?>"> Press </a></li>
                 </ul>
 
 
@@ -42,9 +42,9 @@
                 <h4> LEARN MORE </h4>
 
                 <ul>
-                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/faq'); ?>"> FAQ </a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/terms'); ?>"> Terms </a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/privacy_and_security'); ?>"> Privacy and Security </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'faq')); ?>"> FAQ </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'terms')); ?>"> Terms </a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'privacy_and_security')); ?>"> Privacy and Security </a></li>
 
                 </ul>
 
@@ -56,7 +56,7 @@
                 <h4> PARTNERS </h4>
 
                 <ul>
-                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view/interested_in_____________________________partnership'); ?>"> Interested in
+                    <li><a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'interested_in_____________________________partnership')); ?>"> Interested in
                             Partnership? </a></li>
 
                 </ul>
