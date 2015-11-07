@@ -86,6 +86,9 @@
                 <h4 class="modal-title">Registration</h4>
               </div>
               <div class="modal-body">
+                <div class="row reg-msg-error" style="color:red; padding-bottom: 10px; text-align: center;"></div>
+                <div class="row reg-msg-success" style="color:green; padding-bottom: 10px; text-align: center;"></div>
+                
                 
                 <div class="panel panel-default">
 
@@ -94,13 +97,18 @@
                       
                     <form method="post" name="reg-form" id="reg-form">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">User Name</label>
-                        <input name="user_name" style="outline: medium none;" value="" hidefocus="true" class="form-control" id="exampleInputEmail1" placeholder="User Name" type="text">
+                        <label for="exampleInputEmail1">First Name</label>
+                        <input name="firstname" id="firstname" style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="First Name" type="text">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Password</label>
-                        <input name="user_email" style="outline: medium none;" value="" hidefocus="true" class="form-control" id="exampleInputEmail1" placeholder="Password" type="password">
-                      </div>                    
+                        <label for="exampleInputEmail1">Last Name</label>
+                        <input name="lastname" id="lastname"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Last Name" type="text">
+                      </div>  
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input name="email" id="email"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Email" type="email">
+                      </div>    
+                        
                       <button type="button" class="btn btn-default payment-buttam" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" onclick="site_registration();">Submit</button>
                     </form>
                       
@@ -113,20 +121,16 @@
           </div>
         </div>        
         
-        
-        
-        
-        
          
         <!-- Menu Button -->
         <span id="menu-call" class="tficon-menu invisible"></span>
         <!--/ Menu Button -->
  <?php require_once('tpl_navigation.php') ?>
         
-    </header>
-    <!--/ Header -->
-    
-    <script type="text/javascript">
+</header>
+<!--/ Header -->
+
+<script type="text/javascript">
 function site_login()
 {
     $.ajax({
@@ -158,12 +162,43 @@ function site_logout()
 function site_registration()
 {
   
+ 
+  if( $("#firstname").val()=="")
+  {
+      $("#firstname").focus();
+      return;
+  }
+  
+  if( $("#lastname").val()=="")
+  {
+      $("#lastname").focus();
+      return;
+  }
+  
+  if( $("#email").val()=="")
+  {
+      $("#email").focus();
+      return;
+  }
+  
     $.ajax({
         type: "POST",
         url: "<?php echo Yii::app()->createUrl('site/siteregistration'); ?>",
         data: $("#reg-form").serialize(),
         success: function(msg) {
-         alert(msg);
+        alert(msg);
+         if(msg=="duplicate_email")
+         {
+            $(".reg-msg-error").html("Your email is already exist.");
+            $("#email").focus();
+         }
+         else if(msg=="email_send")
+         {
+            $(".reg-msg-error").html("");
+            $(".reg-msg-success").html("Activation link is sent to your ."); 
+         }
+         
+         
         }
     });
 }

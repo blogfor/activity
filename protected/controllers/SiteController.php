@@ -200,7 +200,42 @@ class SiteController extends Controller
         
         public function actionSiteregistration()
         {
-           print_r($_POST);
+           $firstname=$_POST['firstname'];
+            $lastname=$_POST['lastname'];                    
+            $email=$_POST['email'];
+            
+            $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
+                        . " WHERE u.email='".$email."' ";
+            $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_email)->queryRow();
+            
+            if((int)$QueryEmailDuplicate['tot_email']>0){
+                echo "duplicate_email";
+                return;
+            }
+                       
+            
+            $sql=" INSERT INTO  `at_users` (
+            `firstname` ,
+            `lastname` ,
+            `email`          
+            )
+            VALUES (
+            '$firstname',  '$lastname',  '$email' )";          
+
+            Yii::app()->db->createCommand($sql)->execute();
+            
+            
+            $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
+            $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
+            $headers="From: $firstname <{$email}>\r\n".
+                    "Reply-To: {$email}\r\n".
+                    "MIME-Version: 1.0\r\n".
+                    "Content-Type: text/plain; charset=UTF-8";
+            $mail_body="HI";
+            mail($email,$subject,$mail_body,$headers);
+            echo "email_send";
+
+            
             
         }
         

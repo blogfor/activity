@@ -9930,3 +9930,103 @@ Stack trace:
 REQUEST_URI=/activity/pages/about_us
 HTTP_REFERER=http://localhost/activity/
 ---
+2015/11/07 09:17:57 [error] [exception.CException] exception 'CException' with message 'CDbConnection and its behaviors do not have a method or closure named "insert".' in C:\xampp\htdocs\activity\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('insert', Array)
+#1 C:\xampp\htdocs\activity\protected\controllers\SiteController.php(208): CDbConnection->insert('at_users', Array)
+#2 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionSiteregistration()
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('siteregistratio...')
+#7 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/siteregist...')
+#8 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#10 {main}
+REQUEST_URI=/activity/site/siteregistration
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/07 09:18:14 [error] [exception.CException] exception 'CException' with message 'CDbConnection and its behaviors do not have a method or closure named "insert".' in C:\xampp\htdocs\activity\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('insert', Array)
+#1 C:\xampp\htdocs\activity\protected\controllers\SiteController.php(208): CDbConnection->insert('at_users', Array)
+#2 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionSiteregistration()
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('siteregistratio...')
+#7 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/siteregist...')
+#8 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#10 {main}
+REQUEST_URI=/activity/site/siteregistration
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/07 09:18:46 [error] [exception.CException] exception 'CException' with message 'CDbConnection and its behaviors do not have a method or closure named "insert".' in C:\xampp\htdocs\activity\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('insert', Array)
+#1 C:\xampp\htdocs\activity\protected\controllers\SiteController.php(208): CDbConnection->insert('at_users', Array)
+#2 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionSiteregistration()
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('siteregistratio...')
+#7 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/siteregist...')
+#8 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#10 {main}
+REQUEST_URI=/activity/site/siteregistration
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/07 09:18:53 [error] [exception.CException] exception 'CException' with message 'CDbConnection and its behaviors do not have a method or closure named "insert".' in C:\xampp\htdocs\activity\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('insert', Array)
+#1 C:\xampp\htdocs\activity\protected\controllers\SiteController.php(208): CDbConnection->insert('at_users', Array)
+#2 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionSiteregistration()
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('siteregistratio...')
+#7 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/siteregist...')
+#8 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#10 {main}
+REQUEST_URI=/activity/site/siteregistration
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/07 09:48:26 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (C:\xampp\htdocs\activity\protected\controllers\SiteController.php:234)
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/siteregistration
+in C:\xampp\htdocs\activity\protected\controllers\SiteController.php (234)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/07 09:49:21 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (C:\xampp\htdocs\activity\protected\controllers\SiteController.php:234)
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/siteregistration
+in C:\xampp\htdocs\activity\protected\controllers\SiteController.php (234)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/07 09:50:41 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (C:\xampp\htdocs\activity\protected\controllers\SiteController.php:236)
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/siteregistration
+in C:\xampp\htdocs\activity\protected\controllers\SiteController.php (236)
+in C:\xampp\htdocs\activity\index.php (14)
