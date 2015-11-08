@@ -6,18 +6,18 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
+            return array(
+                // captcha action renders the CAPTCHA image displayed on the contact page
+                'captcha'=>array(
+                        'class'=>'CCaptchaAction',
+                        'backColor'=>0xFFFFFF,
+                ),
+                // page action renders "static" pages stored under 'protected/views/site/pages'
+                // They can be accessed via: index.php?r=site/page&view=FileName
+                'page'=>array(
+                        'class'=>'CViewAction',
+                ),
+            );
 	}
 
 	/**
@@ -75,10 +75,8 @@ class SiteController extends Controller
             
                if(isset($_POST['dashboard_search'])){
                   $model=$this->global_students_search($_POST['dashboard_search']); 
-               }
-               
-            $this->render('dashboard_search',array('model'=>$model));
-	
+               }               
+            $this->render('dashboard_search',array('model'=>$model));	
         }
         
         public function search_registration($student_id)
@@ -95,7 +93,7 @@ class SiteController extends Controller
         
         public function search_payments($reg_id)
 	{ 
-             $sql_registrations=" SELECT sum(amount) as tot_amt FROM mr_course_registration_payment r"
+            $sql_registrations=" SELECT sum(amount) as tot_amt FROM mr_course_registration_payment r"
                                 . " WHERE r.registration_id='".$reg_id."'  ";
             $QueryDataReg = Yii::app()->db->createCommand($sql_registrations)->queryAll();
             return $QueryDataReg[0];
@@ -107,14 +105,14 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-             $this->layout='adminmain';
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
+            $this->layout='adminmain';
+            if($error=Yii::app()->errorHandler->error)
+            {
+                    if(Yii::app()->request->isAjaxRequest)
+                            echo $error['message'];
+                    else
+                            $this->render('error', $error);
+            }
 	}
 
 	/**

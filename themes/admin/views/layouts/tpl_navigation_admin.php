@@ -28,7 +28,7 @@
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Mail Content', array('atMailContent/admin'), array('class' => '')); ?>
 
             </li>
-             <li>
+            <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Pages', array('atPages/admin'), array('class' => '')); ?>
 
             </li>
@@ -46,6 +46,11 @@
             </li>
              <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Site Settings', array('atSiteSettings/admin'), array('class' => '')); ?>
+
+            </li>
+            
+            <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Users', array('atUsers/admin'), array('class' => '')); ?>
 
             </li>
             
