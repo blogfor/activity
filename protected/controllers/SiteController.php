@@ -208,6 +208,7 @@ class SiteController extends Controller
            $firstname=$_POST['firstname'];
             $lastname=$_POST['lastname'];                    
             $email=$_POST['email'];
+            $ctype=$_POST['ctype'];
             
             $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
                         . " WHERE u.email='".$email."' ";
@@ -222,13 +223,14 @@ class SiteController extends Controller
             $sql=" INSERT INTO `at_users` (
             `firstname` ,
             `lastname` ,
-            `email`          
+            `email` ,
+            `user_type`
             )
             VALUES (
-            '$firstname',  '$lastname',  '$email' )";          
+            '$firstname',  '$lastname',  '$email','$ctype' )";          
 
-            echo Yii::app()->db->createCommand($sql)->execute();
-            
+            Yii::app()->db->createCommand($sql)->execute();
+            echo "email_send";
             //EMAIL=============================================================
             $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
             $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
@@ -245,7 +247,7 @@ class SiteController extends Controller
             
             //mail($email,$subject,$mail_body,$headers);
            
-            echo "email_send";
+            
             
         }
         

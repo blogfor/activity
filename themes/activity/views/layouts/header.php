@@ -57,6 +57,7 @@
                         <label for="exampleInputEmail1">User Name</label>
                         <input name="user_name" id="user_name" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="User Name" type="text">
                       </div>
+                          
                       <div class="form-group">
                         <label for="exampleInputEmail1">Password</label>
                         <input name="user_password" id="user_password" style="outline: medium none;" value="" hidefocus="true" class="form-control" id="exampleInputEmail1" placeholder="Password" type="password">
@@ -107,6 +108,11 @@
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
                         <input name="email" id="email"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Email" type="email">
+                      </div>   
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Join as</label>&nbsp;&nbsp;&nbsp;                       
+                        <label for="Customer">  <input type="radio" name="ctype" value="Customer" checked="checked"> Customer</label>&nbsp;&nbsp;&nbsp;
+                       <label for="Partner">  <input type="radio" name="ctype" value="Partner"> Partner </label>
                       </div>    
                         
                       <button type="button" class="btn btn-default payment-buttam" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" onclick="site_registration();">Submit</button>
@@ -187,7 +193,7 @@ function site_registration()
         url: "<?php echo Yii::app()->createUrl('site/siteregistration'); ?>",
         data: $("#reg-form").serialize(),
         success: function(msg) {
-        alert(msg);
+
          if(msg=="duplicate_email")
          {
             $(".reg-msg-error").html("Your email is already exist.");
@@ -196,16 +202,11 @@ function site_registration()
          else if(msg=="email_send")
          {
             $(".reg-msg-error").html("");
-            $(".reg-msg-success").html("Activation link is sent to your ."); 
+            $(".reg-msg-success").html("Activation link is sent to your email."); 
          }
          
          
         }
     });
 }
-
-//    jQuery(document).ready(function(){
-//        // binds form submission and fields to the validation engine
-//        $("#login_form").validationEngine();
-//    });
 </script>

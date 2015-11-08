@@ -158,6 +158,23 @@ class AtUsersController extends Controller
 			'model'=>$model,
 		));
 	}
+        
+        public function actionProfiledtls()
+	{
+            Yii::app()->theme = 'activity';
+            //$this->layout='adminmain';
+        
+      
+                $model=new AtUsers('search');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];
+
+		$this->render('profiledtls',array(
+			'model'=>$model,
+		));
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
