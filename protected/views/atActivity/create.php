@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create AtActivity</h1>
+<h1>Create Activity</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

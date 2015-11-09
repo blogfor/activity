@@ -35,9 +35,13 @@ class SiteController extends Controller
             $queryKA = "SELECT * FROM at_kids_activities ORDER BY id";
             $resultKA = Yii::app()->db->createCommand($queryKA)->queryAll();
             
+            
+             $queryBANNER = "SELECT * FROM at_banner ORDER BY id";
+            $resultBANNER = Yii::app()->db->createCommand($queryBANNER)->queryAll();
+            
             Yii::app()->theme = 'activity';
            
-	    $this->render('index',array('resultHIW'=>$resultHIW,'resultKA'=>$resultKA));
+	    $this->render('index',array('resultHIW'=>$resultHIW,'resultKA'=>$resultKA,'resultBANNER'=>$resultBANNER));
 	}
 	
         

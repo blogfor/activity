@@ -23,22 +23,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                         <div class="wInnerBall">
                         </div>
                     </div>
-                    <div class="wBall" id="wBall_2">
-                        <div class="wInnerBall">
-                        </div>
-                    </div>
-                    <div class="wBall" id="wBall_3">
-                        <div class="wInnerBall">
-                        </div>
-                    </div>
-                    <div class="wBall" id="wBall_4">
-                        <div class="wInnerBall">
-                        </div>
-                    </div>
-                    <div class="wBall" id="wBall_5">
-                        <div class="wInnerBall">
-                        </div>
-                    </div>
+                   
                 </div>
                 <!--/ Loading Spinner -->
 
@@ -51,81 +36,47 @@ $baseUrl = Yii::app()->theme->baseUrl;
                    
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                    
-                    
-                        <!-- Item -->
-                        <section class="active item" style="background-image: url(<?php echo $baseUrl; ?>/images/temp/slide-1.jpg);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft">Lorem Ipsum is simply dummy text</h1>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight">Pain may last a minute, an hour, or a day, but eventually it will subside and something else will take its place. If you quit, however, it will last forever.<span class="angle"></span></div>
-                                        <a href="#" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>More info</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!--/ Item -->
-
-                        <!-- Item -->
-                        <section class="item" style="background-image: url(<?php echo $baseUrl; ?>/images/temp/slide-2.jpg);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft">Lorem Ipsum is simply dummy text</h1>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight">Pain may last a minute, an hour, or a day, but eventually it will subside and something else will take its place. If you quit, however, it will last forever.<span class="angle"></span></div>
-                                        <a href="#" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>check out my workouts</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!--/ Item -->
-
-                        <!-- Item -->
-                        <section class="item" style="background-image: url(<?php echo $baseUrl; ?>/images/temp/slide-3.jpg);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft">Lorem Ipsum is simply dummy text</h1>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight">Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus in pellentesque faucibus vestibulum. Dulla at nulla justo.<span class="angle"></span></div>
-                                        <a href="#" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>let's meet in person</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!--/ Item -->
-
-                        <!-- Item -->
-                        <section class="item" style="background-image: url(<?php echo $baseUrl; ?>/images/temp/slide-4.jpg);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft">Work hard everyday. No guts, no glory!</h1>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight">In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin.<span class="angle"></span></div>
-                                        <a href="#" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>more about me</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!--/ Item -->
+                                   
+                       
                         
+                        <?php 
+              foreach($resultBANNER as $rBANNER) {
+              ?>
+              
+                        <section class="item" style="background-image: url(/demo/activity/uploads/<?php echo $rBANNER['banner_image'];?>);">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft"><?php echo $rBANNER['banner_title'];?></h1>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight"><?php echo $rBANNER['banner_description'];?><span class="angle"></span></div>
+              <?php if($rBANNER['banner_link']!=''){ ?><a href="<?php echo $rBANNER['banner_link'];?>" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>more about me</span></a><?php }?>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+              
+              
+              
+             <?php 
+              }
+              ?>
                          
                         
                     </div>
                     <!-- Carousel indicators -->
                     <ol class="carousel-indicators" data-animate-in="fadeInUp" data-animate-out="fadeOutDown">
-                        <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                        <li data-target="#main-slider" data-slide-to="1"></li>
-                        <li data-target="#main-slider" data-slide-to="2"></li>
-                        <li data-target="#main-slider" data-slide-to="3"></li>
+                        <?php 
+                        
+              foreach($resultBANNER as $rBANNER) {
+              ?>
+                   <li data-target="#main-slider" data-slide-to="<?php echo $rBANNER['id'];?>"></li>
+                         <?php 
+              }
+              ?>
+                        
                     </ol>
                     <!-- Carousel nav -->
                     <a class="carousel-control left" href="#main-slider" data-slide="prev">&lsaquo;</a>
@@ -284,32 +235,6 @@ $baseUrl = Yii::app()->theme->baseUrl;
 	</div>
         
   </div>      
-        
-  <!-- <div class="container">
-   <div class="masanery_div">
-       <h1> Browse by Activity </h1>
-        <div class="row">
-            <div class="col-lg-8 col-sm-6">
-               <div class="box"> <img src="<?php echo $baseUrl; ?>/images/temp/arts.jpg">
-                <div class="mask">
-                  <h2><span class="word1">Through</span>the Wormhole</h2>
-                  
-                </div>
-            </div>
-            </div>
-            <div class="col-lg-4 col-sm-6"> 
-               <div class="box"> <img src="http://files.room1design.com/morgan.jpg">
-                <div class="mask">
-                  <h2><span class="word1">Through</span>the Wormhole</h2>
-                  
-                </div>
-            </div>
-            </div>
-       </div>
-        
-   </div>     
-        
-</div>  -->
  
         
         
@@ -365,7 +290,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                       </div>
                       <div class="media-body">
                         
-                          <p><strong><?php echo $rKIA['kids_name'];?> -</strong> <?php echo $rKIA['kids_description'];?>  </p>
+                          <p><strong></strong> <?php echo $rKIA['kids_description'];?>  </p>
                       </div>
                   </div>
               </div>

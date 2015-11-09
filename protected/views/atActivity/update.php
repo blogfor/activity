@@ -16,6 +16,6 @@
 //);
 ?>
 
-<h1>Update AtActivity <?php echo $model->id; ?></h1>
+<h1>Update Activity <?php echo $model->id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
