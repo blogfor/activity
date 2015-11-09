@@ -6,18 +6,18 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
+            return array(
+                // captcha action renders the CAPTCHA image displayed on the contact page
+                'captcha'=>array(
+                        'class'=>'CCaptchaAction',
+                        'backColor'=>0xFFFFFF,
+                ),
+                // page action renders "static" pages stored under 'protected/views/site/pages'
+                // They can be accessed via: index.php?r=site/page&view=FileName
+                'page'=>array(
+                        'class'=>'CViewAction',
+                ),
+            );
 	}
 
 	/**
@@ -75,10 +75,8 @@ class SiteController extends Controller
             
                if(isset($_POST['dashboard_search'])){
                   $model=$this->global_students_search($_POST['dashboard_search']); 
-               }
-               
-            $this->render('dashboard_search',array('model'=>$model));
-	
+               }               
+            $this->render('dashboard_search',array('model'=>$model));	
         }
         
         public function search_registration($student_id)
@@ -95,7 +93,7 @@ class SiteController extends Controller
         
         public function search_payments($reg_id)
 	{ 
-             $sql_registrations=" SELECT sum(amount) as tot_amt FROM mr_course_registration_payment r"
+            $sql_registrations=" SELECT sum(amount) as tot_amt FROM mr_course_registration_payment r"
                                 . " WHERE r.registration_id='".$reg_id."'  ";
             $QueryDataReg = Yii::app()->db->createCommand($sql_registrations)->queryAll();
             return $QueryDataReg[0];
@@ -107,14 +105,14 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-             $this->layout='adminmain';
-		if($error=Yii::app()->errorHandler->error)
-		{
-			if(Yii::app()->request->isAjaxRequest)
-				echo $error['message'];
-			else
-				$this->render('error', $error);
-		}
+            $this->layout='adminmain';
+            if($error=Yii::app()->errorHandler->error)
+            {
+                    if(Yii::app()->request->isAjaxRequest)
+                            echo $error['message'];
+                    else
+                            $this->render('error', $error);
+            }
 	}
 
 	/**
@@ -207,8 +205,100 @@ class SiteController extends Controller
         
         public function actionSiteregistration()
         {
-           print_r($_POST);
+           $firstname=$_POST['firstname'];
+            $lastname=$_POST['lastname'];                    
+            $email=$_POST['email'];
+            $ctype=$_POST['ctype'];
+            
+            $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
+                        . " WHERE u.email='".$email."' ";
+            $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_email)->queryRow();
+            
+            if((int)$QueryEmailDuplicate['tot_email']>0){
+                echo "duplicate_email";
+                return;
+            }
+                       
+            
+            $sql=" INSERT INTO `at_users` (
+            `firstname` ,
+            `lastname` ,
+            `email` ,
+            `user_type`
+            )
+            VALUES (
+            '$firstname',  '$lastname',  '$email','$ctype' )";          
+
+            Yii::app()->db->createCommand($sql)->execute();
+            echo "email_send";
+            //EMAIL=============================================================
+            $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
+            $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
+            $headers="From: $firstname <{$email}>\r\n".
+                    "Reply-To: {$email}\r\n".
+                    "MIME-Version: 1.0\r\n".
+                    "Content-Type: text/plain; charset=UTF-8";
+                    
+            
+            $activation_link=Yii::app()->createUrl('/site/activateuser')."/?u=".  base64_encode($firstname."$".$email);
+            $mail_body="Hi ".$firstname."<br>";
+            $mail_body.="<br>Please click on activation link to activate your link.<br>";
+            $mail_body.="<br>Activation Link:".$activation_link;
+            
+            //mail($email,$subject,$mail_body,$headers);
+           
+            
             
         }
+        
+        public function actionActivateuser()
+        {
+            $data=explode("$",  base64_decode($_REQUEST['u']));     
+            $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
+                        ." WHERE u.email='".$data[1]."' and u.firstname='".$data[0]."'  ";
+            $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_email)->queryRow();
+            
+            if((int)$QueryEmailDuplicate['tot_email']==1){
+                
+                $username=$data[1];
+                $password=$this->random_password();
+                $firstname=$data[0];
+                $email=$data[1];
+                
+                $sql_user=" UPDATE at_users u set username='".$username."', password='".$password."'"
+                         ." WHERE u.email='".$data[1]."' and u.firstname='".$data[0]."'  ";
+                
+                $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_user)->queryRow();
+            
+                //EMAIL=============================================================
+                $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
+                $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
+                $headers="From: $firstname <{$email}>\r\n".
+                        "Reply-To: {$email}\r\n".
+                        "MIME-Version: 1.0\r\n".
+                        "Content-Type: text/plain; charset=UTF-8";
+
+
+                $activation_link=Yii::app()->createUrl('/site/activateuser')."/?u=".  base64_encode($firstname."$".$email);
+                $mail_body="Hi ".$firstname."<br>";
+                $mail_body.="<br>Your login account details is below.<br>";
+                $mail_body.="<br>User Name:".$username;
+                $mail_body.="<br>Password:".$password;
+
+                //mail($email,$subject,$mail_body,$headers);
+                                
+            }
+            
+        }
+        
+        function random_password( $length = 8 ) {
+            $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+            $password = substr( str_shuffle( $chars ), 0, $length );
+            return $password;
+        }
+        
+        
+        
+        
         
 }

@@ -24,26 +24,27 @@ class AtUsersController extends Controller
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-	public function accessRules()
-	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
+//	public function accessRules()
+//	{
+//           
+//		return array(
+//			array('allow',  // allow all users to perform 'index' and 'view' actions
+//				'actions'=>array('index','view'),
+//				'users'=>array('*'),
+//			),
+//			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+//				'actions'=>array('create','update'),
+//				'users'=>array('@'),
+//			),
+//			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+//				'actions'=>array('admin','delete'),
+//				'users'=>array('admin'),
+//			),
+//			array('deny',  // deny all users
+//				'users'=>array('*'),
+//			),
+//		);
+//	}
 
 	/**
 	 * Displays a particular model.
@@ -51,7 +52,9 @@ class AtUsersController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+	Yii::app()->theme = 'admin';
+        $this->layout='adminmain';
+        $this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -62,7 +65,9 @@ class AtUsersController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new AtUsers;
+	Yii::app()->theme = 'admin';
+        $this->layout='adminmain';
+        $model=new AtUsers;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -86,7 +91,9 @@ class AtUsersController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+	Yii::app()->theme = 'admin';
+        $this->layout='adminmain';
+        $model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -110,7 +117,10 @@ class AtUsersController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+	Yii::app()->theme = 'admin';
+        $this->layout='adminmain';
+        
+            $this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -122,7 +132,8 @@ class AtUsersController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('AtUsers');
+		
+            $dataProvider=new CActiveDataProvider('AtUsers');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,12 +144,34 @@ class AtUsersController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new AtUsers('search');
+            Yii::app()->theme = 'admin';
+            $this->layout='adminmain';
+        
+      
+                $model=new AtUsers('search');
 		$model->unsetAttributes();  // clear any default values
+                
 		if(isset($_GET['AtUsers']))
 			$model->attributes=$_GET['AtUsers'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+        
+        public function actionProfiledtls()
+	{
+            Yii::app()->theme = 'activity';
+            //$this->layout='adminmain';
+        
+      
+                $model=new AtUsers('search');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];
+
+		$this->render('profiledtls',array(
 			'model'=>$model,
 		));
 	}
@@ -170,4 +203,60 @@ class AtUsersController extends Controller
 			Yii::app()->end();
 		}
 	}
+        
+        function gridgeCountChilds($val) {			
+            $sql = "SELECT count(*) as tot from at_users_child where user_id='".$val['id']."' ";
+            $data = Yii::app()->db
+            ->createCommand($sql)
+            ->queryAll();
+
+            if($data[0]['tot']==0){
+                return "<p style='color:red;'> No</p>";
+            }else{
+            return "<p style='color:red; cursor:pointer' title='".$val['id']."' class='totbtn'><b>".$data[0]['tot']."</b>"
+                    ."<a style='cursor:pointer'> View </a>"
+                    ."</p>";
+            }
+           
+        }
+        
+        
+        public function actionGetchilds(){
+        
+            $sql = "SELECT * from at_users_child where user_id='".$_POST['userid']."' order by child_age ";
+            $data = Yii::app()->db
+            ->createCommand($sql)
+            ->queryAll();
+           
+
+                   
+           if(count($data)>0){
+                          
+                $html='<table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                <th>Name</th>
+                <th>Age</th>
+                </tr>
+                </thead>
+                <tbody>';
+               foreach($data as $allchilds){
+                   
+                  $html.="<tr><td>".$allchilds['child_name']."</td>";
+                  $html.="<td>". $allchilds['child_age']."</td></tr>";
+                   
+                   
+               }
+               
+               $html.="</tbody></table>";
+               
+           } 
+           
+           echo $html;
+          
+        } 
+        
+        
+        
+        
 }

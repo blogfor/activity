@@ -36,11 +36,11 @@
     </head>
     <body>
         <div id="page" class="hfeed site">
-            <?php require_once('header.php') ?>
-<?php
-echo $content;
-?>
-            <?php require_once('footer.php') ?>
+            <?php 
+            require_once('header.php');            
+            echo $content;            
+            require_once('footer.php'); 
+            ?>
             </div>
 <!-- #page -->
 

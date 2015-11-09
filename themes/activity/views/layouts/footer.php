@@ -12,7 +12,8 @@
 
 
             <div class="col-sm-4 about-footer">
-                <div class=""><a href="<?php echo Yii::app()->createUrl('/site/index'); ?>"><img src="<?php echo $baseUrl; ?>/images/Logo1.png" alt="Activety"></a></div>
+                <div class=""><a href="<?php echo Yii::app()->createUrl('/site/index'); ?>">
+                        <img src="<?php echo $baseUrl; ?>/images/Logo1.png" alt="Activety"></a></div>
 
                 <p>We are a platform which gives you one-stop
                     access to children enrichment classes,
