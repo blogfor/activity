@@ -21,28 +21,6 @@ $SqlSetting = " SELECT * FROM at_site_settings";
      return $returnValue;
  }
  
- /*
-  * Get Basic Settings
-  */
- 
- public static function get_basic_setting_info() {
-             
-        
-         //Get Course Global settings 
-        
-###------------------------------------------------------####
-$SqlSetting = " SELECT marker FROM peg_basic_settings WHERE active=1";
- $ArraySettingResult = Yii::app()->db->createCommand($SqlSetting)->queryAll();
-###------------------------------------------------------####
- $returnValue=array();
- 
-        foreach ($ArraySettingResult as $asr)
-        {
-            $returnValue[]=$asr['marker'];
-        }
-        
-     return $returnValue;
- }
  
  
  /*
@@ -241,7 +219,7 @@ WHERE a.`status`=1 and pmig.mail_content_id=".$mailContentID." and group_type='M
      
     }//if
     
-    
+ }
 
 
  }

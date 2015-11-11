@@ -124,6 +124,8 @@ class SiteController extends Controller
 	 */
 	public function actionContact()
 	{
+            $siteSettings=  ActivityCommon::get_setting_info();
+            
 		$model=new ContactForm;
 		if(isset($_POST['ContactForm']))
 		{
@@ -137,7 +139,8 @@ class SiteController extends Controller
 					"MIME-Version: 1.0\r\n".
 					"Content-Type: text/plain; charset=UTF-8";
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+				mail($siteSettings['site_email'],$subject,$model->body,$headers);
+                                //mail('ramen488@gmail.com',$subject,$model->body,$headers);
 				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
 				$this->refresh();
 			}

@@ -1,11 +1,11 @@
 <header id="masthead" class="site-header">
-                 
+                 <?php $siteSettings=  ActivityCommon::get_setting_info();?>
         <div class="header_top">
           <div class="container">
              <div class="row">
               <div class="col-sm-6 phone_number">
                 <div class="phone_icon"> <i class="fa fa-phone-square"></i> </div>
-                <h5>1230000236 / 2569874123 </h5>
+                <h5><?php echo $siteSettings['site_phone'];?></h5>
               </div>
               <div class="col-sm-6 log_re">
                 
@@ -109,11 +109,21 @@
                         <label for="exampleInputEmail1">Email</label>
                         <input name="email" id="email"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Email" type="email">
                       </div>   
-                      <div class="form-group">
+                       <div class="form-group">
+                        <label for="exampleInputMobile">Mobile</label>
+                        <input name="mobile" id="mobile"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Mobile" type="phone">
+                      </div> 
+                        
+                        <div class="form-group">
+                        <label for="exampleInputMobile">Password</label>
+                        <input name="mobile" id="mobile"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Mobile" type="phone">
+                      </div> 
+                        <input type="hidden" name="ctype" value="Customer" checked="checked">
+<!--                      <div class="form-group">
                         <label for="exampleInputEmail1">Join as</label>&nbsp;&nbsp;&nbsp;                       
                         <label for="Customer">  <input type="radio" name="ctype" value="Customer" checked="checked"> Customer</label>&nbsp;&nbsp;&nbsp;
                        <label for="Partner">  <input type="radio" name="ctype" value="Partner"> Partner </label>
-                      </div>    
+                      </div>    -->
                         
                       <button type="button" class="btn btn-default payment-buttam" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" onclick="site_registration();">Submit</button>
                     </form>

@@ -8,6 +8,7 @@ $this->pageTitle=Yii::app()->name . ' - Contact Us';
 //	'Contact',
 //);
 ?>
+<?php $siteSettings=  ActivityCommon::get_setting_info();?>
 <div class="container">
     
 <h1>Contact Us</h1>
@@ -96,10 +97,9 @@ If you have business inquiries or other questions, please fill out the following
   <div class="col-lg-5 col-md-push-1">
     <address>
     <h3>Office Location</h3>
-    <p class="lead"><a href="https://www.google.com/maps/preview?ie=UTF-8&q=The+Pentagon&fb=1&gl=us&hq=1400+Defense+Pentagon+Washington,+DC+20301-1400&cid=12647181945379443503&ei=qmYfU4H8LoL2oATa0IHIBg&ved=0CKwBEPwSMAo&safe=on">The Pentagon<br>
-Washington, DC 20301</a><br>
-      Phone: XXX-XXX-XXXX<br>
-      Fax: XXX-XXX-YYYY</p>
+    <p class="lead"><?php echo $siteSettings['site_address'];?><br />
+      Phone: <?php echo $siteSettings['site_phone'];?><br />
+     </p>
     </address>
   </div>
 </div>

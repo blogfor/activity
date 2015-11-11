@@ -78,7 +78,7 @@
                                 <i class="fa fa-envelope-o"></i>
                             </div>
                             <div class="media-body">
-                                <p>hello@activityhere.com</p>
+                                <p><?php echo $siteSettings['site_email'];?></p>
                             </div>
                         </li>
 
@@ -86,10 +86,10 @@
 
                     <div class="socail_icon"> 
                         <ul>
-                            <li><a href="#"> <i class="fa fa-facebook"></i></a> </li>
-                            <li><a href="#"> <i class="fa fa-twitter"></i></a> </li>
-                            <li><a href="#"> <i class="fa fa-google-plus"></i></a> </li>
-                            <li><a href="#"> <i class="fa fa-pinterest-p"></i> </a></li>
+                            <li><a href="<?php echo $siteSettings['site_fb'];?>" target="_blank"> <i class="fa fa-facebook"></i></a> </li>
+                            <li><a href="<?php echo $siteSettings['site_twitter'];?>" target="_blank"> <i class="fa fa-twitter"></i></a> </li>
+                            <li><a href="<?php echo $siteSettings['site_gplus'];?>" target="_blank"> <i class="fa fa-google-plus"></i></a> </li>
+                            
                         </ul>
                     </div>
 
