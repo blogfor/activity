@@ -59,9 +59,9 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Password</label>
-                                        <input name="user_password" id="user_password" style="outline: medium none;" value="" hidefocus="true" class="form-control" id="exampleInputEmail1" placeholder="Password" type="password">
+                                        <input name="user_password" id="user_password" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Password" type="password">
                                     </div>                    
-                                    <button type="button" class="btn btn-default payment-buttam" onclick="script:site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;">Submit</button>
+                                    <input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Login"/>
                                 </form>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                                         <input name="childage4" id="childage4"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[custom[number],maxSize[2]]" placeholder="Child Age(four)" type="text">
                                     </div>
 
-                                    <input type="submit" class="btn btn-default payment-buttam" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" onclick="javascript:return site_registration();" value="Submit"/>
+                                    <input type="submit" class="btn btn-default search_submit" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" onclick="javascript:return site_registration();" value="Submit"/>
                                 </form>
 
                             </div>
@@ -189,22 +189,29 @@
 
     $(document).ready(function() {
         $("#reg-form").validationEngine();
+        $("#login_form").validationEngine();
     });
 
     function site_login()
     {
-        $.ajax({
-            type: "POST",
-            url: "<?php echo Yii::app()->createUrl('site/sitelogin'); ?>",
-            data: {user_name: $("#user_name").val(), user_password: $("#user_password").val()},
-            success: function(msg) {
-                if (msg != "") {
-                    document.location.reload(true);
-                } else {
-                    $(".msg-error").html("Invalid username or password");
+         if ($("#login_form").validationEngine('validate'))
+        {
+    
+            $.ajax({
+                type: "POST",
+                url: "<?php echo Yii::app()->createUrl('site/sitelogin'); ?>",
+                data: {user_name: $("#user_name").val(), user_password: $("#user_password").val()},
+                success: function(msg) {
+                    if (msg != "") {
+                        document.location.reload(true);
+                    } else {
+                        $(".msg-error").html("Invalid username or password");
+                    }
                 }
-            }
-        });
+            });
+
+        }
+        return false;
     }
 
     function site_logout()

@@ -12936,3 +12936,76 @@ Stack trace:
 REQUEST_URI=/activity/site/siteregistration
 in E:\xampp\htdocs\activity\protected\controllers\SiteController.php (215)
 in E:\xampp\htdocs\activity\index.php (14)
+2015/11/13 06:58:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:06:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:11:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activityimages/error-img.png".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activityimages/error-img.png
+HTTP_REFERER=http://localhost/activity/hjgjhjh
+---
+2015/11/13 07:11:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:12:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:14:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---
+2015/11/13 07:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hjgjhjh".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('hjgjhjh')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/hjgjhjh
+---

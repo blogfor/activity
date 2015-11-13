@@ -109,7 +109,7 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-            $this->layout='adminmain';
+              Yii::app()->theme = 'activity';
             if($error=Yii::app()->errorHandler->error)
             {
                     if(Yii::app()->request->isAjaxRequest)
@@ -194,7 +194,7 @@ class SiteController extends Controller
             if(isset($_POST['user_name']) && isset($_POST['user_password'])){
                 
                 $sql_login=" SELECT * FROM at_users u"
-                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".$_POST['user_password']."'  ";
+                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".md5($_POST['user_password'])."'  ";
                 $QueryDataReg = Yii::app()->db->createCommand($sql_login)->queryRow();
               
                 $_SESSION['user_name']=$QueryDataReg['username'];
