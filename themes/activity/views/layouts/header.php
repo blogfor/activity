@@ -116,7 +116,7 @@
                         
                         <div class="form-group">
                         <label for="exampleInputMobile">Password</label>
-                        <input name="mobile" id="mobile"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Mobile" type="phone">
+                        <input name="password" id="password"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Password" type="password">
                       </div> 
                         <input type="hidden" name="ctype" value="Customer" checked="checked">
 <!--                      <div class="form-group">
@@ -125,6 +125,46 @@
                        <label for="Partner">  <input type="radio" name="ctype" value="Partner"> Partner </label>
                       </div>    -->
                         
+                    <div class="form-group">
+                        <label for="exampleInputMobile">Child Name (one) </label>
+                        <input name="childname1" id="childname1"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Name(One)" type="text">
+                      </div> 
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Age (one) </label>
+                        <input name="childage1" id="childage1"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Age(One)" type="text">
+                      </div> 
+
+
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Name (two) </label>
+                        <input name="childname2" id="childname2"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Name(two)" type="text">
+                      </div> 
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Age (two) </label>
+                        <input name="childage2" id="childage2"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Age(two)" type="text">
+                      </div>
+
+
+
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Name (three) </label>
+                        <input name="childname3" id="childname3"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Name(three)" type="text">
+                      </div> 
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Age (three) </label>
+                        <input name="childage3" id="childage3"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Age(three)" type="text">
+                      </div>
+
+
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Name (four) </label>
+                        <input name="childname4" id="childname4"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Name(four)" type="text">
+                      </div> 
+<div class="form-group">
+                        <label for="exampleInputMobile">Child Age (four) </label>
+                        <input name="childage4" id="childage4"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Age(four)" type="text">
+                      </div>
+
                       <button type="button" class="btn btn-default payment-buttam" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" onclick="site_registration();">Submit</button>
                     </form>
                       

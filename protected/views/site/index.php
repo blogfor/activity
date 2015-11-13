@@ -43,7 +43,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
               foreach($resultBANNER as $rBANNER) {
               ?>
               
-                        <section class="item" style="background-image: url(/demo/activity/uploads/<?php echo $rBANNER['banner_image'];?>);">
+                        <section class="item" style="background-image: url('http://blogfordeveloper.com/demo/activity/uploads/<?php echo $rBANNER['banner_image'];?>');">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-sm-6">

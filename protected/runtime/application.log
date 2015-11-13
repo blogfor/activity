@@ -12906,3 +12906,33 @@ Stack trace:
 REQUEST_URI=/activity/themes/activity/themes/activity/images/temp/avatar-1.jpg
 HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
 ---
+2015/11/12 21:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admi".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('admi')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/admi/
+---
+2015/11/12 22:12:34 [error] [php] Undefined index: body (E:\xampp\htdocs\activity\protected\controllers\SiteController.php:277)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/siteregistration
+in E:\xampp\htdocs\activity\protected\controllers\SiteController.php (277)
+in E:\xampp\htdocs\activity\index.php (14)
+2015/11/12 22:13:00 [error] [php] Undefined index: firstname (E:\xampp\htdocs\activity\protected\controllers\SiteController.php:215)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/siteregistration
+in E:\xampp\htdocs\activity\protected\controllers\SiteController.php (215)
+in E:\xampp\htdocs\activity\index.php (14)

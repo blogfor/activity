@@ -124,4 +124,25 @@ class AtMailContent extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
+        /********** Function to Return the All mailing Data *************/
+	function fetchMailContent($id,$isAdmin='1')
+	{
+		$sql = "SELECT a.* FROM at_mail_content a
+				WHERE a.id=".$id;
+			
+		$EmailData = Yii::app()->db->createCommand($sql)->queryAll();		
+		$emailArray = array();		
+		if(!empty($EmailData))
+		{
+			$emailArray['subject'] 	= $EmailData[0]['mail_subject'];
+			$emailArray['body']		= $EmailData[0]['mail_content'];
+			$emailArray['footer']	= $EmailData[0]['mail_footer'];	
+                        $emailArray['notification_on'] 	= $EmailData[0]['notification_on'];
+		
+		}
+		return $emailArray;
+	}	
+	/********** End of function **************************/
 }
