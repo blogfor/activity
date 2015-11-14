@@ -204,6 +204,8 @@ class AtUsersController extends Controller
 		if(isset($_GET['AtUsers']))
 			$model->attributes=$_GET['AtUsers'];    
                    
+               
+            if(isset($_POST) && count($_POST)>3){    
                $firstname=$_POST['firstname'];
             $lastname=$_POST['lastname'];                    
             $email=$_POST['email'];
@@ -259,11 +261,13 @@ class AtUsersController extends Controller
                         $msg .= $mailData['footer'];
                         $emails[]=$email;
                         ActivityCommon::atMailSend($emails,1,$msg,$mailData);
-           
+            Yii::app()->user->setFlash('successMailPartner', 'Please check your email for the activation link.');
            
             }
           
-                Yii::app()->user->setFlash('successMailPartner', 'Please check your email for the activation link.');
+       
+            }
+           
 		$this->render('registrationpartner',array('model'=>$model));
 	}
         

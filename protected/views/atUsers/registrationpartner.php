@@ -38,7 +38,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     <div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
 
-                            <form method="post" name="reg-form-partner" id="reg-form-partner">
+                            <form method="post" name="reg-form-partner" id="reg-form-partner" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">First Name</label>
                                     <input name="firstname" id="firstname" style="outline: medium none;" value=""  class="form-control validate[required]" placeholder="First Name" type="text">
@@ -66,6 +66,19 @@ $baseUrl = Yii::app()->theme->baseUrl;
                                     <textarea name="address1" id="address1"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Address"></textarea>
                                 </div>  
 
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Activities</label>
+                                    <select name="activities" id="activities"  style="outline: medium none;" hidefocus="true" class="form-control validate[required]" multiple="true">
+                                        <?php
+                                        
+                                        $QueryActivity = Yii::app()->db->createCommand('SELECT * FROM at_activity')->queryAll();
+                                        foreach($QueryActivity as $act)
+                                        {
+                                            echo '<option value="'.$act['id'].'">'.$act['activity_name'].'</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div> 
                                 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Logo</label>
