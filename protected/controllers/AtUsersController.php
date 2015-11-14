@@ -164,17 +164,74 @@ class AtUsersController extends Controller
             Yii::app()->theme = 'activity';
             //$this->layout='adminmain';
         
-      
                 $model=new AtUsers('search');
 		$model->unsetAttributes();  // clear any default values
                 
 		if(isset($_GET['AtUsers']))
-			$model->attributes=$_GET['AtUsers'];
-
+			$model->attributes=$_GET['AtUsers'];    
+                   
+                $user_data=AtUsers::model()->findByPk($_SESSION['user_id']);
+                
+                if(!isset($user_data) && count($user_data)==0)
+                    $this->redirect(Yii::app()->createUrl('/site/index'));
+                    
+                
 		$this->render('profiledtls',array(
-			'model'=>$model,
+			'model'=>$model,'user_data'=>$user_data
 		));
 	}
+        
+        public function actionUpdateProfile(){
+            
+                $model=new AtUsers('search');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];    
+                $user_data= Array
+                (
+                    'firstname' => $_POST['firstname'],
+                    'lastname' =>  $_POST['lastname'],
+                    'address1' =>  $_POST['address1'],
+                    'zipcode' =>   $_POST['zipcode'], 
+                    'email' =>     $_POST['email'], 
+                    'office_phone' => $_POST['office_phone'],
+                    'home_phone' => $_POST['home_phone']
+                );
+                 AtUsers::model()->updateByPk($_SESSION['user_id'],$user_data);
+                        
+                
+            $this->redirect(Yii::app()->createUrl('/atUsers/profiledtls'));
+        }
+        
+        public function actionUpdateProfileAccount(){
+            
+                $model=new AtUsers('search');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];    
+               
+                
+                if((isset($_POST['password']) && isset($_POST['password'])) && ($_POST['password']==$_POST['con_password']) && !empty($_POST['con_password']) ){
+                $user_data= Array
+                (
+                    'username' => $_POST['username'],
+                    'password' => md5($_POST['password'])                 
+                );
+                }else{
+                
+                $user_data= Array
+                (
+                    'username' => $_POST['username'],
+                );
+                }
+                
+                 AtUsers::model()->updateByPk($_SESSION['user_id'],$user_data);
+                        
+                
+            $this->redirect(Yii::app()->createUrl('/atUsers/profiledtls'));
+        }
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

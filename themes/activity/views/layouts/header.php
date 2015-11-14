@@ -12,7 +12,7 @@
                     <?php
                     if (isset($_SESSION['user_name'])) {
                     ///USER LOGEDIN
-                        echo '<a class="btn btn-transparent login" href="#" hidefocus="true" style="border:0 !important;" >';
+                        echo '<a class="btn btn-transparent login" href="'.Yii::app()->createUrl('/atUsers/profiledtls').'" hidefocus="true" style="border:0 !important;" >';
                         echo "<span> Hi " . $_SESSION['user_name'] . "</span>";
                         echo '</a>';
                         ?>    

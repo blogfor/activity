@@ -198,6 +198,7 @@ class SiteController extends Controller
                 $QueryDataReg = Yii::app()->db->createCommand($sql_login)->queryRow();
               
                 $_SESSION['user_name']=$QueryDataReg['username'];
+                $_SESSION['user_id']=$QueryDataReg['id'];
                 $_SESSION['user_firstname']=$QueryDataReg['firstname'];
                 
                 echo $_SESSION['user_name'];

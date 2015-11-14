@@ -9228,3 +9228,358 @@ REQUEST_URI=/activity/mrUsers/admin
 HTTP_REFERER=http://localhost/activity/admin/dashboard
 ---
 
+2015/11/13 21:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 22:24:18 [error] [exception.CException] exception 'CException' with message 'Property "AtUsersController.user_data" is not defined.' in C:\xampp\htdocs\activity\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php(4): CComponent->__get('user_data')
+#1 C:\xampp\htdocs\activity\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\activity\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(782): CController->renderPartial('profiledtls', Array, true)
+#5 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(178): CController->render('profiledtls', Array)
+#6 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionProfiledtls()
+#7 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('profiledtls')
+#16 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atUsers/profile...')
+#17 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/activity/atUsers/profiledtls
+HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
+---
+2015/11/13 22:24:20 [error] [exception.CException] exception 'CException' with message 'Property "AtUsersController.user_data" is not defined.' in C:\xampp\htdocs\activity\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php(4): CComponent->__get('user_data')
+#1 C:\xampp\htdocs\activity\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\activity\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(782): CController->renderPartial('profiledtls', Array, true)
+#5 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(178): CController->render('profiledtls', Array)
+#6 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionProfiledtls()
+#7 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('profiledtls')
+#16 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atUsers/profile...')
+#17 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/activity/atUsers/profiledtls
+HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
+---
+2015/11/14 00:25:24 [error] [exception.CDbException] exception 'CDbException' with message 'No columns are being updated for table "at_users".' in C:\xampp\htdocs\activity\framework\db\schema\CDbCommandBuilder.php:395
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(1752): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 C:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(1127): CActiveRecord->updateByPk('1', Array)
+#2 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(204): CActiveRecord->update(Array)
+#3 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('updateprofile')
+#13 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atUsers/updatep...')
+#14 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/activity/atUsers/updateprofile
+HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
+---
+2015/11/14 00:25:27 [error] [exception.CDbException] exception 'CDbException' with message 'No columns are being updated for table "at_users".' in C:\xampp\htdocs\activity\framework\db\schema\CDbCommandBuilder.php:395
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(1752): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 C:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(1127): CActiveRecord->updateByPk('1', Array)
+#2 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(204): CActiveRecord->update(Array)
+#3 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('updateprofile')
+#13 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atUsers/updatep...')
+#14 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/activity/atUsers/updateprofile
+HTTP_REFERER=http://localhost/activity/atUsers/updateprofile
+---
+2015/11/14 00:27:05 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:185) (C:\xampp\htdocs\activity\framework\web\CHttpRequest.php:860)
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(206): AtUsersController->redirect()
+#1 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): AtUsersController->runAction()
+#4 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): AtUsersController->filterAccessControl()
+#7 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#10 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#11 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/updateprofile
+in C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (206)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 00:27:08 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:185) (C:\xampp\htdocs\activity\framework\web\CHttpRequest.php:860)
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(206): AtUsersController->redirect()
+#1 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): AtUsersController->runAction()
+#4 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): AtUsersController->filterAccessControl()
+#7 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#10 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#11 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/updateprofile
+in C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (206)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 00:27:20 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:185) (C:\xampp\htdocs\activity\framework\web\CHttpRequest.php:860)
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(206): AtUsersController->redirect()
+#1 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): AtUsersController->runAction()
+#4 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): AtUsersController->filterAccessControl()
+#7 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#10 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#11 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/updateprofile
+in C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (206)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 00:27:22 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:185) (C:\xampp\htdocs\activity\framework\web\CHttpRequest.php:860)
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(206): AtUsersController->redirect()
+#1 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): AtUsersController->runAction()
+#4 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): AtUsersController->filterAccessControl()
+#7 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#10 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#11 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/updateprofile
+in C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (206)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 00:29:31 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:187) (C:\xampp\htdocs\activity\framework\web\CHttpRequest.php:860)
+Stack trace:
+#0 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(207): AtUsersController->redirect()
+#1 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionUpdateProfile()
+#2 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): AtUsersController->runAction()
+#4 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): AtUsersController->filterAccessControl()
+#7 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#10 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#11 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/updateprofile
+in C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (207)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 00:43:38 [error] [exception.CException] exception 'CException' with message 'Property "AtUsers.user_name" is not defined.' in C:\xampp\htdocs\activity\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(145): CComponent->__get('user_name')
+#1 C:\xampp\htdocs\activity\framework\base\CModel.php(596): CActiveRecord->__get('user_name')
+#2 C:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php(118): CModel->offsetGet('user_name')
+#3 C:\xampp\htdocs\activity\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\activity\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\activity\framework\web\CController.php(782): CController->renderPartial('profiledtls', Array, true)
+#7 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(181): CController->render('profiledtls', Array)
+#8 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionProfiledtls()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('profiledtls')
+#18 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atUsers/profile...')
+#19 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/activity/atUsers/profiledtls
+HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
+---
+2015/11/14 00:43:41 [error] [exception.CException] exception 'CException' with message 'Property "AtUsers.user_name" is not defined.' in C:\xampp\htdocs\activity\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(145): CComponent->__get('user_name')
+#1 C:\xampp\htdocs\activity\framework\base\CModel.php(596): CActiveRecord->__get('user_name')
+#2 C:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php(118): CModel->offsetGet('user_name')
+#3 C:\xampp\htdocs\activity\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\activity\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\activity\framework\web\CController.php(782): CController->renderPartial('profiledtls', Array, true)
+#7 C:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(181): CController->render('profiledtls', Array)
+#8 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionProfiledtls()
+#9 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('profiledtls')
+#18 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atUsers/profile...')
+#19 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/activity/atUsers/profiledtls
+HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
+---
+2015/11/14 01:45:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dg".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('dg')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('dg')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dg')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/dg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 01:45:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dg".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('dg')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('dg')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dg')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/dg
+HTTP_REFERER=http://localhost/activity/site/dg
+---
+2015/11/14 01:49:52 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\activity\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('AtUsers/delete')
+#10 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/activity/AtUsers/delete/7?returnUrl=%2Factivity%2FatUsers%2Fadmin
+HTTP_REFERER=http://localhost/activity/atUsers/admin
+---
+2015/11/14 01:49:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\activity\framework\web\CController.php:1118
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\activity\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\activity\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\activity\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\activity\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\activity\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('AtUsers/delete')
+#10 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/activity/AtUsers/delete/7?returnUrl=%2Factivity%2FatUsers%2Fadmin
+HTTP_REFERER=http://localhost/activity/AtUsers/delete/7?returnUrl=%2Factivity%2FatUsers%2Fadmin
+---
