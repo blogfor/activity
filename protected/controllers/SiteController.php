@@ -45,43 +45,10 @@ class SiteController extends Controller
 	}
 	
         
-	public function actionDashboard()
-	{           
-            $this->layout='adminmain';             
-           
-            // today classes =============================
-            $resultp=array();	
-            $queryp = " select * from mr_class c "               
-                    . " LEFT JOIN mr_course co ON co.id=c.course_id"
-                    . " where SYSDATE() BETWEEN start_date AND end_date order by start_date";
-            $resultp = Yii::app()->db->createCommand($queryp)->queryAll();
-            
-            //today registrations =========================
-            $query_reg = "select * from mr_course_registration where DATE(creat_date)=CURRENT_DATE()";
-            $result_reg = Yii::app()->db->createCommand($query_reg)->queryAll();
-            
-            //Total students ==============================
-            $query_student= "select * from mr_students";
-            $result_std = Yii::app()->db->createCommand($query_student)->queryAll();
-            
-            //Total courses ==============================
-            $query_course= "select * from mr_course where status='Y'";
-            $result_course = Yii::app()->db->createCommand($query_course)->queryAll();
-                     
-            $this->render('dashboard',array('model'=>$resultp,'tot_reg'=>$result_reg,'students'=>$result_std,'course'=>$result_course));
-	}
+	
         
         
-        public function actionDashboardsearch()
-	{      
-            $this->layout='adminmain'; 
-            $model=array();
-            
-               if(isset($_POST['dashboard_search'])){
-                  $model=$this->global_students_search($_POST['dashboard_search']); 
-               }               
-            $this->render('dashboard_search',array('model'=>$model));	
-        }
+      
         
         public function search_registration($student_id)
 	{   
@@ -95,13 +62,7 @@ class SiteController extends Controller
             }
         }
         
-        public function search_payments($reg_id)
-	{ 
-            $sql_registrations=" SELECT sum(amount) as tot_amt FROM mr_course_registration_payment r"
-                                . " WHERE r.registration_id='".$reg_id."'  ";
-            $QueryDataReg = Yii::app()->db->createCommand($sql_registrations)->queryAll();
-            return $QueryDataReg[0];
-        }
+       
         
         
 	/**
@@ -285,6 +246,45 @@ class SiteController extends Controller
                         ActivityCommon::atMailSend($emails,1,$msg,$mailData);
            
             echo "email_send";
+            
+            Yii:app()->end();
+        }
+        
+        
+        public function actionSiteforgot()
+        {
+                              
+            $email=$_POST['email'];
+            $password=(rand(56,8956).str_shuffle('ACTIVITY'));
+           
+            
+            $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
+                        . " WHERE u.email='".$email."' ";
+            $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_email)->queryRow();
+            
+            if((int)$QueryEmailDuplicate['tot_email']>0){
+                
+                  $MailContent = new AtMailContent;
+                        $mailData = $MailContent->fetchMailContent(2);
+                       
+                         $mailData['body'] = str_replace("[EMAIL]", $email, $mailData['body']);
+                          $mailData['body'] = str_replace("[PASSWORD]", $password, $mailData['body']);
+                        $msg = $mailData['body'];
+                       
+                        $msg .= $mailData['footer'];
+                        $emails[]=$email;
+                        ActivityCommon::atMailSend($emails,2,$msg,$mailData);
+                        
+                Yii::app()->db->createCommand("UPDATE at_users SET password='".$password."'")->execute();
+                echo "email_send";
+                return;
+            } else {
+                 echo "email_not_send";
+                return;
+            }
+                       
+            
+           
             
             Yii:app()->end();
         }

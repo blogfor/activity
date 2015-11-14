@@ -40,7 +40,7 @@
     <div id="mylogin" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content" id="lognform">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
                     <h4 class="modal-title">Login</h4>
@@ -54,14 +54,15 @@
                                 <form name="login_form" id="login_form" method="post">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">User Name</label>
-                                        <input name="user_name" id="user_name" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="User Name" type="text">
+                                        <input name="user_name" id="user_name" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[email]]" id="exampleInputEmail1" placeholder="User Name" type="text">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Password</label>
                                         <input name="user_password" id="user_password" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Password" type="password">
                                     </div>                    
-                                    <input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Login"/>
+                                    <input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Login"/> &nbsp;
+                                    <a href="javascript:forgotPassword();">Forgot Password</a>
                                 </form>
                             </div>
                         </div>
@@ -71,6 +72,39 @@
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                               </div>-->
             </div>
+            
+            
+            
+            <div class="modal-content" id="forgotpassword" style="display: none;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+                    <h4 class="modal-title">Forgot Password</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row msg-error" style="color:red; padding-bottom: 10px; text-align: center;"></div>
+                    <div class="panel panel-default">
+                        <div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <form name="forgot-form" id="forgot-form" method="post">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input name="forgotemail" id="forgotemail" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[email]]" id="exampleInputEmail1" placeholder="Email" type="text">
+                                    </div>
+
+                                                     
+                                    <input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_forgot();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>-->
+            </div>
+            
+            
         </div>
     </div>
 
@@ -186,11 +220,43 @@
 <!--/ Header -->
 
 <script type="text/javascript">
-
+function forgotPassword()
+{
+    $('#lognform').hide('slow');
+    $('#forgotpassword').show('slow');
+    
+}
     $(document).ready(function() {
         $("#reg-form").validationEngine();
         $("#login_form").validationEngine();
     });
+
+
+function site_forgot()
+{
+    if ($("#forgot-form").validationEngine('validate'))
+        {
+    
+            $.ajax({
+                type: "POST",
+                url: "<?php echo Yii::app()->createUrl('site/siteforgot'); ?>",
+                data: {forgotemail: $("#forgotemail").val()},
+                success: function(msg) {
+                    if (msg == "email_not_send") {
+                        alert('Please check your email. Email does not exist in our database');
+                        $("#forgotemail").val('');
+                        $("#forgotemail").focus();
+                    } else {
+                        alert('Please check your email. New password has been send.');
+                         $('#lognform').slow('slow');
+                    $('#forgotpassword').hide('slow');
+                    }
+                }
+            });
+
+        }
+        return false;
+}
 
     function site_login()
     {

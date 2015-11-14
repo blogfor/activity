@@ -2,15 +2,15 @@
 /* @var $this AtMailContentController */
 /* @var $model AtMailContent */
 
-$this->breadcrumbs=array(
-	'At Mail Contents'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List AtMailContent', 'url'=>array('index')),
-	array('label'=>'Create AtMailContent', 'url'=>array('create')),
-);
+//$this->breadcrumbs=array(
+//	'At Mail Contents'=>array('index'),
+//	'Manage',
+//);
+//
+//$this->menu=array(
+//	array('label'=>'List AtMailContent', 'url'=>array('index')),
+//	array('label'=>'Create AtMailContent', 'url'=>array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -25,42 +25,79 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Manage Mail Contents</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
 
-<h1>Manage At Mail Contents</h1>
+<div class="row">
+    <div id="statusMsg">
+<?php if(Yii::app()->user->hasFlash('successMail')):?>
+    <div class="alert alert-success">
+        <?php echo Yii::app()->user->getFlash('successMail'); ?>
+    </div>
+<?php endif; ?>
+<?php if(Yii::app()->user->hasFlash('errorMail')):?>
+    <div class="errorMessage">
+        <?php echo Yii::app()->user->getFlash('errorMail'); ?>
+    </div>
+<?php endif; ?>
+</div>
+    
+   
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+    <div class="col-lg-12">
+        <?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
+        <div class="search-form" style="display:none">
+            <?php
+            $this->renderPartial('_search', array(
+                'model' => $model,
+            ));
+            ?>
+        </div><!-- search-form -->
+        <div class="panel-body">
+            <div class="dataTable_wrapper">
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+                <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'at-mail-content-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	 'itemsCssClass' => 'table table-striped table-bordered table-hover',
 	'columns'=>array(
 		'id',
 		'module_name',
 		'mail_subject',
 		'mail_content',
-		'cdate',
+//		'cdate',
 		'mail_footer',
-		/*
-		'mail_exclude',
-		'mail_include',
-		'instant',
-		'include_external_emails',
-		'notification_on',
-		'send_admin',
-		*/
 		array(
-			'class'=>'CButtonColumn',
-		),
+					'class'=>'CButtonColumn',
+					'template'=>'{Edit}',
+					'buttons'=>array
+					(
+							
+							'Edit' => array
+							(
+								'label'=>'Update',
+								'imageUrl'=>Yii::app()->request->baseUrl.'/themes/admin/img/icons/update.png',							
+								'url'=>'Yii::app()->createUrl("atMailContent/update/".$data[\'id\'])',
+							),
+							
+                        
+                        
+					),
+            
+					
+				),
 	),
 )); ?>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

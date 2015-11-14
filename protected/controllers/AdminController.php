@@ -39,7 +39,7 @@ class AdminController extends Controller
             
             if(isset($_POST) && isset($_POST['userlogin']))
             {
-                if($_POST['userlogin']==trim('admin') && $_POST['userpassword']==trim('admin'))
+                if($_POST['userlogin']==trim('admin') && $_POST['userpassword']==md5(trim('admin')))
                 {                   
                     $_SESSION['superUser']=1;
                     $this->redirect(array('dashboard'));
