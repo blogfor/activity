@@ -101,7 +101,11 @@ class AtMailContentController extends Controller
 		{
 			$model->attributes=$_POST['AtMailContent'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			{
+                             Yii::app()->user->setFlash('successMail', 'Content has been created.');
+                            $this->redirect(array('admin'));
+                            
+                        }
 		}
 
 		$this->render('update',array(
