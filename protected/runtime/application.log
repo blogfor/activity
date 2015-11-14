@@ -12906,3 +12906,786 @@ Stack trace:
 REQUEST_URI=/activity/themes/activity/themes/activity/images/temp/avatar-1.jpg
 HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
 ---
+2015/11/10 08:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/10 08:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/10 08:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/10 08:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:46:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:55:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:55:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:57:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:59:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:59:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 06:59:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 07:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 07:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 07:06:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/11 07:06:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 08:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:05:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "localhost/activity/uploads/2802-DFD_Level_1.PNG".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('localhost/activ...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/localhost/activity/uploads/2802-DFD_Level_1.PNG
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/12 09:31:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/8116-How1.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/8116-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/8116-How1.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/1682-How2.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/1682-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/1682-How2.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/6715-How4.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/6715-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/6715-How4.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/13 21:31:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/3872-How3.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/3872-Ho...')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/3872-How3.png
+HTTP_REFERER=http://localhost/activity/
+---
