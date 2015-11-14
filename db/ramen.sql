@@ -2,16 +2,15 @@
 -- Host:                         127.0.0.1
 -- Server version:               5.5.8 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
--- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-11-13 19:49:05
+-- HeidiSQL Version:             9.3.0.4984
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping structure for table activity.at_activity
-DROP TABLE IF EXISTS `at_activity`;
 CREATE TABLE IF NOT EXISTS `at_activity` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `activity_name` varchar(255) DEFAULT NULL,
@@ -31,7 +30,6 @@ INSERT INTO `at_activity` (`id`, `activity_name`, `activity_description`, `activ
 
 
 -- Dumping structure for table activity.at_banner
-DROP TABLE IF EXISTS `at_banner`;
 CREATE TABLE IF NOT EXISTS `at_banner` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `banner_title` varchar(255) DEFAULT NULL,
@@ -53,7 +51,6 @@ INSERT INTO `at_banner` (`id`, `banner_title`, `banner_image`, `banner_descripti
 
 
 -- Dumping structure for table activity.at_daily_logs
-DROP TABLE IF EXISTS `at_daily_logs`;
 CREATE TABLE IF NOT EXISTS `at_daily_logs` (
   `user_id` int(11) NOT NULL DEFAULT '0',
   `platform` text,
@@ -72,7 +69,6 @@ CREATE TABLE IF NOT EXISTS `at_daily_logs` (
 
 
 -- Dumping structure for table activity.at_how_it_works
-DROP TABLE IF EXISTS `at_how_it_works`;
 CREATE TABLE IF NOT EXISTS `at_how_it_works` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `hwt_name` varchar(255) DEFAULT NULL,
@@ -95,7 +91,6 @@ INSERT INTO `at_how_it_works` (`id`, `hwt_name`, `hwt_description`, `hwt_image`,
 
 
 -- Dumping structure for table activity.at_kids_activities
-DROP TABLE IF EXISTS `at_kids_activities`;
 CREATE TABLE IF NOT EXISTS `at_kids_activities` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `kids_name` varchar(255) DEFAULT NULL,
@@ -112,7 +107,6 @@ CREATE TABLE IF NOT EXISTS `at_kids_activities` (
 
 
 -- Dumping structure for table activity.at_mail_content
-DROP TABLE IF EXISTS `at_mail_content`;
 CREATE TABLE IF NOT EXISTS `at_mail_content` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `module_name` varchar(255) NOT NULL,
@@ -127,17 +121,18 @@ CREATE TABLE IF NOT EXISTS `at_mail_content` (
   `notification_on` enum('Yes','No') NOT NULL,
   `send_admin` enum('Yes','No') NOT NULL DEFAULT 'Yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table activity.at_mail_content: ~1 rows (approximately)
+-- Dumping data for table activity.at_mail_content: ~2 rows (approximately)
 /*!40000 ALTER TABLE `at_mail_content` DISABLE KEYS */;
 INSERT INTO `at_mail_content` (`id`, `module_name`, `mail_subject`, `mail_content`, `cdate`, `mail_footer`, `mail_exclude`, `mail_include`, `instant`, `include_external_emails`, `notification_on`, `send_admin`) VALUES
-	(1, 'Activation Link ( Activity)!!', 'Activation Link ( Activity)', 'Please click the following link to activate your account.\r\nLink : [LINK]\r\nUser Name : [EMAIL]\r\nPassword :[PASSWORD]\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', '', '', 'Y', '', 'Yes', 'Yes');
+	(1, 'Activation Link ( Activity)!!', 'Activation Link ( Activity)', 'Please click the following link to activate your account.\r\nLink : [LINK]\r\nUser Name : [EMAIL]\r\nPassword :[PASSWORD]\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', '', '', 'Y', '', 'Yes', 'Yes'),
+	(2, 'Forgot Password ( Activity)!!', 'Forgot Password ( Activity)', 'Here is your new password . Please change it after login .\r\nUser Name : [EMAIL]\r\nPassword :[PASSWORD]\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', NULL, NULL, 'Y', NULL, 'Yes', 'Yes'),
+	(3, 'Partner Inquiry Form ( Activity)!!', 'Partner Inquiry Form  ( Activity)', 'Here is one partner interested to join.\r\nCompany Name:[COMPANY]\r\nWebsite/facebook:[WEBSITE]\r\nName:[NAME]\r\nEmail :[EMAIL]\r\nPhone:[PHONE]\r\nComments:[COMMENTS]\r\n\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', NULL, NULL, 'Y', NULL, 'Yes', 'Yes');
 /*!40000 ALTER TABLE `at_mail_content` ENABLE KEYS */;
 
 
 -- Dumping structure for table activity.at_pages
-DROP TABLE IF EXISTS `at_pages`;
 CREATE TABLE IF NOT EXISTS `at_pages` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `page_name` varchar(255) DEFAULT NULL,
@@ -158,7 +153,6 @@ INSERT INTO `at_pages` (`id`, `page_name`, `page_slug`, `page_description`, `cre
 
 
 -- Dumping structure for table activity.at_payment
-DROP TABLE IF EXISTS `at_payment`;
 CREATE TABLE IF NOT EXISTS `at_payment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cdate` datetime NOT NULL,
@@ -193,7 +187,6 @@ CREATE TABLE IF NOT EXISTS `at_payment` (
 
 
 -- Dumping structure for table activity.at_site_settings
-DROP TABLE IF EXISTS `at_site_settings`;
 CREATE TABLE IF NOT EXISTS `at_site_settings` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `site_address` text,
@@ -216,7 +209,6 @@ INSERT INTO `at_site_settings` (`id`, `site_address`, `site_phone`, `site_email`
 
 
 -- Dumping structure for table activity.at_users
-DROP TABLE IF EXISTS `at_users`;
 CREATE TABLE IF NOT EXISTS `at_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `username` varchar(256) NOT NULL COMMENT 'User Name',
@@ -240,19 +232,17 @@ CREATE TABLE IF NOT EXISTS `at_users` (
   `modifiedby` int(11) NOT NULL DEFAULT '0' COMMENT 'Modified By',
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
--- Dumping data for table activity.at_users: ~3 rows (approximately)
+-- Dumping data for table activity.at_users: ~2 rows (approximately)
 /*!40000 ALTER TABLE `at_users` DISABLE KEYS */;
 INSERT INTO `at_users` (`id`, `username`, `password`, `email`, `profilepic`, `firstname`, `lastname`, `address1`, `sex`, `user_type`, `office_phone`, `home_phone`, `zipcode`, `create_at`, `lastvisit_at`, `superuser`, `status`, `verification`, `createdby`, `modifiedby`) VALUES
-	(1, 'admin', 'admin', 'admin@gmail.com', '', '', '', 'Kolkata', 'M', 'Customer', '', '', 712233, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, NULL, 0, 0),
-	(6, 'ramen488@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'ramen488@gmail.com', '', 'Ramen', 'Dey', '', 'M', 'Customer', '', '88888888', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, 'UmFtZW4kcmFtZW40ODhAZ21haWwuY29t', 0, 0),
-	(7, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '', '', '', 'M', 'Customer', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'JA==', 0, 0);
+	(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', '', '', '', 'Kolkata', 'M', 'Customer', '', '', 712233, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, NULL, 0, 0),
+	(6, 'ramen488@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'ramen488@gmail.com', '', 'Ramen', 'Dey', '', 'M', 'Customer', '', '88888888', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, 'UmFtZW4kcmFtZW40ODhAZ21haWwuY29t', 0, 0);
 /*!40000 ALTER TABLE `at_users` ENABLE KEYS */;
 
 
 -- Dumping structure for table activity.at_users_child
-DROP TABLE IF EXISTS `at_users_child`;
 CREATE TABLE IF NOT EXISTS `at_users_child` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `user_id` int(11) NOT NULL DEFAULT '0' COMMENT 'ID',
@@ -267,5 +257,6 @@ CREATE TABLE IF NOT EXISTS `at_users_child` (
 -- Dumping data for table activity.at_users_child: ~0 rows (approximately)
 /*!40000 ALTER TABLE `at_users_child` DISABLE KEYS */;
 /*!40000 ALTER TABLE `at_users_child` ENABLE KEYS */;
-/*!40014 SET FOREIGN_KEY_CHECKS=1 */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

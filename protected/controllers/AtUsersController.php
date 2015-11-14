@@ -159,6 +159,41 @@ class AtUsersController extends Controller
 		));
 	}
         
+        public function actionPartnerregistration()
+	{
+            Yii::app()->theme = 'activity';
+            //$this->layout='adminmain';
+        
+                $model=new AtUsers('search');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];    
+                   
+                if(isset($_POST) && isset($_POST['companyname']))
+                {
+                            $MailContent = new AtMailContent;
+                            $mailData = $MailContent->fetchMailContent(3);
+                        $mailData['body'] = str_replace("[COMPANY]", $_POST['companyname'], $mailData['body']);
+                         $mailData['body'] = str_replace("[WEBSITE]", $_POST['website'], $mailData['body']);
+                        $mailData['body'] = str_replace("[[NAME]]", $_POST['name'], $mailData['body']);
+                         $mailData['body'] = str_replace("[EMAIL]", $_POST['email'], $mailData['body']);
+                          $mailData['body'] = str_replace("[[PHONE]]", $_POST['mobile'], $mailData['body']);
+                         $mailData['body'] = str_replace("[[COMMENTS]]", $_POST['comments'], $mailData['body']);
+                        $msg = $mailData['body'];
+                       
+                        $msg .= $mailData['footer'];
+                        $emails[]='partner@activityhere.com';
+                        ActivityCommon::atMailSend($emails,3,$msg,$mailData);
+                        
+                        Yii::app()->user->setFlash('successMail', 'Thank you for showing your interest. We will get back to you as soon as possible.');
+                }
+                
+		$this->render('partnerregistration',array('model'=>$model));
+	}
+        
+        
+        
         public function actionProfiledtls()
 	{
             Yii::app()->theme = 'activity';
