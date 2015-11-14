@@ -193,6 +193,80 @@ class AtUsersController extends Controller
 	}
         
         
+        public function actionRegistrationpartner()
+	{
+            Yii::app()->theme = 'activity';
+            //$this->layout='adminmain';
+        
+                $model=new AtUsers('search');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];    
+                   
+               $firstname=$_POST['firstname'];
+            $lastname=$_POST['lastname'];                    
+            $email=$_POST['email'];
+            $ctype=$_POST['ctype'];
+             $mobile=$_POST['mobile'];
+            $password=$_POST['password'];
+             //$childname1=$_POST['childname1'];
+             //$childage1=$_POST['childage1'];
+            
+            $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
+                        . " WHERE u.email='".$email."' ";
+            $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_email)->queryRow();
+            
+            if((int)$QueryEmailDuplicate['tot_email']>0){
+              
+                 Yii::app()->user->setFlash('errorMailPartner', 'Email already in use. Please use different email.');
+            }
+            else{
+                       
+            
+            $sql=" INSERT INTO `at_users` (
+            `firstname` ,
+            `lastname` ,
+            `email` ,
+            `user_type`,
+            `home_phone`,
+            `password`,
+            `username`,
+            `verification`
+            )
+            VALUES (
+            '$firstname',  '$lastname',  '$email','$ctype','".$mobile."','".md5($password)."','".$email."','".base64_encode($firstname."$".$email)."' )";          
+
+            Yii::app()->db->createCommand($sql)->execute();
+            $insertid=Yii::app()->db->getLastInsertID();
+            
+            
+            
+            
+            //EMAIL=============================================================
+                              
+            
+            $activation_link=Yii::app()->getBaseUrl(true).'/site/activateuser'."/?u=".  base64_encode($firstname."$".$email);
+            
+            
+            $MailContent = new AtMailContent;
+                        $mailData = $MailContent->fetchMailContent(1);
+                        $mailData['body'] = str_replace("[LINK]", $activation_link, $mailData['body']);
+                         $mailData['body'] = str_replace("[EMAIL]", $email, $mailData['body']);
+                          $mailData['body'] = str_replace("[PASSWORD]", $password, $mailData['body']);
+                        $msg = $mailData['body'];
+                       
+                        $msg .= $mailData['footer'];
+                        $emails[]=$email;
+                        ActivityCommon::atMailSend($emails,1,$msg,$mailData);
+           
+           
+            }
+          
+                Yii::app()->user->setFlash('successMailPartner', 'Please check your email for the activation link.');
+		$this->render('registrationpartner',array('model'=>$model));
+	}
+        
         
         public function actionProfiledtls()
 	{
