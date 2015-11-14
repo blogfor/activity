@@ -3,7 +3,7 @@
 -- Server version:               5.5.8 - MySQL Community Server (GPL)
 -- Server OS:                    Win32
 -- HeidiSQL version:             7.0.0.4053
--- Date/time:                    2015-11-04 22:51:10
+-- Date/time:                    2015-11-13 19:49:05
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -127,10 +127,12 @@ CREATE TABLE IF NOT EXISTS `at_mail_content` (
   `notification_on` enum('Yes','No') NOT NULL,
   `send_admin` enum('Yes','No') NOT NULL DEFAULT 'Yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table activity.at_mail_content: ~0 rows (approximately)
+-- Dumping data for table activity.at_mail_content: ~1 rows (approximately)
 /*!40000 ALTER TABLE `at_mail_content` DISABLE KEYS */;
+INSERT INTO `at_mail_content` (`id`, `module_name`, `mail_subject`, `mail_content`, `cdate`, `mail_footer`, `mail_exclude`, `mail_include`, `instant`, `include_external_emails`, `notification_on`, `send_admin`) VALUES
+	(1, 'Activation Link ( Activity)!!', 'Activation Link ( Activity)', 'Please click the following link to activate your account.\r\nLink : [LINK]\r\nUser Name : [EMAIL]\r\nPassword :[PASSWORD]\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', '', '', 'Y', '', 'Yes', 'Yes');
 /*!40000 ALTER TABLE `at_mail_content` ENABLE KEYS */;
 
 
@@ -209,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `at_site_settings` (
 -- Dumping data for table activity.at_site_settings: ~1 rows (approximately)
 /*!40000 ALTER TABLE `at_site_settings` DISABLE KEYS */;
 INSERT INTO `at_site_settings` (`id`, `site_address`, `site_phone`, `site_email`, `site_fb`, `site_gplus`, `site_twitter`, `site_paypal_business_email`, `site_paypal_secrect`, `site_paypal_authid`) VALUES
-	(1, 'Test address', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+	(1, 'Test address', 'gd', 'hello@activityhere.com', 'dgg', 'dgg', 'dg', 'hello@activityhere.com', 'dgdg', 'dg');
 /*!40000 ALTER TABLE `at_site_settings` ENABLE KEYS */;
 
 
@@ -232,18 +234,20 @@ CREATE TABLE IF NOT EXISTS `at_users` (
   `create_at` datetime NOT NULL COMMENT 'Create At',
   `lastvisit_at` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Last Visit At',
   `superuser` int(1) NOT NULL DEFAULT '0' COMMENT 'Super User',
-  `status` int(1) NOT NULL DEFAULT '0' COMMENT 'Status',
+  `status` int(1) NOT NULL DEFAULT '0' COMMENT 'Status - 1 - Active , 2- In-Active, 0-Verification Required',
+  `verification` mediumtext,
   `createdby` int(11) NOT NULL DEFAULT '0' COMMENT 'Created By',
   `modifiedby` int(11) NOT NULL DEFAULT '0' COMMENT 'Modified By',
   PRIMARY KEY (`id`),
-  KEY `id` (`id`),
-  KEY `status` (`status`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
--- Dumping data for table activity.at_users: ~1 rows (approximately)
+-- Dumping data for table activity.at_users: ~3 rows (approximately)
 /*!40000 ALTER TABLE `at_users` DISABLE KEYS */;
-INSERT INTO `at_users` (`id`, `username`, `password`, `email`, `profilepic`, `firstname`, `lastname`, `address1`, `sex`, `user_type`, `office_phone`, `home_phone`, `zipcode`, `create_at`, `lastvisit_at`, `superuser`, `status`, `createdby`, `modifiedby`) VALUES
-	(1, 'admin', 'admin', 'admin@gmail.com', '', '', '', 'Kolkata', 'M', 'Customer', '', '', 712233, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, 0);
+INSERT INTO `at_users` (`id`, `username`, `password`, `email`, `profilepic`, `firstname`, `lastname`, `address1`, `sex`, `user_type`, `office_phone`, `home_phone`, `zipcode`, `create_at`, `lastvisit_at`, `superuser`, `status`, `verification`, `createdby`, `modifiedby`) VALUES
+	(1, 'admin', 'admin', 'admin@gmail.com', '', '', '', 'Kolkata', 'M', 'Customer', '', '', 712233, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, NULL, 0, 0),
+	(6, 'ramen488@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'ramen488@gmail.com', '', 'Ramen', 'Dey', '', 'M', 'Customer', '', '88888888', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 1, 'UmFtZW4kcmFtZW40ODhAZ21haWwuY29t', 0, 0),
+	(7, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '', '', '', 'M', 'Customer', '', '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'JA==', 0, 0);
 /*!40000 ALTER TABLE `at_users` ENABLE KEYS */;
 
 
@@ -258,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `at_users_child` (
   `modified` datetime DEFAULT NULL COMMENT 'ID',
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table activity.at_users_child: ~0 rows (approximately)
 /*!40000 ALTER TABLE `at_users_child` DISABLE KEYS */;

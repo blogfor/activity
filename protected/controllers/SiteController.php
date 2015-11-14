@@ -109,7 +109,7 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-            $this->layout='adminmain';
+              Yii::app()->theme = 'activity';
             if($error=Yii::app()->errorHandler->error)
             {
                     if(Yii::app()->request->isAjaxRequest)
@@ -194,7 +194,7 @@ class SiteController extends Controller
             if(isset($_POST['user_name']) && isset($_POST['user_password'])){
                 
                 $sql_login=" SELECT * FROM at_users u"
-                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".$_POST['user_password']."'  ";
+                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".md5($_POST['user_password'])."'  ";
                 $QueryDataReg = Yii::app()->db->createCommand($sql_login)->queryRow();
               
                 $_SESSION['user_name']=$QueryDataReg['username'];
@@ -216,6 +216,10 @@ class SiteController extends Controller
             $lastname=$_POST['lastname'];                    
             $email=$_POST['email'];
             $ctype=$_POST['ctype'];
+             $mobile=$_POST['mobile'];
+            $password=$_POST['password'];
+             //$childname1=$_POST['childname1'];
+             //$childage1=$_POST['childage1'];
             
             $sql_email=" SELECT count(u.email) as tot_email FROM at_users u"
                         . " WHERE u.email='".$email."' ";
@@ -231,31 +235,57 @@ class SiteController extends Controller
             `firstname` ,
             `lastname` ,
             `email` ,
-            `user_type`
+            `user_type`,
+            `home_phone`,
+            `password`,
+            `username`,
+            `verification`
             )
             VALUES (
-            '$firstname',  '$lastname',  '$email','$ctype' )";          
+            '$firstname',  '$lastname',  '$email','$ctype','".$mobile."','".md5($password)."','".$email."','".base64_encode($firstname."$".$email)."' )";          
 
             Yii::app()->db->createCommand($sql)->execute();
-            echo "email_send";
+            $insertid=Yii::app()->db->getLastInsertID();
+            
+            for($i=1;$i<=4;$i++)
+            {
+                if($_POST['childname'.$i]!='')
+                {
+                     $sql="INSERT INTO `at_users_child` (
+            `user_id` ,
+            `child_name` ,
+            `child_age` ,
+            `added`,
+            `modified`
+            )
+            VALUES (
+            '".$insertid."',  '".$_POST['childname'.$i]."',  '".$_POST['childage'.$i]."',NOW(),NOW())";          
+
+            Yii::app()->db->createCommand($sql)->execute();
+                }
+            }
+            
+            
             //EMAIL=============================================================
-            $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
-            $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
-            $headers="From: $firstname <{$email}>\r\n".
-                    "Reply-To: {$email}\r\n".
-                    "MIME-Version: 1.0\r\n".
-                    "Content-Type: text/plain; charset=UTF-8";
-                    
+                              
             
-            $activation_link=Yii::app()->createUrl('/site/activateuser')."/?u=".  base64_encode($firstname."$".$email);
-            $mail_body="Hi ".$firstname."<br>";
-            $mail_body.="<br>Please click on activation link to activate your link.<br>";
-            $mail_body.="<br>Activation Link:".$activation_link;
+            $activation_link=Yii::app()->getBaseUrl(true).'/site/activateuser'."/?u=".  base64_encode($firstname."$".$email);
             
-            //mail($email,$subject,$mail_body,$headers);
+            
+            $MailContent = new AtMailContent;
+                        $mailData = $MailContent->fetchMailContent(1);
+                        $mailData['body'] = str_replace("[LINK]", $activation_link, $mailData['body']);
+                         $mailData['body'] = str_replace("[EMAIL]", $email, $mailData['body']);
+                          $mailData['body'] = str_replace("[PASSWORD]", $password, $mailData['body']);
+                        $msg = $mailData['body'];
+                       
+                        $msg .= $mailData['footer'];
+                        $emails[]=$email;
+                        ActivityCommon::atMailSend($emails,1,$msg,$mailData);
            
+            echo "email_send";
             
-            
+            Yii:app()->end();
         }
         
         public function actionActivateuser()
@@ -267,32 +297,14 @@ class SiteController extends Controller
             
             if((int)$QueryEmailDuplicate['tot_email']==1){
                 
-                $username=$data[1];
-                $password=$this->random_password();
-                $firstname=$data[0];
-                $email=$data[1];
                 
-                $sql_user=" UPDATE at_users u set username='".$username."', password='".$password."'"
+                
+                $sql_user=" UPDATE at_users u set status='1'"
                          ." WHERE u.email='".$data[1]."' and u.firstname='".$data[0]."'  ";
                 
-                $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_user)->queryRow();
-            
-                //EMAIL=============================================================
-                $name='=?UTF-8?B?'.base64_encode($firstname).'?=';
-                $subject='=?UTF-8?B?'.base64_encode("Registration Activation ").'?=';
-                $headers="From: $firstname <{$email}>\r\n".
-                        "Reply-To: {$email}\r\n".
-                        "MIME-Version: 1.0\r\n".
-                        "Content-Type: text/plain; charset=UTF-8";
-
-
-                $activation_link=Yii::app()->createUrl('/site/activateuser')."/?u=".  base64_encode($firstname."$".$email);
-                $mail_body="Hi ".$firstname."<br>";
-                $mail_body.="<br>Your login account details is below.<br>";
-                $mail_body.="<br>User Name:".$username;
-                $mail_body.="<br>Password:".$password;
-
-                //mail($email,$subject,$mail_body,$headers);
+                $QueryEmailDuplicate = Yii::app()->db->createCommand($sql_user)->execute();
+                    $this->redirect(array('site/index'));
+                
                                 
             }
             
