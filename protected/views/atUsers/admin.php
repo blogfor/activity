@@ -49,6 +49,29 @@ $('.search-form form').submit(function(){
   </div>
 </div>
 
+
+<div id="emailModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Send Email</h4>
+      </div>
+        <form method="POST" name="emailform"  id="emailform" action="<?php echo Yii::app()->createUrl('atUsers/emailformsubmit'); ?>" >
+        <div class="modal-body popup-child-list">
+
+        </div>
+        </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <script>
 
     $( document ).ready(function() {
@@ -72,6 +95,31 @@ $('.search-form form').submit(function(){
         });
     });
 </script>
+
+<script>
+
+    $( document ).ready(function() {
+        $(".send_email").on('click',function(){
+           var userid=$(this).attr('title');
+           
+            $.ajax({
+            type: "POST",
+            url: "<?php echo Yii::app()->createUrl('atUsers/emailform'); ?>",
+            data:{userid:userid, usertype:'user' },
+            success: function(msg) {    
+               
+                $(".popup-child-list").html(msg);
+               // $("#childModalbtn").click();
+                 $('#emailModal').modal('show');
+            }
+            });
+
+           
+           
+        });
+    });
+</script>
+    
     
 
 
@@ -131,7 +179,7 @@ $('.search-form form').submit(function(){
 		'lastname',
                 'email',
                 array('name'=>'Child','value' =>array($this,'gridgeCountChilds'),'type'=>'html'),
-            
+        array('name'=>'Send Email','value' =>array($this,'gridgeSendEmail'),'type'=>'html'),    
 //            array('name'=>'created','value'=>'getDateTimeFormat($data[\'created\'])','type'=>'html'),
 //            array('name'=>'modified','value'=>'getDateTimeFormat($data[\'modified\'])','type'=>'html'),
 //		

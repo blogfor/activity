@@ -27,20 +27,21 @@ $('.search-form form').submit(function(){
 ?>
 
 
-<button id="#childModalbtn" data-toggle="modal" data-target="#childModal" style="display: none;"> View</button>
 <!--CHILD DETAILS MODAL-->
-<div id="childModal" class="modal fade" role="dialog">
+<div id="emailModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Childs</h4>
+        <h4 class="modal-title">Send Email</h4>
       </div>
-      <div class="modal-body popup-child-list">
-        
-      </div>
+        <form method="POST" name="emailform"  id="emailform" action="<?php echo Yii::app()->createUrl('atUsers/emailformsubmit'); ?>" >
+        <div class="modal-body popup-child-list">
+
+        </div>
+        </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
@@ -49,21 +50,24 @@ $('.search-form form').submit(function(){
   </div>
 </div>
 
+
+
+
 <script>
 
     $( document ).ready(function() {
-        $(".totbtn").on('click',function(){
+        $(".send_email").on('click',function(){
            var userid=$(this).attr('title');
            
             $.ajax({
             type: "POST",
-            url: "<?php echo Yii::app()->createUrl('atUsers/getchilds'); ?>",
-            data:{userid:userid },
+            url: "<?php echo Yii::app()->createUrl('atUsers/emailform'); ?>",
+            data:{userid:userid, usertype:'partner' },
             success: function(msg) {    
                
                 $(".popup-child-list").html(msg);
                // $("#childModalbtn").click();
-                 $('#childModal').modal('show');
+                 $('#emailModal').modal('show');
             }
             });
 
@@ -101,6 +105,13 @@ $('.search-form form').submit(function(){
     </div>
     
     
+     <?php if(Yii::app()->user->hasFlash('successMailPartner')):?>
+    <div class="alert alert-success">
+            <?php echo Yii::app()->user->getFlash('successMailPartner'); ?>
+    </div>
+    <?php endif; ?>
+    
+    
     
     
     <div class="col-lg-2" style="float: right;">
@@ -130,7 +141,7 @@ $('.search-form form').submit(function(){
 		'firstname',
 		'lastname',
                 'email',
-                array('name'=>'Child','value' =>array($this,'gridgeCountChilds'),'type'=>'html'),
+                array('name'=>'Send Email','value' =>array($this,'gridgeSendEmail'),'type'=>'html'),
             
 //            array('name'=>'created','value'=>'getDateTimeFormat($data[\'created\'])','type'=>'html'),
 //            array('name'=>'modified','value'=>'getDateTimeFormat($data[\'modified\'])','type'=>'html'),
