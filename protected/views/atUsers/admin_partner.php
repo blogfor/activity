@@ -27,29 +27,7 @@ $('.search-form form').submit(function(){
 ?>
 
 
-<button id="#childModalbtn" data-toggle="modal" data-target="#childModal" style="display: none;"> View</button>
 <!--CHILD DETAILS MODAL-->
-<div id="childModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Childs</h4>
-      </div>
-      <div class="modal-body popup-child-list">
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
 <div id="emailModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -72,29 +50,8 @@ $('.search-form form').submit(function(){
   </div>
 </div>
 
-<script>
 
-    $( document ).ready(function() {
-        $(".totbtn").on('click',function(){
-           var userid=$(this).attr('title');
-           
-            $.ajax({
-            type: "POST",
-            url: "<?php echo Yii::app()->createUrl('atUsers/getchilds'); ?>",
-            data:{userid:userid },
-            success: function(msg) {    
-               
-                $(".popup-child-list").html(msg);
-               // $("#childModalbtn").click();
-                 $('#childModal').modal('show');
-            }
-            });
 
-           
-           
-        });
-    });
-</script>
 
 <script>
 
@@ -105,7 +62,7 @@ $('.search-form form').submit(function(){
             $.ajax({
             type: "POST",
             url: "<?php echo Yii::app()->createUrl('atUsers/emailform'); ?>",
-            data:{userid:userid, usertype:'user' },
+            data:{userid:userid, usertype:'partner' },
             success: function(msg) {    
                
                 $(".popup-child-list").html(msg);
@@ -120,13 +77,12 @@ $('.search-form form').submit(function(){
     });
 </script>
     
-    
 
 
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Manage Users</h1>
+        <h1 class="page-header">Manage Partners</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -147,6 +103,13 @@ $('.search-form form').submit(function(){
     </div>
     <?php endif; ?>
     </div>
+    
+    
+     <?php if(Yii::app()->user->hasFlash('successMailPartner')):?>
+    <div class="alert alert-success">
+            <?php echo Yii::app()->user->getFlash('successMailPartner'); ?>
+    </div>
+    <?php endif; ?>
     
     
     
@@ -170,7 +133,7 @@ $('.search-form form').submit(function(){
                 
         <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'at-users-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model->search_partner(),
         'itemsCssClass' => 'table table-striped table-bordered table-hover',    
 	/*'filter'=>$model,*/
         'columns'=>array(
@@ -178,8 +141,8 @@ $('.search-form form').submit(function(){
 		'firstname',
 		'lastname',
                 'email',
-                array('name'=>'Child','value' =>array($this,'gridgeCountChilds'),'type'=>'html'),
-        array('name'=>'Send Email','value' =>array($this,'gridgeSendEmail'),'type'=>'html'),    
+                array('name'=>'Send Email','value' =>array($this,'gridgeSendEmail'),'type'=>'html'),
+            
 //            array('name'=>'created','value'=>'getDateTimeFormat($data[\'created\'])','type'=>'html'),
 //            array('name'=>'modified','value'=>'getDateTimeFormat($data[\'modified\'])','type'=>'html'),
 //		

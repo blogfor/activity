@@ -27,6 +27,7 @@ class ActivityCommon extends CApplicationComponent {
         //Include external emails
         $includeExtMails = Yii::app()->db->createCommand("SELECT * FROM at_mail_content WHERE id=" . $mailContentID)->queryRow();
         //var_dump($includeExtMails); 
+        
         if ($includeExtMails['notification_on'] == 'Yes') {
 
             //var_dump($emails,$mailContentID,$CompleteMsg,$mailData); 
@@ -96,7 +97,7 @@ class ActivityCommon extends CApplicationComponent {
                         "Content-Type: text/plain; charset=UTF-8";
 
 
-                mail($email,$mailData['subject'],$CompleteMsg,$headers);
+                @mail($email,$mailData['subject'],$CompleteMsg,$headers);
                     }
                     
                 }

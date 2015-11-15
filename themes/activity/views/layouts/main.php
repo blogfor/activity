@@ -27,33 +27,32 @@
     
     <!-------- masanary css ---------------->
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/main.css" /> 
-        
+    <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/main.css" />         
     <script src="<?php echo $baseUrl; ?>/js/libs/jquery-1.11.0.min.js"></script>
     <!-- Modernizr Library -->
-    <script src="<?php echo $baseUrl; ?>/js/libs/modernizr.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/validationEngine.jquery.css" />
     <script src="<?php echo $baseUrl; ?>/js/jquery.validationEngine.js"></script>
     <script src="<?php echo $baseUrl; ?>/js/languages/jquery.validationEngine-en.js"></script>
     
     </head>
     <body>
+        
         <div id="page" class="hfeed site">
             <?php 
             require_once('header.php');            
             echo $content;            
             require_once('footer.php'); 
             ?>
-            </div>
+        </div>
 <!-- #page -->
-
 <!-- JS Placed at the end of the document for faster page loading -->
-
 <!-- Libs -->
 
 <!--<script src="<?php echo $baseUrl; ?>/js/libs/jquery-ui-1.10.4.min.js"></script>-->
 <script src="<?php echo $baseUrl; ?>/js/libs/bootstrap.min.js"></script>
 <!--[if lt IE 9]><script src="<?php echo $baseUrl; ?>/js/libs/respond.min.js"></script><![endif]-->
+
 
 <!-- Responsive Menu, Animated Dropdown -->
 <script src="<?php echo $baseUrl; ?>/js/jquery.slicknav.min.js"></script>

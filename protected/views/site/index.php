@@ -1,12 +1,6 @@
 <?php
 $baseUrl = Yii::app()->theme->baseUrl;
 ?>
-<!--<script src="<?php echo $baseUrl;?>/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php echo $baseUrl;?>/js/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
-
-<link rel="stylesheet" href="<?php echo $baseUrl;?>/css/validationEngine.jquery.css" type="text/css"/>-->
-
-
 
     <!-- Header -->
     
@@ -36,54 +30,45 @@ $baseUrl = Yii::app()->theme->baseUrl;
                    
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                                   
-                       
                         
-                        <?php 
-                        
-                     
-              foreach($resultBANNER as $rBANNER) {
-
-              ?>
-              
-                        <section class="item" style="background-image: url('http://blogfordeveloper.com/demo/activity/uploads/<?php echo $rBANNER['banner_image'];?>');">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft"><?php echo $rBANNER['banner_title'];?></h1>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight"><?php echo $rBANNER['banner_description'];?><span class="angle"></span></div>
-              <?php if($rBANNER['banner_link']!=''){ ?><a href="<?php echo $rBANNER['banner_link'];?>" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>more about me</span></a><?php }?>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-              
-              
-              
-             <?php 
-              }
-              ?>
-                         
-                        
-                    </div>
                     <!-- Carousel indicators -->
                     <ol class="carousel-indicators" data-animate-in="fadeInUp" data-animate-out="fadeOutDown">
-                        <?php 
-                        
-              foreach($resultBANNER as $rBANNER) {
-              ?>
-                   <li data-target="#main-slider" data-slide-to="<?php echo $rBANNER['id'];?>"></li>
-                         <?php 
-              }
-              ?>
-                        
+                        <?php  foreach($resultBANNER as $rBANNER): ?>
+                        <li data-target="#main-slider" data-slide-to="<?php echo $rBANNER['id'];?>"></li>
+                        <?php endforeach;  ?>
+
                     </ol>
                     <!-- Carousel nav -->
                     <a class="carousel-control left" href="#main-slider" data-slide="prev">&lsaquo;</a>
                     <a class="carousel-control right" href="#main-slider" data-slide="next">&rsaquo;</a>
+                        
+                        
+                    <?php  foreach($resultBANNER as $rBANNER): ?>               
+                      <!-- Item -->
+                        <section class="active item" style="background-image: url('<?php echo Yii::app()->getBaseUrl(true);?>/uploads/<?php echo $rBANNER['banner_image'];?>');">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft">
+                                         <?php echo $rBANNER['banner_title'];?>
+                                        </h1>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight">
+                                            <?php echo $rBANNER['banner_description'];?><span class="angle"></span>
+                                        </div>
+                                            
+                                            <?php if($rBANNER['banner_link']!=''): ?>
+                                            <a href="<?php echo $rBANNER['banner_link'];?>" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>more about me</span></a>
+                                            <?php   endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--/ Item -->                                       
+                       <?php endforeach;  ?>
+                        
+                    </div>
                     
                   
                     
@@ -309,3 +294,10 @@ $baseUrl = Yii::app()->theme->baseUrl;
         
     </div>
     <!--/ Main -->
+    
+    
+<script>      
+$(function(){
+  $('#main-slider').carousel();
+});
+</script>

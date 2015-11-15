@@ -159,6 +159,24 @@ class AtUsersController extends Controller
 		));
 	}
         
+        public function actionPartner()
+	{
+            Yii::app()->theme = 'admin';
+            $this->layout='adminmain';
+        
+      
+                $model=new AtUsers('search_partner');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];
+                
+                
+		$this->render('admin_partner',array(
+			'model'=>$model,
+		));
+	}
+        
         public function actionPartnerregistration()
 	{
             Yii::app()->theme = 'activity';
@@ -254,8 +272,8 @@ class AtUsersController extends Controller
             $MailContent = new AtMailContent;
                         $mailData = $MailContent->fetchMailContent(1);
                         $mailData['body'] = str_replace("[LINK]", $activation_link, $mailData['body']);
-                         $mailData['body'] = str_replace("[EMAIL]", $email, $mailData['body']);
-                          $mailData['body'] = str_replace("[PASSWORD]", $password, $mailData['body']);
+                        $mailData['body'] = str_replace("[EMAIL]", $email, $mailData['body']);
+                        $mailData['body'] = str_replace("[PASSWORD]", $password, $mailData['body']);
                         $msg = $mailData['body'];
                        
                         $msg .= $mailData['footer'];
@@ -390,6 +408,53 @@ class AtUsersController extends Controller
            
         }
         
+        function gridgeSendEmail($val) {			
+            $sql_model = AtUsers::model()->findByPk($val['id']);
+            
+            if(empty($sql_model['email'])){
+                return "<p style='color:red;'> Not Yet</p>";
+            }else{
+            return "<p style='color:red; cursor:pointer' title='".$val['id']."' class='send_email'><b>".$data[0]['tot']."</b>"
+                    ."<a style='cursor:pointer'> Send Email </a>"
+                    ."</p>";
+            }
+            
+           
+        }
+        
+        public function actionEmailFormSubmit() {
+            Yii::app()->theme = 'activity';
+            
+            $MailContent = new AtMailContent;
+                        $mailData = $MailContent->fetchMailContent(2);
+                        $mailData['body'] = str_replace("[MESSAGE]", $_POST['messagebody'], $mailData['body']);                     
+                        $msg = $mailData['body'];                       
+                        $msg .= $mailData['footer'];
+                        $emails[]=$_POST['email'];                     
+                        //print_r($mailData);
+                        ActivityCommon::atMailSend($emails,2,$msg,$mailData);
+                   
+            Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to '.$_POST['email']);
+            
+            if($_POST['usertype']=="partner")
+            $this->redirect(Yii::app()->createUrl('/atUsers/partner'));
+            else 
+            $this->redirect(Yii::app()->createUrl('/atUsers/admin'));    
+        }
+        
+        public function actionEmailForm(){
+            
+            $sql_model = AtUsers::model()->findByPk($_POST['userid']);
+           
+            $str="To : ".$sql_model['email'];  
+           // $str.='<br><br><input type="text" name="messagesub" placeholder="Subject" style="width:80%"  >';
+            $str.='<br><br><textarea name="messagebody" id="messagebody" style="width:100%; height:150px;" placeholder="Message Text" ></textarea>';
+            $str.='<br><br><input type="submit" name="messagesubmit" class="btn btn-primary"  >';
+            $str.='<input type="hidden" name="email" value="'.$sql_model['email'].'">';
+            $str.='<input type="hidden" name="usertype" value="'.$_POST['usertype'].'">';
+            echo $str;
+            
+        }
         
         public function actionGetchilds(){
         
@@ -410,6 +475,8 @@ class AtUsersController extends Controller
                 </tr>
                 </thead>
                 <tbody>';
+                
+                
                foreach($data as $allchilds){
                    
                   $html.="<tr><td>".$allchilds['child_name']."</td>";

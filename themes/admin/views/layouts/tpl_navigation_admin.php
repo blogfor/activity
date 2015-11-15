@@ -54,6 +54,13 @@
 
             </li>
             
+            <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Partners', array('atUsers/partner'), array('class' => '')); ?>
+
+            </li>
+            
+            
+            
 <!--            <li>
                 <?php echo CHtml::link('<i class="fa fa-list"></i> Site Contacts', array('mcContactus/admin'), array('class' => '')); ?>
 
