@@ -9600,3 +9600,455 @@ Stack trace:
 REQUEST_URI=/activity/atHowItWorks/update/1
 HTTP_REFERER=http://localhost/activity/atMailContent/admin
 ---
+2015/11/14 02:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-3.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-2.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-4.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-4.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-3.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-2.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:16:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:17:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:18:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:18:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+---
+2015/11/14 02:19:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/images/temp/slide-1.jpg
+---
+2015/11/14 02:20:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 02:21:00 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\activity\protected\views\site\index.php:61)
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\activity\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\activity\protected\controllers\SiteController.php(44): SiteController->render()
+#3 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/index
+in C:\xampp\htdocs\activity\protected\views\site\index.php (61)
+in C:\xampp\htdocs\activity\protected\controllers\SiteController.php (44)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 02:21:06 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\activity\protected\views\site\index.php:61)
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\activity\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\activity\protected\controllers\SiteController.php(44): SiteController->render()
+#3 C:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\activity\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\activity\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/site/index
+in C:\xampp\htdocs\activity\protected\views\site\index.php (61)
+in C:\xampp\htdocs\activity\protected\controllers\SiteController.php (44)
+in C:\xampp\htdocs\activity\index.php (14)
+2015/11/14 02:22:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/tem...')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/images/temp/slide-1.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/14 03:05:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:23:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:25:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:25:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:27:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:27:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:43:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 03:43:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 04:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 04:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 04:29:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 04:29:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:21:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:21:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:23:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:23:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
+2015/11/14 07:25:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/work.png".' in C:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('images/work.png')
+#1 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/images/work.png
+HTTP_REFERER=http://localhost/activity/
+---
