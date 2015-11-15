@@ -27,8 +27,7 @@
     
     <!-------- masanary css ---------------->
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/main.css" /> 
-        
+    <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/main.css" />         
     <script src="<?php echo $baseUrl; ?>/js/libs/jquery-1.11.0.min.js"></script>
     <!-- Modernizr Library -->
     
@@ -38,17 +37,16 @@
     
     </head>
     <body>
+        
         <div id="page" class="hfeed site">
             <?php 
             require_once('header.php');            
             echo $content;            
             require_once('footer.php'); 
             ?>
-            </div>
+        </div>
 <!-- #page -->
-
 <!-- JS Placed at the end of the document for faster page loading -->
-
 <!-- Libs -->
 
 <!--<script src="<?php echo $baseUrl; ?>/js/libs/jquery-ui-1.10.4.min.js"></script>-->

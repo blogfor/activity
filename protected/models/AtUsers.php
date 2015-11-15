@@ -130,6 +130,38 @@ class AtUsers extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        
+        public function search_partner()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('firstname',$this->firstname,true);
+		$criteria->compare('lastname',$this->lastname,true);
+		$criteria->compare('address1',$this->address1,true);
+		$criteria->compare('sex',$this->sex,true);
+		$criteria->compare('office_phone',$this->office_phone,true);
+		$criteria->compare('home_phone',$this->home_phone,true);
+		$criteria->compare('zipcode',$this->zipcode);
+		$criteria->compare('create_at',$this->create_at,true);
+		$criteria->compare('lastvisit_at',$this->lastvisit_at,true);
+		$criteria->compare('superuser',$this->superuser);
+		$criteria->compare('status',$this->status);
+		$criteria->compare('createdby',$this->createdby);
+		$criteria->compare('modifiedby',$this->modifiedby);
+                
+                $criteria->compare('user_type','Partner');
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.

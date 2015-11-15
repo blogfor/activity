@@ -159,6 +159,24 @@ class AtUsersController extends Controller
 		));
 	}
         
+        public function actionPartner()
+	{
+            Yii::app()->theme = 'admin';
+            $this->layout='adminmain';
+        
+      
+                $model=new AtUsers('search_partner');
+		$model->unsetAttributes();  // clear any default values
+                
+		if(isset($_GET['AtUsers']))
+			$model->attributes=$_GET['AtUsers'];
+                
+                
+		$this->render('admin_partner',array(
+			'model'=>$model,
+		));
+	}
+        
         public function actionPartnerregistration()
 	{
             Yii::app()->theme = 'activity';
