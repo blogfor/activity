@@ -39,7 +39,7 @@ class AdminController extends Controller
             
             if(isset($_POST) && isset($_POST['userlogin']))
             {
-                if($_POST['userlogin']==trim('admin') && $_POST['userpassword']==md5(trim('admin')))
+                if($_POST['userlogin']==trim('admin') && $_POST['userpassword']==(trim('admin')))
                 {                   
                     $_SESSION['superUser']=1;
                     $this->redirect(array('dashboard'));
@@ -66,12 +66,14 @@ class AdminController extends Controller
             $result_reg = 0;
             
            
-            $result_std =0;
-            
+            $result_cust =0;
+            //Total students ==============================
+            $query_student= "select COUNT(*) AS CNT from at_users WHERE user_type='Customer'";
+            $result_cust = Yii::app()->db->createCommand($query_student)->queryRow();
             
             $result_course = 0;
                      
-            $this->render('dashboard',array('model'=>$resultp,'tot_reg'=>$result_reg,'students'=>$result_std,'course'=>$result_course));
+            $this->render('dashboard',array('model'=>$resultp,'tot_reg'=>$result_reg,'customer'=>$result_cust['CNT'],'course'=>$result_course));
 	}
         
         
