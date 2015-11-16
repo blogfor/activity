@@ -414,7 +414,7 @@ class AtUsersController extends Controller
             if(empty($sql_model['email'])){
                 return "<p style='color:red;'> Not Yet</p>";
             }else{
-            return "<p style='color:red; cursor:pointer' title='".$val['id']."' class='send_email'><b>".$data[0]['tot']."</b>"
+            return "<p style='color:red; cursor:pointer' title='".$val['id']."' class='send_email'>"
                     ."<a style='cursor:pointer'> Send Email </a>"
                     ."</p>";
             }
