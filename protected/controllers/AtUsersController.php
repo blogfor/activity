@@ -426,13 +426,13 @@ class AtUsersController extends Controller
             Yii::app()->theme = 'activity';
             
             $MailContent = new AtMailContent;
-                        $mailData = $MailContent->fetchMailContent(4);
+                        $mailData = $MailContent->fetchMailContent(5);
                         $mailData['body'] = str_replace("[MESSAGE]", $_POST['messagebody'], $mailData['body']);                     
                         $msg = $mailData['body'];                       
                         $msg .= $mailData['footer'];
                         $emails[]=$_POST['email'];                     
                         //print_r($mailData);
-                        ActivityCommon::atMailSend($emails,4,$msg,$mailData);
+                        ActivityCommon::atMailSend($emails,5,$msg,$mailData);
                    
             Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to '.$_POST['email']);
             
