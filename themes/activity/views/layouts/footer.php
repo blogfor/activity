@@ -2,7 +2,7 @@
     <div class="footer-paralux">
         <h4> Join our Monthly Membership </h4>
         <h3> Take any class at your free time flexibly for whole month </h3>
-        <a class="btn btn-black btn-small btn-transparent" href="#" hidefocus="true" style="outline: medium none;">
+        <a class="btn btn-black btn-small btn-transparent" href="<?php echo Yii::app()->createUrl('/atUsers/registrationpartner'); ?>" hidefocus="true" style="outline: medium none;">
             <span>Sing up now</span>
         </a>
     </div>

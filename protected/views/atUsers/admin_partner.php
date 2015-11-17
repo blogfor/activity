@@ -2,15 +2,15 @@
 /* @var $this AtUsersController */
 /* @var $model AtUsers */
 
-$this->breadcrumbs=array(
-	'At Users'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List AtUsers', 'url'=>array('index')),
-	array('label'=>'Create AtUsers', 'url'=>array('create')),
-);
+//$this->breadcrumbs=array(
+//	'At Users'=>array('index'),
+//	'Manage',
+//);
+//
+//$this->menu=array(
+//	array('label'=>'List AtUsers', 'url'=>array('index')),
+//	array('label'=>'Create AtUsers', 'url'=>array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -148,7 +148,7 @@ $('.search-form form').submit(function(){
 //		
 		array(
                         'class'=>'CButtonColumn',
-                        'template'=>'{Edit}{Delete}',
+                        'template'=>'{Edit}',
                         'buttons'=>array
                         (
                             'Edit' => array
@@ -157,14 +157,7 @@ $('.search-form form').submit(function(){
                                     'imageUrl'=>Yii::app()->request->baseUrl.'/themes/admin/img/icons/update.png',							
                                     'url'=>'Yii::app()->createUrl("AtUsers/update/".$data[\'id\'])',
                             ),
-                            'Delete' => array
-                            (
-                                    'label'=>'Delete',
-                                    'imageUrl'=>Yii::app()->request->baseUrl.'/themes/admin/img/icons/delete.png',
-                                    'url'=>'Yii::app()->createUrl("AtUsers/delete/", array("id"=>$data[\'id\'],"returnUrl"=>Yii::app()->request->url))',
-                                    'click'=>'function(){if(confirm("Are you sure you want to delete this page?")) { return true;} else { return false;} }',
-                            ),
-
+                            
                         ),
 
                         'afterDelete'=>'$("#statusMsg").html(data);',

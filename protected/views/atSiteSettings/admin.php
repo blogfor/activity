@@ -61,6 +61,7 @@ $('.search-form form').submit(function(){
 		'site_address',
 		'site_phone',
 		'site_email',
+                'site_email_from',
 		'site_fb',
 		'site_gplus',
 		

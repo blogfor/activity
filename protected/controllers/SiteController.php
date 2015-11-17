@@ -39,10 +39,13 @@ class SiteController extends Controller
             $queryBANNER = "SELECT * FROM at_banner ORDER BY id";
             $resultBANNER = Yii::app()->db->createCommand($queryBANNER)->queryAll();
             
+             $queryACTIVITY = "SELECT * FROM at_activity ORDER BY id";
+            $resultACTIVITY = Yii::app()->db->createCommand($queryACTIVITY)->queryAll();
+            
 
                         
             Yii::app()->theme = 'activity';           
-	    $this->render('index',array('resultHIW'=>$resultHIW,'resultKA'=>$resultKA,'resultBANNER'=>$resultBANNER));
+	    $this->render('index',array('resultHIW'=>$resultHIW,'resultKA'=>$resultKA,'resultBANNER'=>$resultBANNER,'resultACTIVITY'=>$resultACTIVITY));
 	}
 	
         

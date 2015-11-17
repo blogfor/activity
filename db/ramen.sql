@@ -29,6 +29,26 @@ INSERT INTO `at_activity` (`id`, `activity_name`, `activity_description`, `activ
 /*!40000 ALTER TABLE `at_activity` ENABLE KEYS */;
 
 
+-- Dumping structure for table activity.at_authvalue
+CREATE TABLE IF NOT EXISTS `at_authvalue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(80) NOT NULL,
+  `value` float(11,2) NOT NULL,
+  `membership_desc` text NOT NULL,
+  `number_of_reg` int(3) NOT NULL,
+  `is_active` enum('Y','N') NOT NULL DEFAULT 'Y',
+  `membership_duration` int(5) DEFAULT NULL COMMENT 'Monthly',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+-- Dumping data for table activity.at_authvalue: ~2 rows (approximately)
+/*!40000 ALTER TABLE `at_authvalue` DISABLE KEYS */;
+INSERT INTO `at_authvalue` (`id`, `name`, `value`, `membership_desc`, `number_of_reg`, `is_active`, `membership_duration`) VALUES
+	(1, 'Free', 0.00, 'Free membership', 0, 'Y', 1),
+	(2, 'Paid', 0.00, 'Free membership', 0, 'Y', 1);
+/*!40000 ALTER TABLE `at_authvalue` ENABLE KEYS */;
+
+
 -- Dumping structure for table activity.at_banner
 CREATE TABLE IF NOT EXISTS `at_banner` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -121,15 +141,35 @@ CREATE TABLE IF NOT EXISTS `at_mail_content` (
   `notification_on` enum('Yes','No') NOT NULL,
   `send_admin` enum('Yes','No') NOT NULL DEFAULT 'Yes',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table activity.at_mail_content: ~2 rows (approximately)
+-- Dumping data for table activity.at_mail_content: ~4 rows (approximately)
 /*!40000 ALTER TABLE `at_mail_content` DISABLE KEYS */;
 INSERT INTO `at_mail_content` (`id`, `module_name`, `mail_subject`, `mail_content`, `cdate`, `mail_footer`, `mail_exclude`, `mail_include`, `instant`, `include_external_emails`, `notification_on`, `send_admin`) VALUES
 	(1, 'Activation Link ( Activity)!!', 'Activation Link ( Activity)', 'Please click the following link to activate your account.\r\nLink : [LINK]\r\nUser Name : [EMAIL]\r\nPassword :[PASSWORD]\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', '', '', 'Y', '', 'Yes', 'Yes'),
 	(2, 'Forgot Password ( Activity)!!', 'Forgot Password ( Activity)', 'Here is your new password . Please change it after login .\r\nUser Name : [EMAIL]\r\nPassword :[PASSWORD]\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', NULL, NULL, 'Y', NULL, 'Yes', 'Yes'),
-	(3, 'Partner Inquiry Form ( Activity)!!', 'Partner Inquiry Form  ( Activity)', 'Here is one partner interested to join.\r\nCompany Name:[COMPANY]\r\nWebsite/facebook:[WEBSITE]\r\nName:[NAME]\r\nEmail :[EMAIL]\r\nPhone:[PHONE]\r\nComments:[COMMENTS]\r\n\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', NULL, NULL, 'Y', NULL, 'Yes', 'Yes');
+	(3, 'Partner Inquiry Form ( Activity)!!', 'Partner Inquiry Form  ( Activity)', 'Here is one partner interested to join.\r\nCompany Name:[COMPANY]\r\nWebsite/facebook:[WEBSITE]\r\nName:[NAME]\r\nEmail :[EMAIL]\r\nPhone:[PHONE]\r\nComments:[COMMENTS]\r\n\r\n', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', NULL, NULL, 'Y', NULL, 'Yes', 'Yes'),
+	(4, 'Partner Registered ( Activity)!!', 'Partner Registered ( Activity)!!', 'A new partner has been registerd . Please login in Administration Area for review and active.', '2015-11-11 23:34:56', 'Thanks very much and keep up the great work', NULL, NULL, 'Y', NULL, 'Yes', 'Yes');
 /*!40000 ALTER TABLE `at_mail_content` ENABLE KEYS */;
+
+
+-- Dumping structure for table activity.at_membership_info
+CREATE TABLE IF NOT EXISTS `at_membership_info` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `payment_c_date` datetime NOT NULL,
+  `todate` datetime NOT NULL,
+  `fromdate` datetime NOT NULL,
+  `membership_title` varchar(100) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `membership_note` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `fromdate` (`fromdate`,`todate`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+-- Dumping data for table activity.at_membership_info: ~0 rows (approximately)
+/*!40000 ALTER TABLE `at_membership_info` DISABLE KEYS */;
+/*!40000 ALTER TABLE `at_membership_info` ENABLE KEYS */;
 
 
 -- Dumping structure for table activity.at_pages
@@ -150,6 +190,29 @@ INSERT INTO `at_pages` (`id`, `page_name`, `page_slug`, `page_description`, `cre
 	(2, 'About Us', 'about_us', '<p><strong>Lorem Ipsum is simply dummy text of the printing </strong>and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and<strong> scrambled it to make a type </strong>specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', '2015-11-02 17:38:04', '2015-11-02 09:51:29'),
 	(4, 'page name', 'page_name', '<p>dvzv</p>\r\n', '2015-11-02 17:46:53', '2015-11-02 17:46:53');
 /*!40000 ALTER TABLE `at_pages` ENABLE KEYS */;
+
+
+-- Dumping structure for table activity.at_partner_activity
+CREATE TABLE IF NOT EXISTS `at_partner_activity` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `activity_type_id` int(11) NOT NULL DEFAULT '0',
+  `age_range` varchar(50) NOT NULL DEFAULT '0',
+  `activity_date` date DEFAULT NULL,
+  `activity_time` varchar(50) NOT NULL DEFAULT '0',
+  `is_paid` enum('Y','N') NOT NULL DEFAULT 'N',
+  `price` float NOT NULL DEFAULT '0',
+  `address` float NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL COMMENT 'Create At',
+  `createdby` int(11) NOT NULL DEFAULT '0' COMMENT 'Created By',
+  `modifiedby` int(11) NOT NULL DEFAULT '0' COMMENT 'Modified By',
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- Dumping data for table activity.at_partner_activity: ~0 rows (approximately)
+/*!40000 ALTER TABLE `at_partner_activity` DISABLE KEYS */;
+/*!40000 ALTER TABLE `at_partner_activity` ENABLE KEYS */;
 
 
 -- Dumping structure for table activity.at_payment
@@ -192,6 +255,7 @@ CREATE TABLE IF NOT EXISTS `at_site_settings` (
   `site_address` text,
   `site_phone` varchar(15) DEFAULT NULL,
   `site_email` varchar(255) DEFAULT NULL,
+  `site_email_from` varchar(255) DEFAULT NULL,
   `site_fb` varchar(255) DEFAULT NULL,
   `site_gplus` varchar(255) DEFAULT NULL,
   `site_twitter` varchar(255) DEFAULT NULL,
@@ -203,8 +267,8 @@ CREATE TABLE IF NOT EXISTS `at_site_settings` (
 
 -- Dumping data for table activity.at_site_settings: ~1 rows (approximately)
 /*!40000 ALTER TABLE `at_site_settings` DISABLE KEYS */;
-INSERT INTO `at_site_settings` (`id`, `site_address`, `site_phone`, `site_email`, `site_fb`, `site_gplus`, `site_twitter`, `site_paypal_business_email`, `site_paypal_secrect`, `site_paypal_authid`) VALUES
-	(1, 'Test address', 'gd', 'hello@activityhere.com', 'dgg', 'dgg', 'dg', 'hello@activityhere.com', 'dgdg', 'dg');
+INSERT INTO `at_site_settings` (`id`, `site_address`, `site_phone`, `site_email`, `site_email_from`, `site_fb`, `site_gplus`, `site_twitter`, `site_paypal_business_email`, `site_paypal_secrect`, `site_paypal_authid`) VALUES
+	(1, 'Test address', 'gd', 'hello@activityhere.com', NULL, 'dgg', 'dgg', 'dg', 'hello@activityhere.com', 'dgdg', 'dg');
 /*!40000 ALTER TABLE `at_site_settings` ENABLE KEYS */;
 
 

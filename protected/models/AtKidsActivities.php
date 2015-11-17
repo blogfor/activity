@@ -30,7 +30,7 @@ class AtKidsActivities extends CActiveRecord {
             array('kids_name, kids_image', 'length', 'max' => 255),
             array('kids_description, created, modified', 'safe'),
             array('kids_name, kids_image,kids_description', 'required'),
-            array('hwt_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
+            array('kids_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
              array('modified','default',
                       'value'=>date("Y-m-d H:i:s"),
                       'setOnEmpty'=>false,'on'=>'update'),

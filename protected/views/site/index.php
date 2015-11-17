@@ -187,25 +187,26 @@ $('.slider').sss();
                            
                               <div class="dropdown">
                                   <button id="dLabel" class="search_option" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Services Option....
+                                    Activity
                             
                                     <i class="fa fa-chevron-circle-down down-arows_search"></i>
 
                                   </button>
                                   <ul class="dropdown-menu search_drop-bg" aria-labelledby="dLabel">
-                                    <li><a href="#"> SPORTS </a> </li>
-                                    <li><a href="#"> ARTS </a> </li>
-                                    <li><a href="#"> MUSIC </a> </li>
-                                    <li><a href="#"> DANCE </a> </li>
-                                    <li><a href="#"> STUDY </a> </li>
-                                    <li><a href="#"> FUN </a> </li>
+                                      <?php
+                                      foreach($resultACTIVITY as $rActivity)
+                                      {
+                                           echo '<li><a href="#">'. $rActivity['activity_name'] .'</a> </li>';
+                                      }
+                                      ?>
+                                    
                                   </ul>
                               </div>
                            </div>
                            <div class="col-sm-9"> 
                               <form class="navbar-form navbar-left search_from" role="search">
         <div class="form-group search_fil">
-          <input type="text" class="form-control" placeholder="Optional Keywords ...................">
+          <input type="text" class="form-control" placeholder="Search by keywords">
         </div>
         <button type="submit" class="btn btn-default search_submit">Submit</button>
       </form>

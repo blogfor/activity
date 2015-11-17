@@ -38,7 +38,7 @@ class AtSiteSettings extends CActiveRecord
 			array('site_address', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, site_address, site_phone, site_email, site_fb, site_gplus, site_twitter, site_paypal_business_email, site_paypal_secrect, site_paypal_authid', 'safe', 'on'=>'search'),
+			array('id, site_address, site_phone, site_email, site_fb, site_gplus, site_twitter, site_paypal_business_email, site_paypal_secrect, site_paypal_authid,site_email_from', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +63,7 @@ class AtSiteSettings extends CActiveRecord
 			'site_address' => 'Site Address',
 			'site_phone' => 'Site Phone',
 			'site_email' => 'Site Email',
+                        'site_email_from'=>'Site Email From',
 			'site_fb' => 'Site Fb',
 			'site_gplus' => 'Site Gplus',
 			'site_twitter' => 'Site Twitter',
@@ -100,7 +101,7 @@ class AtSiteSettings extends CActiveRecord
 		$criteria->compare('site_paypal_business_email',$this->site_paypal_business_email,true);
 		$criteria->compare('site_paypal_secrect',$this->site_paypal_secrect,true);
 		$criteria->compare('site_paypal_authid',$this->site_paypal_authid,true);
-
+                $criteria->compare('site_email_from',$this->site_email_from,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
