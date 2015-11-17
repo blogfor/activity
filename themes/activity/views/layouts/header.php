@@ -1,6 +1,6 @@
 <header id="masthead" class="site-header">
     <?php $siteSettings = ActivityCommon::get_setting_info(); ?>
-    <div class="header_top">
+<!--    <div class="header_top">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 phone_number">
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>   
-    </div>
+    </div>-->
 
 
     <!--LOGIN MODAL BOX-->

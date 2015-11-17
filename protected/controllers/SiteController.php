@@ -165,6 +165,7 @@ class SiteController extends Controller
                 $_SESSION['user_name']=$QueryDataReg['username'];
                 $_SESSION['user_id']=$QueryDataReg['id'];
                 $_SESSION['user_firstname']=$QueryDataReg['firstname'];
+                $_SESSION['user_type']=$QueryDataReg['user_type'];
                 
                 echo $_SESSION['user_name'];
             }

@@ -291,6 +291,27 @@ class AtUsersController extends Controller {
             'model' => $model, 'user_data' => $user_data
         ));
     }
+    
+    public function actionPartnerdtls() {
+        Yii::app()->theme = 'activity';
+        //$this->layout='adminmain';
+
+        $model = new AtUsers('search');
+        $model->unsetAttributes();  // clear any default values
+
+        if (isset($_GET['AtUsers']))
+            $model->attributes = $_GET['AtUsers'];
+
+        $user_data = AtUsers::model()->findByPk($_SESSION['user_id']);
+
+        if (!isset($user_data) && count($user_data) == 0)
+            $this->redirect(Yii::app()->createUrl('/site/index'));
+
+
+        $this->render('partnerdtls', array(
+            'model' => $model, 'user_data' => $user_data
+        ));
+    }
 
     public function actionUpdateProfile() {
 
