@@ -53,6 +53,11 @@
 
             </li>
             
+             <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i>User Membership', array('atMembershipInfo/admin'), array('class' => '')); ?>
+
+            </li>
+            
             <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Users', array('atUsers/admin'), array('class' => '')); ?>
 

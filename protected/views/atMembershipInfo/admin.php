@@ -2,15 +2,15 @@
 /* @var $this AtMembershipInfoController */
 /* @var $model AtMembershipInfo */
 
-$this->breadcrumbs=array(
-	'At Membership Infos'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List AtMembershipInfo', 'url'=>array('index')),
-	array('label'=>'Create AtMembershipInfo', 'url'=>array('create')),
-);
+//$this->breadcrumbs=array(
+//	'At Membership Infos'=>array('index'),
+//	'Manage',
+//);
+//
+//$this->menu=array(
+//	array('label'=>'List AtMembershipInfo', 'url'=>array('index')),
+//	array('label'=>'Create AtMembershipInfo', 'url'=>array('create')),
+//);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -25,37 +25,53 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">User Membership Information</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
 
-<h1>Manage At Membership Infos</h1>
+<div class="row">
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'at-membership-info-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
-		'payment_c_date',
-		'todate',
-		'fromdate',
-		'membership_title',
-		'user_id',
-		/*
-		'membership_note',
-		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
+
+    <div class="col-lg-12">
+        <?php echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
+        <div class="search-form" style="display:none">
+            <?php
+            $this->renderPartial('_search', array(
+                'model' => $model,
+            ));
+            ?>
+        </div><!-- search-form -->
+        <div class="panel-body">
+            <div class="dataTable_wrapper">
+
+
+
+                <?php
+                $this->widget('zii.widgets.grid.CGridView', array(
+                    'id' => 'at-membership-info-grid',
+                    'dataProvider' => $model->search(),
+                    'itemsCssClass' => 'table table-striped table-bordered table-hover',
+                    'columns' => array(
+                        'id',
+                        array('name' => 'payment_c_date', 'value' => 'getDateTimeFormat($data[\'payment_c_date\'])', 'type' => 'html'),
+                        array('name' => 'todate', 'value' => 'getDateTimeFormat($data[\'todate\'])', 'type' => 'html'),
+                        array('name' => 'fromdate', 'value' => 'getDateTimeFormat($data[\'fromdate\'])', 'type' => 'html'),
+                        'membership_title',
+                        array('name' => 'user_id', 'value' => array($this, 'gridUserName'), 'type' => 'html'),
+                        'membership_note',
+                    ),
+                ));
+                ?>
+            </div>
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->

@@ -68,114 +68,115 @@ jQuery(document).ready(function() {
     }
 
 // Main Slider, Post Slider, Animated Header
-    $.fn.sliderApi = function() {
-        var slider = $(this),
-            header = $('.page-header'),
-            animateClass;
+//    $.fn.sliderApi = function() {
+//        var slider = $(this),
+//            header = $('.page-header'),
+//            animateClass;
+//
+//        slider.find('[data-animate-in]').addClass('animated');
+//
+//        // Page Header Animation
+//        setTimeout(function(){
+//            header.find('[data-animate-in]').each(function () {
+//                var $this = $(this);
+//                animateClass = $this.data('animate-in');
+//
+//                $this.removeClass('invisible').addClass('animated ' + animateClass);
+//            })
+//        }, 300);
+//
+//        // Animation when Slide Appear
+//        function animateSlide() {
+//            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
+//                var $this = $(this);
+//                animateClass = $this.data('animate-in');
+//                $this.addClass(animateClass);
+//            });
+//            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
+//                var $this = $(this);
+//                animateClass = $this.data('animate-out');
+//                $this.removeClass(animateClass);
+//            });
+//        }
+//
+//        // Animation when Slide Disappear
+//        function animateSlideEnd() {
+//            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
+//                var $this = $(this);
+//                animateClass = $this.data('animate-in');
+//                $this.removeClass(animateClass)
+//            });
+//            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
+//                var $this = $(this);
+//                animateClass = $this.data('animate-out');
+//                $this.addClass(animateClass);
+//            });
+//        }
+//
+//        // Slide Description Right Angle
+//        function slideDescAngle() {
+//            slider.find('.active .page-desc').each(function () {
+//                var $this = $(this),
+//                    height = $this.outerHeight();
+//                $this.children('.angle').css('border-top-width', height);
+//            })
+//        }
+//
+//        // Slider Controls Position
+//        function sliderControls() {
+//            slider.find('.active .page-title, .active .entry-content p:last-child').each(function () {
+//                var $this = $(this),
+//                    offset = $this.offset().top - slider.offset().top + $this.height();
+//                slider.find('.carousel-indicators').css('top', offset + 30);
+//                if (screenRes < 992) {
+//                    slider.find('.carousel-indicators').css('top', offset + 10);
+//                }
+//            })
+//        }
+//
+//        sliderControls();
+//        slideDescAngle();
+//        animateSlide();
+//
+//        slider.on('slid.bs.carousel', function () {
+//            sliderControls();
+//            slideDescAngle();
+//            animateSlide();
+//        });
+//        slider.on('slide.bs.carousel', function () {
+//            animateSlideEnd();
+//        });
+//        $(window).on('resize', function () {
+//            sliderControls();
+//            slideDescAngle();
+//        });
+//
+////        if (Modernizr.touch) {
+////            slider.find('.carousel-inner').swipe( {
+////                swipeLeft: function() {
+////                    $(this).parent().carousel('prev');
+////                },
+////                swipeRight: function() {
+////                    $(this).parent().carousel('next');
+////                },
+////                threshold: 30
+////            })
+////        }
+//    };
 
-        slider.find('[data-animate-in]').addClass('animated');
+//    $('#testimage').load(function() {
+//        $("#spinner, #testimage").remove();
+//        $(".main-slider, .site-logo-alt, #menu-call, .page-header, .header, .carousel-control").removeClass('invisible').addClass('animated fadeIn');
+//
+//        $('#main-slider').carousel({interval: 8000, pause: 'none'});
+//        $('#workout-slider').carousel({interval: 10000, pause: 'none'});
+//        $('#main-slider').sliderApi();
+//        $('#workout-slider').sliderApi();
+//    });
+//    $('#post-slider').carousel({interval: 10000, pause: 'none'});
+//    $('#post-slider').sliderApi();
 
-        // Page Header Animation
-        setTimeout(function(){
-            header.find('[data-animate-in]').each(function () {
-                var $this = $(this);
-                animateClass = $this.data('animate-in');
-
-                $this.removeClass('invisible').addClass('animated ' + animateClass);
-            })
-        }, 300);
-
-        // Animation when Slide Appear
-        function animateSlide() {
-            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
-                var $this = $(this);
-                animateClass = $this.data('animate-in');
-                $this.addClass(animateClass);
-            });
-            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
-                var $this = $(this);
-                animateClass = $this.data('animate-out');
-                $this.removeClass(animateClass);
-            });
-        }
-
-        // Animation when Slide Disappear
-        function animateSlideEnd() {
-            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
-                var $this = $(this);
-                animateClass = $this.data('animate-in');
-                $this.removeClass(animateClass)
-            });
-            slider.find('.active [data-animate-in], .carousel-indicators, .carousel-control').each(function () {
-                var $this = $(this);
-                animateClass = $this.data('animate-out');
-                $this.addClass(animateClass);
-            });
-        }
-
-        // Slide Description Right Angle
-        function slideDescAngle() {
-            slider.find('.active .page-desc').each(function () {
-                var $this = $(this),
-                    height = $this.outerHeight();
-                $this.children('.angle').css('border-top-width', height);
-            })
-        }
-
-        // Slider Controls Position
-        function sliderControls() {
-            slider.find('.active .page-title, .active .entry-content p:last-child').each(function () {
-                var $this = $(this),
-                    offset = $this.offset().top - slider.offset().top + $this.height();
-                slider.find('.carousel-indicators').css('top', offset + 30);
-                if (screenRes < 992) {
-                    slider.find('.carousel-indicators').css('top', offset + 10);
-                }
-            })
-        }
-
-        sliderControls();
-        slideDescAngle();
-        animateSlide();
-
-        slider.on('slid.bs.carousel', function () {
-            sliderControls();
-            slideDescAngle();
-            animateSlide();
-        });
-        slider.on('slide.bs.carousel', function () {
-            animateSlideEnd();
-        });
-        $(window).on('resize', function () {
-            sliderControls();
-            slideDescAngle();
-        });
-
-        if (Modernizr.touch) {
-            slider.find('.carousel-inner').swipe( {
-                swipeLeft: function() {
-                    $(this).parent().carousel('prev');
-                },
-                swipeRight: function() {
-                    $(this).parent().carousel('next');
-                },
-                threshold: 30
-            })
-        }
-    };
-
-    $('#testimage').load(function() {
-        $("#spinner, #testimage").remove();
-        $(".main-slider, .site-logo-alt, #menu-call, .page-header, .header, .carousel-control").removeClass('invisible').addClass('animated fadeIn');
-
-        $('#main-slider').carousel({interval: 8000, pause: 'none'});
-        $('#workout-slider').carousel({interval: 10000, pause: 'none'});
-        $('#main-slider').sliderApi();
-        $('#workout-slider').sliderApi();
-    });
-    $('#post-slider').carousel({interval: 10000, pause: 'none'});
-    $('#post-slider').sliderApi();
-
+ $("#menu-call, .page-header, .header, .carousel-control").removeClass('invisible').addClass('animated fadeIn');
 // Gray Header Animation
     if($('.main-header-gray').length) {
         $(".page-header, .header").removeClass('invisible').addClass('animated fadeIn');

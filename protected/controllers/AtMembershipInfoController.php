@@ -14,8 +14,8 @@ class AtMembershipInfoController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+//			'accessControl', // perform access control for CRUD operations
+//			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -133,6 +133,9 @@ class AtMembershipInfoController extends Controller
 	 */
 	public function actionAdmin()
 	{
+             Yii::app()->theme = 'admin';
+		$this->layout='adminmain';
+                
 		$model=new AtMembershipInfo('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['AtMembershipInfo']))
@@ -143,6 +146,14 @@ class AtMembershipInfoController extends Controller
 		));
 	}
 
+         protected function gridUserName($data, $row) {
+             $sql = "SELECT * FROM at_users WHERE id='" . $data['user_id'] . "'";
+            $data = Yii::app()->db->createCommand($sql)->queryRow();
+            if(empty($data))
+                return 'N/A';
+               else
+             return stripJunk($data['firstname'].' '.$data['lastname']);
+         }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
