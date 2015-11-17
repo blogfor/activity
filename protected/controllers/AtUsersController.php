@@ -369,6 +369,28 @@ class AtUsersController extends Controller {
         }
     }
 
+        
+        public function actionEmailFormSubmit() {
+            Yii::app()->theme = 'activity';
+            
+            $MailContent = new AtMailContent;
+                        $mailData = $MailContent->fetchMailContent(5);
+                        $mailData['body'] = str_replace("[MESSAGE]", $_POST['messagebody'], $mailData['body']);                     
+                        $msg = $mailData['body'];                       
+                        $msg .= $mailData['footer'];
+                        $emails[]=$_POST['email'];                     
+                        //print_r($mailData);
+                        ActivityCommon::atMailSend($emails,5,$msg,$mailData);
+                   
+            Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to '.$_POST['email']);
+            
+            if($_POST['usertype']=="partner")
+            $this->redirect(Yii::app()->createUrl('/atUsers/partner'));
+            else 
+            $this->redirect(Yii::app()->createUrl('/atUsers/admin'));    
+
+    }
+    
     function gridgeCountChilds($val) {
         $sql = "SELECT count(*) as tot from at_users_child where user_id='" . $val['id'] . "' ";
         $data = Yii::app()->db
@@ -396,25 +418,7 @@ class AtUsersController extends Controller {
         }
     }
 
-    public function actionEmailFormSubmit() {
-        Yii::app()->theme = 'activity';
-
-        $MailContent = new AtMailContent;
-        $mailData = $MailContent->fetchMailContent(2);
-        $mailData['body'] = str_replace("[MESSAGE]", $_POST['messagebody'], $mailData['body']);
-        $msg = $mailData['body'];
-        $msg .= $mailData['footer'];
-        $emails[] = $_POST['email'];
-        //print_r($mailData);
-        ActivityCommon::atMailSend($emails, 2, $msg, $mailData);
-
-        Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to ' . $_POST['email']);
-
-        if ($_POST['usertype'] == "partner")
-            $this->redirect(Yii::app()->createUrl('/atUsers/partner'));
-        else
-            $this->redirect(Yii::app()->createUrl('/atUsers/admin'));
-    }
+    
 
     public function actionEmailForm() {
 

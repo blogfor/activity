@@ -2,6 +2,117 @@
 $baseUrl = Yii::app()->theme->baseUrl;
 ?>
 
+
+<script>
+/*--SLIDER SCRIPT ----*/
+;(function($, window, document, undefined ) {
+
+$.fn.sss = function(options) {
+
+// Options
+
+	var settings = $.extend({
+	slideShow : true,
+	startOn : 0,
+	speed : 3000,
+	transition : 900,
+	arrows : true
+	}, options);
+
+	return this.each(function() {
+
+// Variables
+
+	var
+	wrapper = $(this),
+	slides = wrapper.children().wrapAll('<div class="sss"/>').addClass('ssslide'),
+	slider = wrapper.find('.sss'),
+	slide_count = slides.length,
+	transition = settings.transition,
+	starting_slide = settings.startOn,
+	target = starting_slide > slide_count - 1 ? 0 : starting_slide,
+	animating = false,
+	clicked,
+	timer,
+	key,
+	prev,
+	next,
+
+// Reset Slideshow
+
+	reset_timer = settings.slideShow ? function() {
+	clearTimeout(timer);
+	timer = setTimeout(next_slide, settings.speed);
+	} : $.noop;
+
+// Animate Slider
+
+	function get_height(target) {
+	return ((slides.eq(target).height() / slider.width()) * 100) + '%';
+	}
+
+	function animate_slide(target) {
+	if (!animating) {
+	animating = true;
+	var target_slide = slides.eq(target);
+
+	target_slide.fadeIn(transition);
+	slides.not(target_slide).fadeOut(transition);
+
+	slider.animate({paddingBottom: get_height(target)}, transition,  function() {
+	animating = false;
+	});
+
+	reset_timer();
+
+	}};
+
+// Next Slide
+
+	function next_slide() {
+	target = target === slide_count - 1 ? 0 : target + 1;
+	animate_slide(target);
+	}
+
+// Prev Slide
+
+	function prev_slide() {
+	target = target === 0 ? slide_count - 1 : target - 1;
+	animate_slide(target);
+	}
+
+	if (settings.arrows) {
+	slider.append('<div class="sssprev"/>', '<div class="sssnext"/>');
+	}
+
+	next = slider.find('.sssnext'),
+	prev = slider.find('.sssprev');
+
+	$(window).load(function() {
+
+	slider.css({paddingBottom: get_height(target)}).click(function(e) {
+	clicked = $(e.target);
+	if (clicked.is(next)) { next_slide() }
+	else if (clicked.is(prev)) { prev_slide() }
+	});
+
+	animate_slide(target);
+
+	$(document).keydown(function(e) {
+	key = e.keyCode;
+	if (key === 39) { next_slide() }
+	else if (key === 37) { prev_slide() }
+	});
+
+	});
+// End
+
+});
+
+};
+})(jQuery, window, document);
+</script>
+
     <!-- Header -->
     
 
@@ -24,55 +135,46 @@ $baseUrl = Yii::app()->theme->baseUrl;
                 <!-- Alternative site Logo, appears only on Home Page -->
                 <div class="site-logo-alt invisible"></div>
                 <!--/ Alternative site Logo, appears only on Home Page -->
+                
 
                 <!-- Main Slider -->
-                <div id="main-slider" class="main-slider carousel slide fade-effect invisible">
-                   
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        
-                    <!-- Carousel indicators -->
-                    <ol class="carousel-indicators" data-animate-in="fadeInUp" data-animate-out="fadeOutDown">
-                        <?php  foreach($resultBANNER as $rBANNER): ?>
-                        <li data-target="#main-slider" data-slide-to="<?php echo $rBANNER['id'];?>"></li>
-                        <?php endforeach;  ?>
+                <div id="main-slider" class="main-slider carousel slide fade-effect invisible"></div>
+				
+<div class="slider">
 
-                    </ol>
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#main-slider" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#main-slider" data-slide="next">&rsaquo;</a>
-                        
-                        
-                    <?php  foreach($resultBANNER as $rBANNER): ?>               
-                      <!-- Item -->
-                        <section class="active item" style="background-image: url('<?php echo Yii::app()->getBaseUrl(true);?>/uploads/<?php echo $rBANNER['banner_image'];?>');">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <h1 class="page-title" data-animate-in="fadeInLeft" data-animate-out="fadeOutLeft">
-                                         <?php echo $rBANNER['banner_title'];?>
-                                        </h1>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="page-desc" data-animate-in="fadeInRight" data-animate-out="fadeOutRight">
-                                            <?php echo $rBANNER['banner_description'];?><span class="angle"></span>
-                                        </div>
-                                            
-                                            <?php if($rBANNER['banner_link']!=''): ?>
-                                            <a href="<?php echo $rBANNER['banner_link'];?>" class="btn" data-animate-in="fadeInUp" data-animate-out="fadeOutDown"><span>more about me</span></a>
-                                            <?php   endif; ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!--/ Item -->                                       
-                       <?php endforeach;  ?>
-                        
-                    </div>
+				<?php  foreach($resultBANNER as $rBANNER): ?> 
+            
                     
-                  
-                    
-                </div>
+					<div>
+					<div class="wrapper-shadow"></div>
+					<img src="<?php echo Yii::app()->getBaseUrl(true);?>/uploads/<?php echo $rBANNER['banner_image'];?>" />
+					<div class="slide-caption">
+					
+					<p class="banner-caption"><?php echo $rBANNER['banner_title'];?></p>
+					<p class="banner-details"><?php echo $rBANNER['banner_description'];?></p>
+                                        <?php 
+                                        if(!empty($rBANNER['banner_link_text'])){
+                                            ?>
+                                        <a href="<?php echo $rBANNER['banner_link'];?>">
+                                            <span class="banner-button"><?php echo $rBANNER['banner_link_text'];?></span>
+                                        </a>    
+                                        <?php    
+                                        } ?>
+                                        
+					</div>
+					
+					</div>
+             
+				<?php endforeach;  ?>
+
+</div>
+<script>
+jQuery(function($) {
+$('.slider').sss();
+});
+</script>
+                
+    
                 <!--/ Main Slider -->
                 
             </div>
@@ -239,15 +341,17 @@ $baseUrl = Yii::app()->theme->baseUrl;
               ?>
               
               <div class="col-sm-6 work">
-                  <div class="media">
-                      <div class="media-left media-middle">
+                  <div class="media-block">
+                      <div class="media-thumb">
                         <a href="<?php echo Yii::app()->createUrl('/pages/view',array('p'=>'how_it_works')); ?>">
                           <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rHIW['hwt_image'];?>" alt="<?php echo $rHIW['hwt_name'];?>">
                         </a>
                       </div>
-                      <div class="media-body">
-                        
-                          <p><strong><?php echo $rHIW['hwt_name'];?> -</strong> <?php echo $rHIW['hwt_description'];?>  </p>
+                      <div class="media-title">
+                          <?php echo $rHIW['hwt_name'];?>
+                      </div>
+                      <div class="media-content">                        
+                           <?php echo $rHIW['hwt_description'];?>  
                       </div>
                   </div>
               </div>
@@ -261,7 +365,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
         </section>
         
         
-          <section class="how_work"> 
+        <section class="how_work" style="background-color:#f2f2f2;"> 
           <div class="container">
             <h1> Discover New Kids Activities </h1>
           <div class="row">
@@ -271,15 +375,14 @@ $baseUrl = Yii::app()->theme->baseUrl;
               ?>
               
               <div class="col-sm-6 work">
-                  <div class="media">
-                      <div class="media-left media-middle">
+                  <div class="media-block">
+                      <div class="media-thumb">
                         <a href="javascript:void(0);">
                           <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rKIA['kids_image'];?>" alt="<?php echo $rKIA['kids_name'];?>">
                         </a>
                       </div>
-                      <div class="media-body">
-                        
-                          <p><strong></strong> <?php echo $rKIA['kids_description'];?>  </p>
+                      <div class="media-content">                        
+                          <?php echo $rKIA['kids_description'];?>  
                       </div>
                   </div>
               </div>
