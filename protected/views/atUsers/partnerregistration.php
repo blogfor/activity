@@ -2,7 +2,9 @@
 $baseUrl = Yii::app()->theme->baseUrl;
 
 ?>
-
+<style>
+    .image {max-width: 12% !important;}
+</style>
 <div class="container">
        
     <div class="row">
@@ -24,18 +26,26 @@ Activity here partners with children activity and enrichment class providers to 
 </p>
 <div>
 Why use activity here?<br/><br/>
+<img src="<?php echo $baseUrl; ?>/images/Partner3.png" class="image" alt=""><br/><br />
+
  
 <strong>Nothing to Lose</strong><br/>
-Listing free activities and free trial classes is free for all partners. We will work with partners on pricing of activities that are payable by our members.<br/><br/>
+
+Listing free activities and free trial classes is free for all partners. We will work with partners on pricing of activities that are payable by our members.<br/>
+<img src="<?php echo $baseUrl; ?>/images/Partner1.png" class="image" alt=""><br/><br/>
  
 <strong>Targeted Audience</strong><br/>
-List new classes and activities to parents who are actively seeking new learning opportunities for their children.<br/><br/>
+
+List new classes and activities to parents who are actively seeking new learning opportunities for their children.<br/>
+<img src="<?php echo $baseUrl; ?>/images/Partner4.png" class="image" alt=""><br/><br/>
  
 <strong>Easy to Use</strong><br/>
-Search and reservation of activities is simple and allows discovery of new activities and schools. Boost your online presence with our activity search and reservation system.<br/><br/>
+Search and reservation of activities is simple and allows discovery of new activities and schools. Boost your online presence with our activity search and reservation system.<br/>
+<img src="<?php echo $baseUrl; ?>/images/Partner2.png" class="image" alt=""><br/><br/>
  
 <strong>Additional Revenue</strong><br/>
-We will help you fill unused spots and pay you for each reservation by our users. You also gain potential new sign-ups for members who find an activity or school that suits their children.<br/><br/>
+We will help you fill unused spots and pay you for each reservation by our users. You also gain potential new sign-ups for members who find an activity or school that suits their children.<br/>
+<img src="<?php echo $baseUrl; ?>/images/Partner5.png" class="image" alt=""><br/><br/>
  
 <strong>Marketing and Brand Exposure</strong><br/>
 Activity here helps parents discover new enrichment classes and activities in their area based on their schedules.<br/><br/>

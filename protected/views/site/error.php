@@ -13,3 +13,4 @@
         </div>
     </div>
 </div>
+<?php //echo CHtml::encode($message); ?><?php //echo $code; ?>
