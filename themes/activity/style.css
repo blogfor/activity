@@ -3738,6 +3738,7 @@ Can this be done with Masonry options? */
 
 .media-thumb{
     margin: 0 auto;
+    width: 120px;
 }
 .media-title{
     font-size: 20px;
