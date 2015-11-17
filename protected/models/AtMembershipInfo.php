@@ -58,9 +58,9 @@ class AtMembershipInfo extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'payment_c_date' => 'Payment C Date',
-			'todate' => 'Todate',
-			'fromdate' => 'Fromdate',
+			'payment_c_date' => 'Payment Date',
+			'todate' => 'To Date',
+			'fromdate' => 'From Date',
 			'membership_title' => 'Membership Title',
 			'user_id' => 'User',
 			'membership_note' => 'Membership Note',
