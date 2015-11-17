@@ -61,10 +61,10 @@ class AtAuthvalue extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'value' => 'Value',
-			'membership_desc' => 'Membership Desc',
-			'number_of_reg' => 'Number Of Reg',
+			'membership_desc' => 'Membership Description',
+			'number_of_reg' => 'Number Of Registered',
 			'is_active' => 'Is Active',
-			'membership_duration' => 'Monthly',
+			'membership_duration' => 'Monthly Duration',
 		);
 	}
 

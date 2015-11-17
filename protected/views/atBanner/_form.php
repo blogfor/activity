@@ -45,7 +45,11 @@
 		<?php echo $form->textField($model,'banner_order'); ?>
 		<?php echo $form->error($model,'banner_order'); ?>
 	</div>-->
-        
+        <div class="form-group">
+		<?php echo $form->labelEx($model,'banner_link_text'); ?>
+		<?php echo $form->textField($model,'banner_link_text'); ?>
+		<?php echo $form->error($model,'banner_link_text'); ?>
+	</div>
         <div class="form-group">
 		<?php echo $form->labelEx($model,'banner_image'); ?>
 		<?php echo CHtml::activeFileField($model, 'banner_image'); ?>

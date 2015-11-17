@@ -118,19 +118,21 @@ class AtBannerController extends Controller
 
 		if(isset($_POST['AtBanner']))
 		{
-			$model->attributes=$_POST['AtBanner'];
-                        
+			
+                         
 			 $rnd = rand(0,9999);  // generate random number between 0-9999
                          $_POST['AtBanner']['banner_image'] = $model->banner_image;
-           $model->attributes=$_POST['AtHowItWorks'];
+                         $model->attributes=$_POST['AtBanner'];
  
             $uploadedFile=CUploadedFile::getInstance($model,'banner_image');
             $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
             if(!empty($uploadedFile))
             $model->banner_image = $fileName;
-			
+       
 			if($model->save())
-                        {     if(!empty($uploadedFile))
+                        { 
+                            
+                            if(!empty($uploadedFile))
                                 {
                                 $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/'.$fileName);
                                 $MyImageCom = new ImageComponent();  

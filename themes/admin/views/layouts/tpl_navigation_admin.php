@@ -48,6 +48,10 @@
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Site Settings', array('atSiteSettings/admin'), array('class' => '')); ?>
 
             </li>
+            <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Membership Value', array('atAuthvalue/admin'), array('class' => '')); ?>
+
+            </li>
             
             <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Users', array('atUsers/admin'), array('class' => '')); ?>

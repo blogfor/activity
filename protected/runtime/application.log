@@ -10277,3 +10277,91 @@ Stack trace:
 REQUEST_URI=/activity/uploads/9939-Discover4.png
 HTTP_REFERER=http://localhost/activity/
 ---
+2015/11/17 07:39:42 [error] [php] Undefined index: AtHowItWorks (E:\xampp\htdocs\activity\protected\controllers\AtBannerController.php:125)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(286): AtBannerController->runAction()
+#3 E:\xampp\htdocs\activity\framework\web\CController.php(265): AtBannerController->runActionWithFilters()
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtBannerController->run()
+#5 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atBanner/update/1
+in E:\xampp\htdocs\activity\protected\controllers\AtBannerController.php (125)
+in E:\xampp\htdocs\activity\index.php (14)
+2015/11/17 07:41:10 [error] [php] Undefined index: AtHowItWorks (E:\xampp\htdocs\activity\protected\controllers\AtBannerController.php:125)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(286): AtBannerController->runAction()
+#3 E:\xampp\htdocs\activity\framework\web\CController.php(265): AtBannerController->runActionWithFilters()
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtBannerController->run()
+#5 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atBanner/update/1
+in E:\xampp\htdocs\activity\protected\controllers\AtBannerController.php (125)
+in E:\xampp\htdocs\activity\index.php (14)
+2015/11/17 07:42:18 [error] [php] Undefined index: AtHowItWorks (E:\xampp\htdocs\activity\protected\controllers\AtBannerController.php:125)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 E:\xampp\htdocs\activity\framework\web\CController.php(286): AtBannerController->runAction()
+#3 E:\xampp\htdocs\activity\framework\web\CController.php(265): AtBannerController->runActionWithFilters()
+#4 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtBannerController->run()
+#5 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atBanner/update/1
+in E:\xampp\htdocs\activity\protected\controllers\AtBannerController.php (125)
+in E:\xampp\htdocs\activity\index.php (14)
+2015/11/17 08:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/9764-Art.jpg".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/9764-Ar...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/9764-Art.jpg
+HTTP_REFERER=http://localhost/activity/atBanner/update/2
+---
+2015/11/17 08:01:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/9764-Art.jpg".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/9764-Ar...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/9764-Art.jpg
+HTTP_REFERER=http://localhost/activity/atBanner/update/2
+---
+2015/11/17 08:01:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploads/9764-Art.jpg".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/9764-Ar...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/uploads/9764-Art.jpg
+HTTP_REFERER=http://localhost/activity/atBanner/update/2
+---
+2015/11/17 08:03:53 [error] [exception.CException] exception 'CException' with message 'Property "AtKidsActivities.hwt_image" is not defined.' in E:\xampp\htdocs\activity\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(145): CComponent->__get('hwt_image')
+#1 E:\xampp\htdocs\activity\framework\validators\CFileValidator.php(144): CActiveRecord->__get('hwt_image')
+#2 E:\xampp\htdocs\activity\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(AtKidsActivities), 'hwt_image')
+#3 E:\xampp\htdocs\activity\framework\base\CModel.php(159): CValidator->validate(Object(AtKidsActivities), NULL)
+#4 E:\xampp\htdocs\activity\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#5 E:\xampp\htdocs\activity\protected\controllers\AtKidsActivitiesController.php(128): CActiveRecord->save()
+#6 [internal function]: AtKidsActivitiesController->actionUpdate('1')
+#7 E:\xampp\htdocs\activity\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(AtKidsActivitiesController), Array)
+#8 E:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AtKidsActivitiesController), Object(ReflectionMethod), Array)
+#9 E:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('update')
+#13 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('atKidsActivitie...')
+#14 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/activity/atKidsActivities/update/1
+HTTP_REFERER=http://localhost/activity/atKidsActivities/update/1
+---

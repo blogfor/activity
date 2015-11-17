@@ -31,9 +31,9 @@ class AtBanner extends CActiveRecord {
         return array(
             array('banner_order', 'numerical', 'integerOnly' => true),
             array('banner_title,banner_image,banner_description', 'required'),
-            array('banner_title,banner_image', 'length', 'max' => 255),
+            array('banner_title,banner_image,banner_link_text', 'length', 'max' => 255),
             array('status', 'length', 'max' => 1),
-            array('banner_description, banner_link, added, modified', 'safe'),
+            array('banner_description, banner_link, added, modified,banner_link_text', 'safe'),
             array('banner_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
             array('modified', 'default',
                 'value' => date("Y-m-d H:i:s"),
@@ -43,7 +43,7 @@ class AtBanner extends CActiveRecord {
                 'setOnEmpty' => false, 'on' => 'insert'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('id, banner_title, banner_description, banner_link, banner_order, status,banner_image, added, modified', 'safe', 'on' => 'search'),
+            array('id, banner_title, banner_description, banner_link, banner_order, status,banner_image, added, modified,banner_link_text', 'safe', 'on' => 'search'),
         );
     }
 
@@ -68,6 +68,7 @@ class AtBanner extends CActiveRecord {
             'banner_link' => 'Banner Link',
             'banner_order' => 'Banner Order',
             'banner_image' => 'Banner Image',
+            'banner_link_text'=>'Banner Link Text',
             'status' => 'Status',
             'added' => 'Added',
             'modified' => 'Modified',
@@ -100,7 +101,7 @@ class AtBanner extends CActiveRecord {
         $criteria->compare('status', $this->status, true);
         $criteria->compare('added', $this->added, true);
         $criteria->compare('modified', $this->modified, true);
-
+        $criteria->compare('banner_link_text', $this->banner_link_text, true);
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));

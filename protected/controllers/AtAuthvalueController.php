@@ -14,8 +14,8 @@ class AtAuthvalueController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+//			'accessControl', // perform access control for CRUD operations
+//			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -86,6 +86,8 @@ class AtAuthvalueController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+                Yii::app()->theme = 'admin';
+		$this->layout='adminmain';
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -95,7 +97,11 @@ class AtAuthvalueController extends Controller
 		{
 			$model->attributes=$_POST['AtAuthvalue'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			{
+                              Yii::app()->user->setFlash('successBanner', 'Membership has been updated.');
+			$this->redirect(array('admin'));
+                            
+                        }
 		}
 
 		$this->render('update',array(
@@ -133,6 +139,8 @@ class AtAuthvalueController extends Controller
 	 */
 	public function actionAdmin()
 	{
+                Yii::app()->theme = 'admin';
+		$this->layout='adminmain';
 		$model=new AtAuthvalue('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['AtAuthvalue']))
