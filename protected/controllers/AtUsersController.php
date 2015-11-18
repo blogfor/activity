@@ -303,13 +303,16 @@ class AtUsersController extends Controller {
             $model->attributes = $_GET['AtUsers'];
 
         $user_data = AtUsers::model()->findByPk($_SESSION['user_id']);
+		
+		$pertner_activity_sql="SELECT * FROM at_partner_activity pa LEFT JOIN at_activity ac ON ac.id=pa.activity_type_id WHERE pa.user_id='".$_SESSION['user_id']."'";
+		$activity_data = Yii::app()->db->createCommand($pertner_activity_sql)->queryAll();
 
         if (!isset($user_data) && count($user_data) == 0)
             $this->redirect(Yii::app()->createUrl('/site/index'));
 
 
         $this->render('partnerdtls', array(
-            'model' => $model, 'user_data' => $user_data
+            'model' => $model, 'user_data' => $user_data, 'activity_data'=>$activity_data
         ));
     }
 

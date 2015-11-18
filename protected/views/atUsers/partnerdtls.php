@@ -1,6 +1,6 @@
 <?php
 $baseUrl = Yii::app()->theme->baseUrl;
-
+//print_r($activity_data);
 ?>
 
 <div id="main" class="site-main" role="main">
@@ -150,8 +150,134 @@ $baseUrl = Yii::app()->theme->baseUrl;
         </div>
           
        </div>
-    </div>  
-    
+    </div> 
 
+	
+	<div class="activity_section">
+	
+		<div class="container"> 
+			 <h4 class="hading">My Activity
+						<a class="btn btn-transparent login" href="#" hidefocus="true" data-toggle="modal" data-target="#myActivityform" style="outline: medium none; padding: 12px 0px 0px 20px;">
+                            <span>Add Activity</span>
+                        </a>
+			 
+			 </h4> 
+			  
+			 
+		<table style="width:100%;">
+		<tr>
+		<td>Sl </td>
+		<td>Activity Type</td>
+		<td>Date </td>
+		<td>Time </td>
+		<td>Location </td>
+		<td>Price </td>
+		</tr>
+		
+		<?php 
+		if(count($activity_data)==0)
+		echo "<tr><td colspan=6> No activity is enlisted </td></tr>";
+		else{
+		    $i=1;
+			foreach($activity_data as $data){
+			?>
+			<tr>
+				<td><?php echo $i;?> </td>
+				<td><?php echo $data['activity_name']; ?> </td>
+				<td><?php echo $data['activity_date']; ?> </td>
+				<td><?php echo $data['activity_time']; ?> </td>
+				<td><?php echo $data['address']; ?> 	  </td>
+				<td><?php echo $data['price']; ?>$		  </td>
+			</tr>			
+			<?php
+			$i++;
+			}		
+		}
+		?>		
+		</table>
+		</div>
+	</div>
+
+	<br clear="all">
     
-</div>    
+</div> 
+
+
+
+<!--ACTIVITY ADD MODAL BOX-->
+<div id="myActivityform" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content" id="lognform">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+				<h4 class="modal-title">Create Activity</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row msg-error" style="color:red; padding-bottom: 10px; text-align: center;"></div>
+				<div class="panel panel-default">
+					<div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							<form name="login_form" id="login_form" method="post">
+								
+								<div class="form-group  col-lg-12">
+									<label for="exampleInputEmail1">Activity Type</label>
+									<select class="form-control">									
+									<option>eeeee</option>
+									<option>ttttt</option>
+									</select>									
+								</div>
+
+								<div class="form-group col-lg-6">
+									<label for="exampleInputEmail1">Activity Date</label>
+									<input name="activity_date" id="activity_date" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Date" type="text">
+								</div>    
+
+								<div class="form-group col-lg-6">
+									<label for="exampleInputEmail1">Activity Time</label>
+									<input name="activity_date" id="activity_date" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Time" type="text">
+								</div> 
+								
+								<div class="form-group col-lg-6">
+									<label for="exampleInputEmail1"></label>
+									is Paid?<input type="checkbox" name="is_paid" id="is_paid" value="Y" onclick="display_fees(this);" >
+								</div> 
+								
+								<div class="form-group col-lg-6 fees-text" style="display:none;" >
+									<label for="exampleInputEmail1">Fees($)</label>
+									<input name="price" id="price" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Price" type="text">
+								</div> 
+								
+								<div class="form-group col-lg-12">
+									<label for="exampleInputEmail1">Address</label>
+									<textarea name="address" id="address" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Addesss" ></textarea>
+								</div>  
+								
+								
+								<div class="form-group col-lg-12">
+								<input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/> &nbsp;
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		  
+		</div>            
+	</div>
+</div>
+
+<script>
+function display_fees(chkobj){
+	if($(chkobj).is(':checked')==true){
+	$(".fees-text").show();
+	}
+	else{
+	$(".fees-text").hide();
+	$("#price").val("");
+	}
+}
+</script>
+
+   
