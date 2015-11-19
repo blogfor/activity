@@ -1,9 +1,26 @@
 <?php
 $baseUrl = Yii::app()->theme->baseUrl;
-//print_r($activity_data);
+print_r($user_selected_activity);
 ?>
 
+<style>
+.list-table td{
+line-height:35px;
+}
+
+.list-table tbody td{
+border-top:1px #ccc solid;
+}
+.list-table tbody tr:hover{
+background-color:#f1f1f1;
+
+}
+</style>
+
 <div id="main" class="site-main" role="main">
+
+
+
 
     <div class="profile_section"> 
       
@@ -153,6 +170,34 @@ $baseUrl = Yii::app()->theme->baseUrl;
     </div> 
 
 	
+	<div class="container"> 
+	<?php if (Yii::app()->user->hasFlash('successAddActivity')): ?>
+	<div id="statusMsg">
+		<div class="alert alert-success">
+			<?php echo Yii::app()->user->getFlash('successAddActivity'); ?>
+		</div>
+	</div>
+	<?php endif; ?>
+	
+	<?php if (Yii::app()->user->hasFlash('successUpdateActivity')): ?>
+	<div id="statusMsg">
+		<div class="alert alert-success">
+			<?php echo Yii::app()->user->getFlash('successUpdateActivity'); ?>
+		</div>
+	</div>
+	<?php endif; ?>
+
+	<?php if (Yii::app()->user->hasFlash('errorAddActivity')): ?>
+	<div id="statusMsg">
+		<div class="alert alert-error">
+			<?php echo Yii::app()->user->getFlash('errorAddActivity'); ?>
+		</div>
+	</div>
+	<?php endif; ?>
+	</div>
+	
+	
+	
 	<div class="activity_section">
 	
 		<div class="container"> 
@@ -163,38 +208,49 @@ $baseUrl = Yii::app()->theme->baseUrl;
 			 
 			 </h4> 
 			  
-			 
-		<table style="width:100%;">
-		<tr>
-		<td>Sl </td>
+		<div class="panel panel-default">	 
+		<table style="width:100%;" class="list-table" >
+		<tr style="background-color: #4F81BD !important; color: #FFF !important;">
+		<td>&nbsp;Sl </td>
 		<td>Activity Type</td>
 		<td>Date </td>
 		<td>Time </td>
 		<td>Location </td>
 		<td>Price </td>
+		<td>Action </td>
 		</tr>
-		
+		<tbody>
 		<?php 
 		if(count($activity_data)==0)
 		echo "<tr><td colspan=6> No activity is enlisted </td></tr>";
 		else{
 		    $i=1;
 			foreach($activity_data as $data){
+			
 			?>
 			<tr>
-				<td><?php echo $i;?> </td>
+				<td>&nbsp;<?php echo $i;?> </td>
 				<td><?php echo $data['activity_name']; ?> </td>
 				<td><?php echo $data['activity_date']; ?> </td>
 				<td><?php echo $data['activity_time']; ?> </td>
 				<td><?php echo $data['address']; ?> 	  </td>
 				<td><?php echo $data['price']; ?>$		  </td>
+				<td>	
+				
+				<i class="fa fa-pencil-square-o"></i>
+				&nbsp;
+				<a href="javascript:void(0);" title="Delete Activity" onclick="delete_activity(<?php echo $data['aid']; ?>);"><i class="fa fa-trash"></i></a>
+				</td>
 			</tr>			
 			<?php
 			$i++;
 			}		
 		}
-		?>		
+		?>	
+		</tbody>	
 		</table>
+		</div>
+		
 		</div>
 	</div>
 
@@ -218,13 +274,21 @@ $baseUrl = Yii::app()->theme->baseUrl;
 				<div class="panel panel-default">
 					<div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
 						<div class="panel-body">
-							<form name="login_form" id="login_form" method="post">
+							<form name="activity_form" id="activity_form" method="post" action="<?php echo Yii::app()->createUrl('atUsers/addpartneractivity'); ?>">
 								
 								<div class="form-group  col-lg-12">
 									<label for="exampleInputEmail1">Activity Type</label>
-									<select class="form-control">									
-									<option>eeeee</option>
-									<option>ttttt</option>
+                                                                        
+                                                                        <select class="form-control" name="activity_type_id">                                                                       
+                                                                        <?php  
+                                                                        if(count($user_selected_activity)>0){
+                                                                            foreach($user_selected_activity as $activity):
+                                                                            ?>                                                                        
+                                                                            <option value="<?php echo $activity['id'];?>"><?php echo $activity['activity_name'];?></option>
+                                                                            <?php 
+                                                                            endforeach;                          
+                                                                        }
+                                                                        ?>
 									</select>									
 								</div>
 
@@ -235,7 +299,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
 								<div class="form-group col-lg-6">
 									<label for="exampleInputEmail1">Activity Time</label>
-									<input name="activity_date" id="activity_date" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Time" type="text">
+									<input name="activity_time" id="activity_time" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Eg: 10-11AM " type="text">
 								</div> 
 								
 								<div class="form-group col-lg-6">
@@ -247,6 +311,10 @@ $baseUrl = Yii::app()->theme->baseUrl;
 									<label for="exampleInputEmail1">Fees($)</label>
 									<input name="price" id="price" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Price" type="text">
 								</div> 
+								<div class="form-group col-lg-12">
+									<label for="exampleInputEmail1">Age Range</label>
+									<input type="text" name="age_range" id="age_range" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Eg: 10-12 Yrs" >
+								</div>  
 								
 								<div class="form-group col-lg-12">
 									<label for="exampleInputEmail1">Address</label>
@@ -255,7 +323,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
 								
 								
 								<div class="form-group col-lg-12">
-								<input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/> &nbsp;
+								<input type="submit" class="btn btn-default search_submit" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/> &nbsp;
 								</div>
 								
 							</form>
@@ -268,6 +336,85 @@ $baseUrl = Yii::app()->theme->baseUrl;
 	</div>
 </div>
 
+
+
+<!--ACTIVITY ADD MODAL BOX-->
+<div id="myActivityUpdateform" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content" id="lognform">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" style="float:right;">&times;</button>
+				<h4 class="modal-title">Update Activity</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row msg-error" style="color:red; padding-bottom: 10px; text-align: center;"></div>
+				<div class="panel panel-default">
+					<div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							<form name="activity_form" id="activity_form" method="post" action="<?php echo Yii::app()->createUrl('atUsers/addpartneractivity'); ?>">
+								
+								<div class="form-group  col-lg-12">
+									<label for="exampleInputEmail1">Activity Type</label>
+                                                                        
+                                                                        <select class="form-control" name="activity_type_id">                                                                       
+                                                                        <?php  
+                                                                        if(count($user_selected_activity)>0){
+                                                                            foreach($user_selected_activity as $activity):
+                                                                            ?>                                                                        
+                                                                            <option value="<?php echo $activity['id'];?>"><?php echo $activity['activity_name'];?></option>
+                                                                            <?php 
+                                                                            endforeach;                          
+                                                                        }
+                                                                        ?>
+									</select>									
+								</div>
+
+								<div class="form-group col-lg-6">
+									<label for="exampleInputEmail1">Activity Date</label>
+									<input name="activity_date" id="activity_date" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Date" type="text">
+								</div>    
+
+								<div class="form-group col-lg-6">
+									<label for="exampleInputEmail1">Activity Time</label>
+									<input name="activity_time" id="activity_time" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Eg: 10-11AM " type="text">
+								</div> 
+								
+								<div class="form-group col-lg-6">
+									<label for="exampleInputEmail1"></label>
+									is Paid?<input type="checkbox" name="is_paid" id="is_paid" value="Y" onclick="display_fees(this);" >
+								</div> 
+								
+								<div class="form-group col-lg-6 fees-text" style="display:none;" >
+									<label for="exampleInputEmail1">Fees($)</label>
+									<input name="price" id="price" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Price" type="text">
+								</div> 
+								<div class="form-group col-lg-12">
+									<label for="exampleInputEmail1">Age Range</label>
+									<input type="text" name="age_range" id="age_range" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Eg: 10-12 Yrs" >
+								</div>  
+								
+								<div class="form-group col-lg-12">
+									<label for="exampleInputEmail1">Address</label>
+									<textarea name="address" id="address" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Addesss" ></textarea>
+								</div>  
+								
+								
+								<div class="form-group col-lg-12">
+								<input type="submit" class="btn btn-default search_submit" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/> &nbsp;
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		  
+		</div>            
+	</div>
+</div>
+
+
 <script>
 function display_fees(chkobj){
 	if($(chkobj).is(':checked')==true){
@@ -277,6 +424,15 @@ function display_fees(chkobj){
 	$(".fees-text").hide();
 	$("#price").val("");
 	}
+}
+
+function delete_activity(aid){
+
+	var r=confirm("Are you sure to delete this activity");
+	if(r==true){
+	window.location.href="<?php echo Yii::app()->createUrl('/atUsers/activitydelete');?>/"+aid;
+	}
+
 }
 </script>
 

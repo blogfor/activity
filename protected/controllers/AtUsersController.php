@@ -285,7 +285,7 @@ class AtUsersController extends Controller {
 
         if (!isset($user_data) && count($user_data) == 0)
             $this->redirect(Yii::app()->createUrl('/site/index'));
-
+      
 
         $this->render('profiledtls', array(
             'model' => $model, 'user_data' => $user_data
@@ -295,7 +295,7 @@ class AtUsersController extends Controller {
     public function actionPartnerdtls() {
         Yii::app()->theme = 'activity';
         //$this->layout='adminmain';
-
+		$user_activity=array();
         $model = new AtUsers('search');
         $model->unsetAttributes();  // clear any default values
 
@@ -304,16 +304,22 @@ class AtUsersController extends Controller {
 
         $user_data = AtUsers::model()->findByPk($_SESSION['user_id']);
 		
-		$pertner_activity_sql="SELECT * FROM at_partner_activity pa LEFT JOIN at_activity ac ON ac.id=pa.activity_type_id WHERE pa.user_id='".$_SESSION['user_id']."'";
+		$pertner_activity_sql="SELECT pa.id as aid,pa.*,ac.* FROM at_partner_activity pa LEFT JOIN at_activity ac ON ac.id=pa.activity_type_id WHERE pa.user_id='".$_SESSION['user_id']."'";
 		$activity_data = Yii::app()->db->createCommand($pertner_activity_sql)->queryAll();
 
-        if (!isset($user_data) && count($user_data) == 0)
-            $this->redirect(Yii::app()->createUrl('/site/index'));
+		if (!isset($user_data) && count($user_data) == 0)
+		$this->redirect(Yii::app()->createUrl('/site/index'));
 
+        $user_act="select activity_ids from at_partner_details where user_id='".$_SESSION['user_id']."'";
+        $Queryactivity= Yii::app()->db->createCommand($user_act)->queryRow();
+                
+        $sql="select * from at_activity where id in (".$Queryactivity['activity_ids'].")";		
+        $user_activity = Yii::app()->db->createCommand($sql)->queryAll();
 
         $this->render('partnerdtls', array(
-            'model' => $model, 'user_data' => $user_data, 'activity_data'=>$activity_data
+            'model' => $model, 'user_data' => $user_data, 'activity_data'=>$activity_data,'user_selected_activity'=>$user_activity
         ));
+		
     }
 
     public function actionUpdateProfile() {
@@ -489,5 +495,63 @@ class AtUsersController extends Controller {
 
         echo $html;
     }
+    
+    
+    
+    public function actionAddPartnerActivity(){		
+		$activity_type_id=$_POST['activity_type_id'];
+		$age_range=$_POST['age_range'];
+		$activity_date=$_POST['activity_date'];
+		$activity_time=$_POST['activity_time'];
+		$user_id=$_SESSION['user_id'];
+		$address=$_POST['address'];
+		
+		if(empty($activity_date)){
+			Yii::app()->user->setFlash('errorAddActivity', 'Entere activity date.');
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+		}
+		if(empty($activity_time)){
+			Yii::app()->user->setFlash('errorAddActivity', 'Entere activity time.');
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+		}
+		if(empty($address)){
+			Yii::app()->user->setFlash('errorAddActivity', 'Entere activity location.');
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+		}
+		
+        if(isset($_POST['is_paid']) && $_POST['is_paid']=="Y") {
+		$is_paid="Y"; 
+		$price=$_POST['price'];
+		}
+		else {
+		$is_paid="N";
+		$price="";
+		}
+		
+            $sql = " INSERT INTO `at_partner_activity`(
+            `user_id` ,
+            `activity_type_id` ,
+            `age_range` ,
+			`address`,
+            `activity_date`,
+            `activity_time`,
+			`is_paid`,
+			`price`	
+            )
+            VALUES (
+            '$user_id',  '$activity_type_id',  '$age_range','$address','$activity_date','$activity_time','$is_paid','$price')";
 
+            Yii::app()->db->createCommand($sql)->execute();
+            Yii::app()->user->setFlash('successAddActivity', 'Your activity is successfully added.');
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+    }
+	
+	public function actionActivityDelete(){	
+	$sql="DELETE FROM at_partner_activity WHERE id='".$_REQUEST['id']."'";	
+	Yii::app()->db->createCommand($sql)->execute();
+	Yii::app()->user->setFlash('successUpdateActivity', 'Your activity is successfully deleted.');
+	$this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+	}
+	
+	
 }
