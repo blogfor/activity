@@ -1,6 +1,6 @@
 <?php
 $baseUrl = Yii::app()->theme->baseUrl;
-//print_r($activity_data);
+print_r($user_activity);
 ?>
 
 <div id="main" class="site-main" role="main">
@@ -218,13 +218,21 @@ $baseUrl = Yii::app()->theme->baseUrl;
 				<div class="panel panel-default">
 					<div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
 						<div class="panel-body">
-							<form name="login_form" id="login_form" method="post">
+							<form name="activity_form" id="activity_form" method="post" action="<?php echo Yii::app()->createUrl('atUsers/addpartneractivity'); ?>">
 								
 								<div class="form-group  col-lg-12">
 									<label for="exampleInputEmail1">Activity Type</label>
-									<select class="form-control">									
-									<option>eeeee</option>
-									<option>ttttt</option>
+                                                                        
+                                                                        <select class="form-control" name="activity_type_id">                                                                       
+                                                                        <?php  
+                                                                        if(count($user_selected_activity)>0){
+                                                                            foreach($user_selected_activity as $activity):
+                                                                            ?>                                                                        
+                                                                            <option value="<?php echo $activity['id'];?>"><?php echo $activity['activity_name'];?></option>
+                                                                            <?php 
+                                                                            endforeach;                          
+                                                                        }
+                                                                        ?>
 									</select>									
 								</div>
 
@@ -255,7 +263,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
 								
 								
 								<div class="form-group col-lg-12">
-								<input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/> &nbsp;
+								<input type="submit" class="btn btn-default search_submit" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/> &nbsp;
 								</div>
 								
 							</form>

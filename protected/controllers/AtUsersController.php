@@ -285,7 +285,7 @@ class AtUsersController extends Controller {
 
         if (!isset($user_data) && count($user_data) == 0)
             $this->redirect(Yii::app()->createUrl('/site/index'));
-
+      
 
         $this->render('profiledtls', array(
             'model' => $model, 'user_data' => $user_data
@@ -310,9 +310,15 @@ class AtUsersController extends Controller {
         if (!isset($user_data) && count($user_data) == 0)
             $this->redirect(Yii::app()->createUrl('/site/index'));
 
+        $user_act="select activity_ids from at_partner_details where user_id='".$_SESSION['user_id']."'";
+        $Queryactivity= Yii::app()->db->createCommand($user_act)->queryRow();
+                
+        $sql="select * from at_activity where id in (".$Queryactivity['activity_ids'].")";
+        $user_activity = Yii::app()->db->createCommand($sql)->queryAll();
+
 
         $this->render('partnerdtls', array(
-            'model' => $model, 'user_data' => $user_data, 'activity_data'=>$activity_data
+            'model' => $model, 'user_data' => $user_data, 'activity_data'=>$activity_data,'user_selected_activity'=>$user_activity
         ));
     }
 
@@ -488,6 +494,33 @@ class AtUsersController extends Controller {
         }
 
         echo $html;
+    }
+    
+    
+    
+    
+    public function actionAddPartnerActivity(){
+        
+        print_r($_POST);
+        echo "erwerwer";
+        
+        print_r($_SESSION);
+        
+            $sql = " INSERT INTO `at_partner_activity` (
+            `user_id` ,
+            `activity_type_id` ,
+            `age_range` ,
+            `activity_date`,
+            `activity_time`
+          
+            )
+            VALUES (
+            '$firstname',  '$lastname',  '$email','$ctype','" . $mobile . "','" . md5($password) . "','" . $email . "','" . base64_encode($firstname . "$" . $email) . "' )";
+
+              //  Yii::app()->db->createCommand($sql)->execute();
+                 Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to '.$_POST['email']);
+           
+        
     }
 
 }
