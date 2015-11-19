@@ -56,6 +56,14 @@ class AtUsersController extends Controller {
             'model' => $this->loadModel($id),
         ));
     }
+    
+     public function actionRegistration() {
+        Yii::app()->theme = 'activity';
+         $model = new AtUsers;
+        $this->render('Registration', array(
+            'model' => $model,
+        ));
+    }
 
     /**
      * Creates a new model.

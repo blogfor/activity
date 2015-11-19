@@ -331,7 +331,7 @@ $('.slider').sss();
         
         
         <!--/ PostList 3 Columns -->
-        <section class="how_work"> 
+        <section class="how_work" id="howtowork"> 
           <div class="container">
             <h1> How it Works </h1>
           <div class="row">
