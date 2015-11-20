@@ -78,7 +78,7 @@
                                 <i class="fa fa-envelope-o"></i>
                             </div>
                             <div class="media-body">
-                                <p><?php echo $siteSettings['site_email'];?></p>
+                                <p style="font-size:12px !important;"><?php echo $siteSettings['site_email'];?></p>
                             </div>
                         </li>
 

@@ -218,6 +218,9 @@ class AtUsersController extends Controller {
 
 
         if (isset($_POST) && count($_POST) > 3) {
+            
+          
+            
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $email = $_POST['email'];
@@ -253,9 +256,40 @@ class AtUsersController extends Controller {
                 Yii::app()->db->createCommand($sql)->execute();
                 $insertid = Yii::app()->db->getLastInsertID();
 
-
-
-
+                if(isset($_FILES['logo']))
+                {
+                    $tmp_name = $_FILES["logo"]["tmp_name"];
+                    $name = rand(0,9999).'-'.$_FILES["logo"]["name"];
+                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot']."/uploads/".$name);
+                    
+                            $MyImageCom = new ImageComponent();  
+                           $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$name);
+                           $MyImageCom->resize(200,200);//width,height,Red,Green,Blue
+                           $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$name);
+                    
+                }
+                
+                $activities=  implode(",",$_POST['activities']);
+                Yii::app()->db->createCommand("INSERT INTO `at_partner_details` (`user_id`, `activity_ids`,`logo`) VALUES ('".$insertid."', '".$activities."','".$name."')")->execute();
+                
+                
+                
+                if(isset($_FILES['image']))
+                {
+                    $tmp_name = $_FILES["image"]["tmp_name"];
+                    $name = rand(0,9999).'-'.$_FILES["image"]["name"];
+                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot']."/uploads/".$name);
+                    
+                            $MyImageCom = new ImageComponent();  
+                           $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$name);
+                           $MyImageCom->resize(200,200);//width,height,Red,Green,Blue
+                           $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$name);
+                    
+                }
+                
+                
+                Yii::app()->db->createCommand("INSERT INTO `at_partner_images` (`user_id`, `image`) VALUES ('".$insertid."','".$name."')")->execute();
+                
                 //EMAIL=============================================================
 
 

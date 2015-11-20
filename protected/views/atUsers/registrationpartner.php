@@ -26,7 +26,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
             <?php endif; ?>
 
 
-
+            <div class="col-sm-9" style="margin-top: 10px;">
 
             <div class="modal-body">
                 <div class="row reg-msg-error-partner" style="color:red; padding-bottom: 10px; text-align: center;"></div>
@@ -68,7 +68,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Activities</label>
-                                    <select name="activities" id="activities"  style="outline: medium none;" hidefocus="true" class="form-control validate[required]" multiple="true">
+                                    <select name="activities[]" id="activities"  style="outline: medium none;" hidefocus="true" class="form-control validate[required]" multiple="true">
                                         <?php
                                         
                                         $QueryActivity = Yii::app()->db->createCommand('SELECT * FROM at_activity')->queryAll();
@@ -87,16 +87,17 @@ $baseUrl = Yii::app()->theme->baseUrl;
                                 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Add Image</label>
-                                    <input type="file" name="logo" id="logo"  style="outline: medium none;" class="form-control validate[required]" />
+                                    <input type="file" name="image" id="image"  style="outline: medium none;" class="form-control validate[required]" />
                                 </div>
                                  <input type="hidden" name="ctype" value="Partner" checked="checked">
-                                <input type="submit" class="btn btn-default search_submit" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/>
+                                <input type="submit" class="btn btn-black btn-small btn-transparent" style="background-color: #f79646; padding: 5px 10px;" padding: 5px 10px;" value="Submit"/>
                             </form>
 
                         </div>
                     </div>
                 </div>
             </div>
+                </div>
         </div>
     </div>
 </div>

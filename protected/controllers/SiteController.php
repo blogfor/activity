@@ -39,7 +39,7 @@ class SiteController extends Controller
             $queryBANNER = "SELECT * FROM at_banner ORDER BY id";
             $resultBANNER = Yii::app()->db->createCommand($queryBANNER)->queryAll();
             
-             $queryACTIVITY = "SELECT * FROM at_activity ORDER BY id";
+             $queryACTIVITY = "SELECT * FROM at_activity ORDER BY RAND()";
             $resultACTIVITY = Yii::app()->db->createCommand($queryACTIVITY)->queryAll();
             
 
@@ -206,13 +206,24 @@ class SiteController extends Controller
             `home_phone`,
             `password`,
             `username`,
-            `verification`
+            `verification`,
+            `create_at`,
+            `createdby`,
+            `modifiedby`
             )
             VALUES (
-            '$firstname',  '$lastname',  '$email','$ctype','".$mobile."','".md5($password)."','".$email."','".base64_encode($firstname."$".$email)."' )";          
+            '$firstname',  '$lastname',  '$email','$ctype','".$mobile."','".md5($password)."','".$email."','".base64_encode($firstname."$".$email)."',NOW(),0,0)";          
 
             Yii::app()->db->createCommand($sql)->execute();
             $insertid=Yii::app()->db->getLastInsertID();
+           
+            //Insert membership Info Default
+            Yii::app()->db->createCommand("INSERT INTO `at_membership_info` (`payment_c_date`, `todate`, `fromdate`, `membership_title`, `user_id`, `membership_note`) VALUES (NOW(), date_add(curdate(),interval 1 month), NOW(), 'Free', '".$insertid."', 'Free basic while registration')")->execute();
+            
+            $membershipId=Yii::app()->db->getLastInsertID();
+            
+            Yii::app()->db->createCommand("INSERT INTO `at_payment` (cdate,`membership_id`, `final_amount`, `payment_process`, `payment_status`, `payment_by`, `pay_by_fname`, `pay_by_lname`, `pay_by_address`) VALUES (NOW(),".$membershipId.", 0, 2, 'SUCCESSFUL', ".$insertid.", '".$firstname."', '".$lastname."', '')")->execute();
+            
             
             for($i=1;$i<=4;$i++)
             {

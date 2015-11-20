@@ -34,7 +34,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/css/validationEngine.jquery.css" />
     <script src="<?php echo $baseUrl; ?>/js/jquery.validationEngine.js"></script>
     <script src="<?php echo $baseUrl; ?>/js/languages/jquery.validationEngine-en.js"></script>
-    
+     <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/js/jquery.datetimepicker.css" />
+<script src="<?php echo $baseUrl; ?>/js/jquery.datetimepicker.js"></script>
     </head>
     <body>
         

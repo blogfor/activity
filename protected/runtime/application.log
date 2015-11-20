@@ -304,3 +304,483 @@ Stack trace:
 REQUEST_URI=/activity/themes/activity/images/arr.png
 HTTP_REFERER=http://localhost/activity/themes/activity/style.css
 ---
+2015/11/19 09:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 10:50:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 10:51:45 [error] [php] Undefined index: user_id (E:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:292)
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CController.php(286): AtUsersController->runAction()
+#1 E:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#2 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#3 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 E:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/profiledtls
+in E:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (292)
+in E:\xampp\htdocs\activity\index.php (14)
+2015/11/19 10:51:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in E:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 E:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 19:09:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 20:59:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 20:59:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 21:06:36 [error] [php] Undefined index: user_id (G:\xampp\htdocs\activity\protected\controllers\AtUsersController.php:313)
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CController.php(286): AtUsersController->runAction()
+#1 G:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#2 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#3 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 G:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/partnerdtls
+in G:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (313)
+in G:\xampp\htdocs\activity\index.php (14)
+2015/11/19 22:53:36 [error] [php] Undefined variable: activity_data (G:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php:153)
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CController.php(869): AtUsersController->renderFile()
+#1 G:\xampp\htdocs\activity\framework\web\CController.php(782): AtUsersController->renderPartial()
+#2 G:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(300): AtUsersController->render()
+#3 G:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionProfiledtls()
+#4 G:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 G:\xampp\htdocs\activity\framework\web\CController.php(286): AtUsersController->runAction()
+#6 G:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#7 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#8 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/profiledtls
+in G:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php (153)
+in G:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (300)
+in G:\xampp\htdocs\activity\index.php (14)
+2015/11/19 23:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/8443-Study resized.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/8443-Study%20resized.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/5608-Sports.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/5608-Sports.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/1205-Music.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/1205-Music.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/4022-Drama.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/4022-Drama.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/377-Dance.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/377-Dance.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/2926-Art.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/2926-Art.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/7906-Others.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/7906-Others.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/3495-Play.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/3495-Play.jpg
+HTTP_REFERER=http://localhost/activity/site/index
+---
+2015/11/19 23:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:36:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:37:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:38:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:39:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:40:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:40:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'RAND' at line 1. The SQL statement executed was: SELECT * FROM at_activity ORDER BY id RAND.
+in G:\xampp\htdocs\activity\protected\controllers\SiteController.php (43)
+in G:\xampp\htdocs\activity\index.php (14)
+2015/11/19 23:40:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'RAND' at line 1. The SQL statement executed was: SELECT * FROM at_activity ORDER BY id RAND' in G:\xampp\htdocs\activity\framework\db\CDbCommand.php:543
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 G:\xampp\htdocs\activity\protected\controllers\SiteController.php(43): CDbCommand->queryAll()
+#2 G:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 G:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 G:\xampp\htdocs\activity\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 G:\xampp\htdocs\activity\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('index')
+#7 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#8 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#10 {main}
+REQUEST_URI=/activity/site/index
+HTTP_REFERER=http://localhost/activity/atUsers/profiledtls
+---
+2015/11/19 23:41:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:41:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:41:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/19 23:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 00:03:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:06:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:06:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:06:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:07:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:08:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 01:47:21 [error] [php] Undefined variable: total (G:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php:195)
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CController.php(869): AtUsersController->renderFile()
+#1 G:\xampp\htdocs\activity\framework\web\CController.php(782): AtUsersController->renderPartial()
+#2 G:\xampp\htdocs\activity\protected\controllers\AtUsersController.php(334): AtUsersController->render()
+#3 G:\xampp\htdocs\activity\framework\web\actions\CInlineAction.php(49): AtUsersController->actionProfiledtls()
+#4 G:\xampp\htdocs\activity\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 G:\xampp\htdocs\activity\framework\web\CController.php(286): AtUsersController->runAction()
+#6 G:\xampp\htdocs\activity\framework\web\CController.php(265): AtUsersController->runActionWithFilters()
+#7 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): AtUsersController->run()
+#8 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 G:\xampp\htdocs\activity\index.php(14): CWebApplication->run()
+REQUEST_URI=/activity/atUsers/profiledtls
+in G:\xampp\htdocs\activity\protected\views\atUsers\profiledtls.php (195)
+in G:\xampp\htdocs\activity\protected\controllers\AtUsersController.php (334)
+in G:\xampp\htdocs\activity\index.php (14)
+2015/11/20 02:50:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 03:01:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/temp/avatar-1.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/temp/avatar-1.jpg
+HTTP_REFERER=http://localhost/activity/atUsers/partnerdtls
+---
+2015/11/20 03:01:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/uploads/temp/avatar-1.jpg".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/uploads/temp/avatar-1.jpg
+HTTP_REFERER=http://localhost/activity/atUsers/partnerdtls
+---
+2015/11/20 03:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 03:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 03:17:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 03:17:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---
+2015/11/20 03:29:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in G:\xampp\htdocs\activity\framework\web\CWebApplication.php:286
+Stack trace:
+#0 G:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 G:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 G:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://localhost/activity/themes/activity/style.css
+---

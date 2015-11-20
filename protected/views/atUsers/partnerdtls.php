@@ -1,6 +1,6 @@
 <?php
 $baseUrl = Yii::app()->theme->baseUrl;
-print_r($user_selected_activity);
+//print_r($user_selected_activity);
 ?>
 
 <style>
@@ -27,30 +27,27 @@ background-color:#f1f1f1;
        <div class="container"> 
          <h3 class="hading">Partner Dashboard</h3>
          
-        <div class="col-sm-2 pull-left profile-img"> <img src="<?php echo $baseUrl;?>/images/temp/avatar-1.jpg" alt=""> 
+        <div class="col-sm-2 pull-left profile-img"> 
+            
+            <?php
+             $partnerActivity=Yii::app()->db->createCommand("SELECT * FROM at_partner_details WHERE id='".$user_data['id']."'")->queryRow();
+            ?>
+            <?php 
+            if(trim($partnerActivity['logo'])=='') {?>
+            <img src="<?php echo $baseUrl;?>/images/temp/avatar-1.jpg" alt=""> 
+            <?php }
+            else
+            {
+              ?>
+            <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $partnerActivity['logo'];?>" class="image"/> 
+            <?php
+            }
+            ?>
+            
             <h5> <?php echo strtoupper($user_data['firstname']." ".$user_data['lastname']);?> </h5>
             <h6> <?php echo $user_data['email'];?> </h6>
             
-            <div class="socail_icon">
-                <ul>
-                <li>
-                <a href="#" hidefocus="true" style="outline: medium none;">
-                <i class="fa fa-facebook"></i>
-                </a>
-                </li>
-                <li>
-                <a href="#" hidefocus="true" style="outline: medium none;">
-                <i class="fa fa-twitter"></i>
-                </a>
-                </li>
-                <li>
-                <a href="#" hidefocus="true" style="outline: medium none;">
-                <i class="fa fa-google-plus"></i>
-                </a>
-                </li>
-
-                </ul>
-                </div>
+            
                             
           </div>
           
@@ -295,6 +292,10 @@ background-color:#f1f1f1;
 								<div class="form-group col-lg-6">
 									<label for="exampleInputEmail1">Activity Date</label>
 									<input name="activity_date" id="activity_date" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Activity Date" type="text">
+                                    
+<?php 	
+	getDatePicker('activity_date');
+    ?>
 								</div>    
 
 								<div class="form-group col-lg-6">
@@ -425,6 +426,12 @@ function display_fees(chkobj){
 	$("#price").val("");
 	}
 }
+ $(document).ready(function() {
+       
+        $("#activity_form").validationEngine();
+    });
+
+
 
 function delete_activity(aid){
 

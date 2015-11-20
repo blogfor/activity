@@ -61,7 +61,7 @@
                                         <label for="exampleInputEmail1">Password</label>
                                         <input name="user_password" id="user_password" style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" id="exampleInputEmail1" placeholder="Password" type="password">
                                     </div>                    
-                                    <input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_login();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Login"/> &nbsp;
+                                    <input type="submit" class="btn btn-black btn-small btn-transparent" style="background-color: #f79646; padding: 5px 10px;" onclick="javascript: return site_login();"  value="Login"/> &nbsp;
                                     <a href="javascript:forgotPassword();">Forgot Password</a>
                                 </form>
                             </div>
@@ -93,7 +93,7 @@
                                     </div>
 
                                                      
-                                    <input type="submit" class="btn btn-default search_submit" onclick="javascript: return site_forgot();" style="background-color: rgb(221, 221, 221); padding: 5px 10px;" value="Submit"/>
+                                    <input type="submit" class="btn btn-black btn-small btn-transparent" style="background-color: #f79646; padding: 5px 10px;" onclick="javascript: return site_forgot();" value="Submit"/>
                                 </form>
                             </div>
                         </div>
@@ -188,7 +188,7 @@ function site_forgot()
             url: "<?php echo Yii::app()->createUrl('site/sitelogout'); ?>",
             data: {user_name: $("#user_name").val(), user_password: $("#user_password").val()},
             success: function(msg) {
-                document.location.reload(true);
+                document.location.href='<?php echo Yii::app()->createUrl('site/index'); ?>';
             }
         });
     }
