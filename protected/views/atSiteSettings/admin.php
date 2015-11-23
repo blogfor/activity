@@ -43,9 +43,9 @@ $('.search-form form').submit(function(){
         <?php //echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
         <div class="search-form" style="display:none">
             <?php
-            $this->renderPartial('_search', array(
-                'model' => $model,
-            ));
+//            $this->renderPartial('_search', array(
+//                'model' => $model,
+//            ));
             ?>
         </div><!-- search-form -->
         <div class="panel-body">
@@ -66,9 +66,9 @@ $('.search-form form').submit(function(){
 		'site_gplus',
 		
 		'site_twitter',
-		'site_paypal_business_email',
-		'site_paypal_secrect',
-		'site_paypal_authid',
+		'paypal_pro_user_name',
+		'paypal_pro_password',
+		'paypal_pro_api_signature',
 		
 		array(
 			'class'=>'CButtonColumn',

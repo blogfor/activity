@@ -241,7 +241,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     <div class="col-sm-<?php echo ($i == 3 || $i == 4 || $i == 7) ? '5' : '3'; ?>">
                         <div class="item">
                             <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rActivity['activity_image']; ?>" class="image" alt="">
-                            <a class="overlay" href="#">
+                            <a class="overlay" href="<?php echo Yii::app()->getBaseUrl(true); ?>/atActivity/searchactivity/<?php echo $rActivity['id']; ?>">
                                 <h3 class="title"><?php echo $rActivity['activity_name']; ?></h3>
                                 <div class="description">
                                     <p>

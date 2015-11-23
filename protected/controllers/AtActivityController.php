@@ -215,11 +215,12 @@ class AtActivityController extends Controller
 		}
 	}
     
-    public function actionSearchActivity()
+    public function actionSearchActivity($id=null)
  {
   $queryACTIVITY = "SELECT * FROM at_activity ORDER BY id";
         $resultACTIVITY = Yii::app()->db->createCommand($queryACTIVITY)->queryAll();
-             
+        if($id!='')
+             $_POST['activity_id']=$id;
   
   $search_sql="SELECT pc.id as aid, pc.*,ac.*,u.* FROM at_partner_activity pc
   LEFT JOIN at_activity ac ON pc.activity_type_id=ac.id

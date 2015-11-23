@@ -11,9 +11,9 @@
  * @property string $site_fb
  * @property string $site_gplus
  * @property string $site_twitter
- * @property string $site_paypal_business_email
- * @property string $site_paypal_secrect
- * @property string $site_paypal_authid
+ * @property string $paypal_pro_user_name
+ * @property string $paypal_pro_password
+ * @property string $paypal_pro_api_signature
  */
 class AtSiteSettings extends CActiveRecord
 {
@@ -34,11 +34,11 @@ class AtSiteSettings extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('site_phone', 'length', 'max'=>15),
-			array('site_email, site_fb, site_gplus, site_twitter, site_paypal_business_email, site_paypal_secrect, site_paypal_authid', 'length', 'max'=>255),
+			array('site_email, site_fb, site_gplus, site_twitter, paypal_pro_user_name, paypal_pro_password, paypal_pro_api_signature', 'length', 'max'=>255),
 			array('site_address', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, site_address, site_phone, site_email, site_fb, site_gplus, site_twitter, site_paypal_business_email, site_paypal_secrect, site_paypal_authid,site_email_from', 'safe', 'on'=>'search'),
+			array('id, site_address, site_phone, site_email, site_fb, site_gplus, site_twitter, paypal_pro_user_name, paypal_pro_password, paypal_pro_api_signature,site_email_from', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,9 +67,9 @@ class AtSiteSettings extends CActiveRecord
 			'site_fb' => 'Site Fb',
 			'site_gplus' => 'Site Gplus',
 			'site_twitter' => 'Site Twitter',
-			'site_paypal_business_email' => 'Site Paypal Business Email',
-			'site_paypal_secrect' => 'Site Paypal Secrect',
-			'site_paypal_authid' => 'Site Paypal Authid',
+			'paypal_pro_user_name' => 'Paypal API User Name',
+			'paypal_pro_password' => 'Paypal API Password',
+			'paypal_pro_api_signature' => 'Paypal API Signature',
 		);
 	}
 
@@ -98,9 +98,9 @@ class AtSiteSettings extends CActiveRecord
 		$criteria->compare('site_fb',$this->site_fb,true);
 		$criteria->compare('site_gplus',$this->site_gplus,true);
 		$criteria->compare('site_twitter',$this->site_twitter,true);
-		$criteria->compare('site_paypal_business_email',$this->site_paypal_business_email,true);
-		$criteria->compare('site_paypal_secrect',$this->site_paypal_secrect,true);
-		$criteria->compare('site_paypal_authid',$this->site_paypal_authid,true);
+		$criteria->compare('paypal_pro_user_name',$this->paypal_pro_user_name,true);
+		$criteria->compare('paypal_pro_password',$this->paypal_pro_password,true);
+		$criteria->compare('paypal_pro_api_signature',$this->paypal_pro_api_signature,true);
                 $criteria->compare('site_email_from',$this->site_email_from,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
