@@ -60,7 +60,7 @@ class AtUsersController extends Controller {
      public function actionRegistration() {
         Yii::app()->theme = 'activity';
          $model = new AtUsers;
-        $this->render('Registration', array(
+        $this->render('registration', array(
             'model' => $model,
         ));
     }
@@ -186,6 +186,8 @@ class AtUsersController extends Controller {
             $model->attributes = $_GET['AtUsers'];
 
         if (isset($_POST) && isset($_POST['companyname'])) {
+            $siteSettings=  ActivityCommon::get_setting_info();
+            
             $MailContent = new AtMailContent;
             $mailData = $MailContent->fetchMailContent(3);
             $mailData['body'] = str_replace("[COMPANY]", $_POST['companyname'], $mailData['body']);
@@ -197,7 +199,7 @@ class AtUsersController extends Controller {
             $msg = $mailData['body'];
 
             $msg .= $mailData['footer'];
-            $emails[] = 'partners@activityhere.com';
+            $emails[] = $siteSettings['site_partner_inquiry_email'];
             ActivityCommon::atMailSend($emails, 3, $msg, $mailData);
 
             Yii::app()->user->setFlash('successMail', 'Thank you for showing your interest. We will get back to you as soon as possible.');

@@ -168,7 +168,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                                 <a href="<?php echo $rBANNER['banner_link']; ?>">
                                     <span class="banner-button"><?php echo $rBANNER['banner_link_text']; ?></span>
                                 </a>    
-                                <?php }
+                            <?php }
                             ?>
 
                         </div>
@@ -228,7 +228,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
     <div class="masanary_section"> 
         <div id="container">
 
-            <div class="container">
+            <div class="col-sm-12">
                 <h1> Browse by Activity </h1>
                 <div class="grid-sizer"></div>
 
@@ -238,14 +238,14 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     ?>
 
 
-                    <div class="col-sm-<?php echo ($i == 3 || $i == 4 || $i == 7) ? '5' : '3'; ?>">
+                    <div class="col-sm-<?php echo ($i == 3 || $i == 4 || $i == 7) ? '3' : '3'; ?>">
                         <div class="item">
                             <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rActivity['activity_image']; ?>" class="image" alt="">
                             <a class="overlay" href="<?php echo Yii::app()->getBaseUrl(true); ?>/atActivity/searchactivity/<?php echo $rActivity['id']; ?>">
                                 <h3 class="title"><?php echo $rActivity['activity_name']; ?></h3>
                                 <div class="description">
                                     <p>
-    <?php echo $rActivity['activity_description']; ?>
+                                        <?php echo $rActivity['activity_description']; ?>
                                     </p>
                                 </div>
                             </a>
@@ -253,10 +253,10 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     </div> 
 
 
-    <?php
-    $i++;
-}
-?>
+                    <?php
+                    $i++;
+                }
+                ?>
 
 
 
@@ -271,35 +271,37 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
     <!--/ PostList 3 Columns -->
     <section class="how_work" id="howtowork"> 
-        <div class="container">
-            <h1> How it Works </h1>
-            <div class="row">
+        <div class="">
+            <div class="col-sm-12">
+                <h1> How it Works </h1>
+                <div class="row">
 
-<?php
-foreach ($resultHIW as $rHIW) {
-    ?>
+                    <?php
+                    foreach ($resultHIW as $rHIW) {
+                        ?>
 
-                    <div class="col-sm-6 work">
-                        <div class="media-block">
-                            <div class="media-thumb">
-                                <a href="<?php echo Yii::app()->createUrl('/pages/view', array('p' => 'how_it_works')); ?>">
-                                    <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rHIW['hwt_image']; ?>" alt="<?php echo $rHIW['hwt_name']; ?>">
-                                </a>
-                            </div>
-                            <div class="media-title">
-    <?php echo $rHIW['hwt_name']; ?>
-                            </div>
-                            <div class="media-content">                        
-                                <?php echo $rHIW['hwt_description']; ?>  
+                        <div class="col-sm-6 work">
+                            <div class="media-block">
+                                <div class="media-thumb">
+                                    <a href="<?php echo Yii::app()->createUrl('/pages/view', array('p' => 'how_it_works')); ?>">
+                                        <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rHIW['hwt_image']; ?>" alt="<?php echo $rHIW['hwt_name']; ?>">
+                                    </a>
+                                </div>
+                                <div class="media-title">
+                                    <?php echo $rHIW['hwt_name']; ?>
+                                </div>
+                                <div class="media-content">                        
+                                    <?php echo $rHIW['hwt_description']; ?>  
+                                </div>
                             </div>
                         </div>
-                    </div>
 
 
-    <?php
-}
-?>
-            </div>  
+                        <?php
+                    }
+                    ?>
+                </div>  
+            </div>
         </div>
     </section>
 
@@ -309,9 +311,9 @@ foreach ($resultHIW as $rHIW) {
             <h1> Discover New Kids Activities </h1>
             <div class="row">
 
-<?php
-foreach ($resultKA as $rKIA) {
-    ?>
+                <?php
+                foreach ($resultKA as $rKIA) {
+                    ?>
 
                     <div class="col-sm-6 work">
                         <div class="media-block">
@@ -321,15 +323,15 @@ foreach ($resultKA as $rKIA) {
                                 </a>
                             </div>
                             <div class="media-content">                        
-    <?php echo $rKIA['kids_description']; ?>  
+                                <?php echo $rKIA['kids_description']; ?>  
                             </div>
                         </div>
                     </div>
 
 
-    <?php
-}
-?>
+                    <?php
+                }
+                ?>
             </div>  
         </div>
     </section>
@@ -337,7 +339,15 @@ foreach ($resultKA as $rKIA) {
 
 </div>
 <!--/ Main -->
-
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-paralux">
+        <h4> Join our Monthly Membership </h4>
+        <h3> Take any class at your free time flexibly for whole month </h3>
+        <a class="btn btn-black btn-small btn-transparent" href="<?php echo Yii::app()->createUrl('/atUsers/registration'); ?>" hidefocus="true" style="outline: medium none;">
+            <span>GET STARTED NOW</span>
+        </a>
+    </div>
+</footer>
 
 <script>
 

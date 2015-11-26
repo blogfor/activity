@@ -191,6 +191,8 @@ body {
   body {
     font-size: 13px;
   }
+  
+  
 }
 .ie7 body {
   background: none;
@@ -817,6 +819,11 @@ p {
   p {
     font-size: 13px;
   }
+  
+  ul.search_drop-bg li
+  {
+      width:299px !important;
+  }
 }
 
 /* Blockquotes */
@@ -1170,7 +1177,7 @@ address {
 .search_box{
 	background-color: rgba(0, 0, 0, 0.65);
 	position:relative;
-	padding:20px 0;
+	padding:12px 0;
 	/*z-index:999999;*/
 	display:block;
 }
@@ -1188,16 +1195,16 @@ address {
 }
 .search_submit{
 	background:#4f81bd !important;
-	padding:9px 25px !important;
+	padding:4px 25px !important;
 	color:#fff;
 	text-transform:uppercase;
 	border-radius: 0;
 }
 .search_option{
-	background:#ececec;
+	background:#fff;
 	padding:10px;
-	width:116%;
-	height:44px;
+	width:100%;
+	height:33px;
 	text-align:left;
 }
 .caret{
@@ -1229,9 +1236,9 @@ address {
 /*-----------------------------------*/
 .site-logo {
   float: left;
-  height: 80px;
-  line-height: 80px;
-  padding:12px 0;
+  height: auto;
+  line-height: auto;
+  padding:2px 0;
   /*  a:before {
     display: inline-block;
     content: '\e60c';
@@ -1509,6 +1516,8 @@ address {
     padding: 65px 0;
     margin-bottom: 60px;
   }
+  
+  
 }
 @media (max-width: 767px) {
   .site-footer {
@@ -1610,16 +1619,16 @@ address {
 .nav-menu > li {
   display: inline-block;
   background: rgba(0, 0, 0, 0);
-  padding:20px 0;
+  padding:5px 0;
   /*IE Fix*/
 }
 .nav-menu > li > a {
-    height: 37px;
-    line-height: 34px;
+    height: 22px;
+    line-height: 24px;
     padding: 0 10px;
 }
 .nav-menu > li > ul {
-  top: 80px;
+  top: 34px;
   left: 0;
   z-index: 9499;
   padding-left: 0;
@@ -3345,7 +3354,8 @@ post----------------------------------*/
 	font-size:50px;
 	font-weight:300;
 	font-family:'Conv_MyriadPro-Regular',Sans-Serif;
-	color:#4f81bd;
+	color:#000;
+        
 }
 .entry-meta{
 	text-align:center;
@@ -3405,7 +3415,7 @@ post----------------------------------*/
 ul.search_drop-bg li{
 	background:#4f81bd;
 	padding:7px !important;
-	width:294px;
+	width:260px;
 	padding:8px 0;
 }
 ul.search_drop-bg li a{
@@ -3419,8 +3429,8 @@ ul.search_drop-bg li a:hover{
 }
 .down-arows_search{
 	float: right !important;
-    font-size: 19px !important;
-    padding: 3px 13px;
+    font-size: 16px !important;
+    padding: 1px 13px;
 }
 .about-footer{
 	text-align:left;
@@ -3433,7 +3443,7 @@ ul.search_drop-bg li a:hover{
 	font-family:'Conv_MyriadPro-Regular',Sans-Serif;
 	text-align:center;
 	padding:15px 0;
-	color: #4f81bd;
+	color: #000;
 }
 
 
@@ -3680,6 +3690,10 @@ ul.search_drop-bg li a:hover{
   .post img {
     padding: 0;
   }
+  ul.search_drop-bg li
+  {
+      width:158px !important;
+  }
 }
 /* Medium devices */
 
@@ -3690,7 +3704,22 @@ ul.search_drop-bg li a:hover{
   #grid > #posts .post.cs2 {
     width: 100%;
   }
+  
+  ul.search_drop-bg li
+  {
+      width:260px !important;
+  }
 }
+
+@media (max-width: 320px) {
+ 
+  
+  ul.search_drop-bg li
+  {
+      width:260px !important;
+  }
+}
+
 /* Large devices */
 
 @media (min-width: 1200px) {
@@ -3847,3 +3876,7 @@ Can this be done with Masonry options? */
 }
 
 /*------SLIDER CSS END--------------*/
+
+.search_from input[type="text"]{
+    height: 33px !important;
+}

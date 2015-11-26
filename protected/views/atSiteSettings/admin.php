@@ -66,6 +66,8 @@ $('.search-form form').submit(function(){
 		'site_gplus',
 		
 		'site_twitter',
+                'site_registration_email',
+		'site_partner_inquiry_email',
 		'paypal_pro_user_name',
 		'paypal_pro_password',
 		'paypal_pro_api_signature',
