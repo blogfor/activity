@@ -123,11 +123,14 @@ class AtBannerController extends Controller
 			 $rnd = rand(0,9999);  // generate random number between 0-9999
                          $_POST['AtBanner']['banner_image'] = $model->banner_image;
                          $model->attributes=$_POST['AtBanner'];
- 
-            $uploadedFile=CUploadedFile::getInstance($model,'banner_image');
+ $uploadedFile=CUploadedFile::getInstance($model,'banner_image');
             $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
             if(!empty($uploadedFile))
-            $model->banner_image = $fileName;
+            {
+                $model->banner_image = $fileName;
+               
+            }
+            
        
 			if($model->save())
                         { 

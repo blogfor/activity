@@ -31,7 +31,7 @@
                         <?php
                     } else {
                         ?>
-                       <li><a href="<?php echo Yii::app()->createUrl('/atUsers/registrationpartner'); ?>"><span>Register for Free</span></a></li>
+                       <li><a href="<?php echo Yii::app()->createUrl('/atUsers/registration'); ?>"><span>Register for Free</span></a></li>
                        <li><a href="#" data-toggle="modal" data-target="#mylogin"><span>Login </span></a></li>
 
                     <?php } ?>  

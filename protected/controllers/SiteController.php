@@ -159,15 +159,20 @@ class SiteController extends Controller
             if(isset($_POST['user_name']) && isset($_POST['user_password'])){
                 
                 $sql_login=" SELECT * FROM at_users u"
-                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".md5($_POST['user_password'])."'  ";
+                        . " WHERE u.username='".$_POST['user_name']."' AND u.password='".md5($_POST['user_password'])."' AND u.status='1'";
                 $QueryDataReg = Yii::app()->db->createCommand($sql_login)->queryRow();
               
+                if($QueryDataReg['username']!='') {
                 $_SESSION['user_name']=$QueryDataReg['username'];
                 $_SESSION['user_id']=$QueryDataReg['id'];
                 $_SESSION['user_firstname']=$QueryDataReg['firstname'];
                 $_SESSION['user_type']=$QueryDataReg['user_type'];
                 
                 echo $_SESSION['user_name'];
+                }
+                else {
+                    echo '';
+                }
             }
         }
         
@@ -270,7 +275,7 @@ class SiteController extends Controller
         public function actionSiteforgot()
         {
                               
-            $email=$_POST['email'];
+            $email=$_POST['forgotemail'];
             $password=(rand(56,8956).str_shuffle('ACTIVITY'));
            
             
@@ -292,10 +297,10 @@ class SiteController extends Controller
                         ActivityCommon::atMailSend($emails,2,$msg,$mailData);
                         
                 Yii::app()->db->createCommand("UPDATE at_users SET password='".$password."'")->execute();
-                echo "email_send";
+                echo "1";
                 return;
             } else {
-                 echo "email_not_send";
+                 echo "0";
                 return;
             }
                        

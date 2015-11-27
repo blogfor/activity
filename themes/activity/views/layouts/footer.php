@@ -1,11 +1,5 @@
 <footer class="site-footer" role="contentinfo">
-    <div class="footer-paralux">
-        <h4> Join our Monthly Membership </h4>
-        <h3> Take any class at your free time flexibly for whole month </h3>
-        <a class="btn btn-black btn-small btn-transparent" href="<?php echo Yii::app()->createUrl('/atUsers/registration'); ?>" hidefocus="true" style="outline: medium none;">
-            <span>GET STARTED NOW</span>
-        </a>
-    </div>
+    
 
     <div class="footer_widget"> 
         <div class="container footer-div">

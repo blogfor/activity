@@ -118,7 +118,7 @@ class AtHowItWorksController extends Controller
 		if(isset($_POST['AtHowItWorks']))
 		{
 			 $rnd = rand(0,9999);  // generate random number between 0-9999
-                         $_POST['Banner']['hwt_image'] = $model->hwt_image;
+                         $_POST['AtHowItWorks']['hwt_image'] = $model->hwt_image;
            $model->attributes=$_POST['AtHowItWorks'];
  
             $uploadedFile=CUploadedFile::getInstance($model,'hwt_image');

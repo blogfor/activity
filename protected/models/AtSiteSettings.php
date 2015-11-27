@@ -34,11 +34,11 @@ class AtSiteSettings extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('site_phone', 'length', 'max'=>15),
-			array('site_email, site_fb, site_gplus, site_twitter, paypal_pro_user_name, paypal_pro_password, paypal_pro_api_signature', 'length', 'max'=>255),
+			array('site_email, site_fb, site_gplus, site_twitter, paypal_pro_user_name, paypal_pro_password, paypal_pro_api_signature,site_partner_inquiry_email,site_registration_email', 'length', 'max'=>255),
 			array('site_address', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, site_address, site_phone, site_email, site_fb, site_gplus, site_twitter, paypal_pro_user_name, paypal_pro_password, paypal_pro_api_signature,site_email_from', 'safe', 'on'=>'search'),
+			array('id, site_address, site_phone, site_email, site_fb, site_gplus, site_twitter, paypal_pro_user_name, paypal_pro_password, paypal_pro_api_signature,site_email_from,site_partner_inquiry_email,site_registration_email', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +70,8 @@ class AtSiteSettings extends CActiveRecord
 			'paypal_pro_user_name' => 'Paypal API User Name',
 			'paypal_pro_password' => 'Paypal API Password',
 			'paypal_pro_api_signature' => 'Paypal API Signature',
+                        'site_partner_inquiry_email'=>'Partner Inquiry Email',
+                        'site_registration_email'=>'Registration Email'
 		);
 	}
 
@@ -102,6 +104,8 @@ class AtSiteSettings extends CActiveRecord
 		$criteria->compare('paypal_pro_password',$this->paypal_pro_password,true);
 		$criteria->compare('paypal_pro_api_signature',$this->paypal_pro_api_signature,true);
                 $criteria->compare('site_email_from',$this->site_email_from,true);
+                $criteria->compare('site_registration_email',$this->site_registration_email,true);
+                 $criteria->compare('site_partner_inquiry_email',$this->site_partner_inquiry_email,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

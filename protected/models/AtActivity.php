@@ -32,7 +32,7 @@ class AtActivity extends CActiveRecord
 			array('activity_name, activity_image', 'length', 'max'=>255),
                     array('activity_name,activity_image,activity_description', 'required'),
 			array('activity_description, created, modified', 'safe'),
-                     array('activity_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
+                    // array('activity_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
                             array('modified','default',
                       'value'=>date("Y-m-d H:i:s"),
                       'setOnEmpty'=>false,'on'=>'update'),

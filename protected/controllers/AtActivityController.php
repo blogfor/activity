@@ -117,6 +117,7 @@ class AtActivityController extends Controller
 		{
                     
                     $rnd = rand(0,9999);  // generate random number between 0-9999
+                    $_POST['AtActivity']['activity_image'] = $model->activity_image;
           $model->attributes=$_POST['AtActivity'];
  
             $uploadedFile=CUploadedFile::getInstance($model,'activity_image');

@@ -34,7 +34,7 @@ class AtBanner extends CActiveRecord {
             array('banner_title,banner_image,banner_link_text', 'length', 'max' => 255),
             array('status', 'length', 'max' => 1),
             array('banner_description, banner_link, added, modified,banner_link_text', 'safe'),
-            array('banner_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
+            //array('banner_image', 'file', 'types' => 'jpg, gif, png', 'allowEmpty' => true, 'on' => 'update'),
             array('modified', 'default',
                 'value' => date("Y-m-d H:i:s"),
                 'setOnEmpty' => false, 'on' => 'update'),

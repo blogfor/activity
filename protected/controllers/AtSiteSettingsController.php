@@ -101,7 +101,7 @@ class AtSiteSettingsController extends Controller
 		{
 			$model->attributes=$_POST['AtSiteSettings'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('update',array(
