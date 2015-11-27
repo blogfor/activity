@@ -150,7 +150,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
             <!-- Main Slider -->
             <div id="main-slider" class="main-slider carousel slide fade-effect invisible"></div>
 
-            <div class="slider">
+            <div class="slider" >
 
                 <?php foreach ($resultBANNER as $rBANNER): ?> 
 
