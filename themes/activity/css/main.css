@@ -13,23 +13,90 @@ html {
 .masanary_section .item { width: 100%; height:250px; margin-top:30px; }
 .masanary_section .item img { width: 100%; height:250px; }
 
+.slide-caption{
+    margin: 0px auto;
+    text-align: center;
+    left: 0px;
+    float: left;
+    top: 161px;
+    z-index: 999;
+    position: absolute;
+    padding:0 150px 0 150px;
+    width:100%;
+    }
 
 @media screen and (max-width: 1224px) {
   /* 10 columns for larger screens */
   .masanary_section .grid-sizer { width: 33.33%; }
   .masanary_section .item { width: 33.33%;  }
+  
+
+
+}
+
+@media screen and (max-width: 1224px) and (min-width: 721px) {
+  /* 10 columns for larger screens */
+ .slide-caption{
+    margin: 0px auto;
+    text-align: center;
+    left: 0px;
+    float: left;
+    top: 71px;
+    z-index: 999;
+    position: absolute;
+    padding:0 150px 0 150px;
+    width:100%;
+    }
+
+    .form-group.search_fil{
+        width:75%;
+    }
 }
 
 @media screen and (max-width: 720px) {
   /* 10 columns for larger screens */
   .masanary_section .grid-sizer { width: 50%; }
   .masanary_section .item { width: 50%; }
+  
+    .slide-caption{
+    margin: 0px auto;
+    text-align: center;
+    left: 0px;
+    float: left;
+    top: 51px;
+    z-index: 999;
+    position: absolute;
+    padding:0 150px 0 150px;
+    width:100%;
+    }
+    
+    .slide-caption p{
+        font-size: 14px !important;
+        
+    }
+    .form-group.search_fil{
+        width:100%;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
   /* 10 columns for larger screens */
   .masanary_section .grid-sizer { width: 100%; }
   .masanary_section .item { width: 100%; }
+  
+    .slide-caption{
+    margin: 0px auto;
+    text-align: center;
+    left: 0px;
+    float: left;
+    top: 161px;
+    z-index: 999;
+    position: absolute;
+    padding:0 150px 0 150px;
+    width:100%;
+    }
+    
 }
 @media screen and (max-width: 1000px) {
   /* 10 columns for larger screens */
@@ -82,3 +149,5 @@ html {
 .item:hover .overlay {
     display: block;
 }
+
+/*------CUSTOM CSS--------------------------------*/

@@ -718,7 +718,7 @@ h6 {
   line-height: 1.2em;
   margin-bottom: .4em;
   word-wrap: break-word;
-  font-weight: 700;
+  /*font-weight: 700;*/
   color: #291c1c;
 }
 h1 {
@@ -1236,15 +1236,10 @@ address {
 /*-----------------------------------*/
 .site-logo {
   float: left;
-<<<<<<< HEAD
-  height: 80px;
-  line-height: 80px;
- /* padding:12px 0;*/
-=======
   height: auto;
   line-height: auto;
-  padding:2px 0;
->>>>>>> a1102a21952c22b57b2154c86a135256db2636c4
+  padding: 9px 0 9px 0;
+
   /*  a:before {
     display: inline-block;
     content: '\e60c';
@@ -1576,9 +1571,9 @@ address {
 .nav-menu li:hover > a,
 .nav-menu li.active > a,
 .nav-menu li.current-menu-item > a {
-  color: #ffffff;
-  border-bottom:1px #fff dashed;
-  border-top:1px #fff dashed;
+  color:#ddd;
+/*  border-bottom:1px #fff dashed;
+  border-top:1px #fff dashed;*/
 }
 .nav-menu li ul {
   -webkit-animation-duration: 0.2s;
@@ -2470,8 +2465,8 @@ input[type="search"],
 input[type="url"],
 input[type="email"],
 textarea {
-  border: none;
-  background-color: #ebeff0;
+  border:1px #ccc solid;
+  /*background-color: #ebeff0;*/
   padding: 0 16px;
   font-size: 13px;
   font-weight: 700;
@@ -2580,7 +2575,7 @@ button {
 .footer-div ul li a{
 	color:#989898;
 	transition: all 0.5s ease 0s;
-	font-family:'Conv_MyriadPro-Regular',Sans-Serif;
+	font-family:' Calibri',Sans-Serif;
 	font-size:14px;
 }
 .footer-div ul li a:hover{
@@ -3827,13 +3822,23 @@ Can this be done with Masonry options? */
 
 }
 
-.sssnext, .sssprev {
-	width: 25px;
+.sssnext {
+	width: 45px;
 	height: 100%;
 	margin: 0;
 	position: absolute;
 	top: 0;
-	background: url('images/arr.png') no-repeat;
+        background: url('images/pre.png') no-repeat;
+	
+}
+
+.sssprev {
+	width: 45px;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	background: url('images/prearr.png') no-repeat;
 }
 
 .sssprev {
@@ -3843,7 +3848,7 @@ Can this be done with Masonry options? */
 
 .sssnext {
 	right: 3%;
-	background-position: -26px 50%;
+	background-position: 0px 50%;
 }
 
 .sssprev:hover, .sssnext:hover {
@@ -3862,17 +3867,17 @@ Can this be done with Masonry options? */
 	font-size:20px;
 }
 
-.slide-caption{
-	margin: 0px auto;
-	text-align: center;
-	left: 0px;
-	float: left;
-	top: 161px;
-	z-index: 999;
-	position: absolute;
-	padding:0 150px 0 150px;
-	width:100%;
-}
+
+
+
+
+
+
+
+
+
+
+
 .banner-button{
     line-height: 35px;
     border-radius: 4px;
