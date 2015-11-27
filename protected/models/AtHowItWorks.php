@@ -32,7 +32,7 @@ class AtHowItWorks extends CActiveRecord
 			array('hwt_name, hwt_image', 'length', 'max'=>255),
                         array('hwt_name, hwt_description', 'required'),
 			array('hwt_description, created, modified', 'safe'),
-                         array('hwt_image', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'),
+                        // array('hwt_image', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'),
                     array('modified','default',
                       'value'=>date("Y-m-d H:i:s"),
                       'setOnEmpty'=>false,'on'=>'update'),
