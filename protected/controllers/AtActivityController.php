@@ -222,13 +222,15 @@ class AtActivityController extends Controller
            $resultACTIVITY = Yii::app()->db->createCommand($queryACTIVITY)->queryAll();
            if($id!='')
                 $_POST['activity_id']=$id;
-          
+        
+
 
      $search_sql="SELECT pc.id as aid, pc.*,ac.*,u.* FROM at_partner_activity pc
      LEFT JOIN at_activity ac ON pc.activity_type_id=ac.id
      LEFT JOIN at_users u ON u.id=pc.user_id
      WHERE pc.activity_type_id='".$_POST['activity_id']."'";
      
+     if(!isset($_SESSION['user_name'])) $search_sql.=" AND pc.is_paid='N' ";     
      if(isset($_POST['search_text'])) $search_sql.=" AND (u.firstname like '".$_POST['search_text']."%' OR u.firstname like '".$_POST['search_text']."%'"
              . " OR u.address1 like '%".$_POST['search_text']."%' )";
          
