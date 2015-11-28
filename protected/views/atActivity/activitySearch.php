@@ -45,7 +45,7 @@ $(document).ready(function(){
 			<div class="col-sm-9"> 
 			<span class="navbar-form navbar-left search_from" role="search">
 				<div class="form-group search_fil">
-				<input type="text" name="search_text" class="form-control" style="height:35px !important;" value="<?php if(isset($search_param['search_text'])) echo $search_param['search_text']; ?>" placeholder="Search by keywords">
+				<input type="text" name="search_text" class="form-control" style="height:35px !important;" value="<?php if(isset($search_param['search_text'])) echo $search_param['search_text']; ?>" placeholder="Search by keywords like Address,Name ">
 				</div>
 				<button type="submit" class="btn btn-default search_submit">Submit</button>
 			</span>							

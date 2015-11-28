@@ -213,7 +213,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                 <div class="col-sm-9"> 
                     <span class="navbar-form navbar-left search_from" role="search">
                         <div class="form-group search_fil">
-                            <input type="text" name="search_text" class="form-text-control" placeholder="Search by keywords" style="height:35px !important;">
+                            <input type="text" name="search_text" class="form-text-control" placeholder="Search by keywords like Address,Name " style="height:35px !important;">
                         </div>
                         <button type="submit" class="btn btn-default search_submit">Submit</button>
                     </span>       
