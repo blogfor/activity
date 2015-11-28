@@ -15,7 +15,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
             var settings = $.extend({
                 slideShow: true,
                 startOn: 0,
-                speed: 3000,
+                speed: 8000,
                 transition: 900,
                 arrows: true
             }, options);
