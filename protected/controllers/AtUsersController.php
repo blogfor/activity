@@ -23,27 +23,26 @@ class AtUsersController extends Controller {
      * This method is used by the 'accessControl' filter.
      * @return array access control rules
      */
-	public function accessRules()
-	{
-           
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
-		);
-	}
+    public function accessRules() {
+
+        return array(
+            array('allow', // allow all users to perform 'index' and 'view' actions
+                'actions' => array('index', 'view'),
+                'users' => array('*'),
+            ),
+            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+                'actions' => array('create', 'update'),
+                'users' => array('@'),
+            ),
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('admin', 'delete'),
+                'users' => array('admin'),
+            ),
+            array('deny', // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
 
     /**
      * Displays a particular model.
@@ -56,10 +55,10 @@ class AtUsersController extends Controller {
             'model' => $this->loadModel($id),
         ));
     }
-    
-     public function actionRegistration() {
+
+    public function actionRegistration() {
         Yii::app()->theme = 'activity';
-         $model = new AtUsers;
+        $model = new AtUsers;
         $this->render('registration', array(
             'model' => $model,
         ));
@@ -186,16 +185,16 @@ class AtUsersController extends Controller {
             $model->attributes = $_GET['AtUsers'];
 
         if (isset($_POST) && isset($_POST['companyname'])) {
-            $siteSettings=  ActivityCommon::get_setting_info();
-            
+            $siteSettings = ActivityCommon::get_setting_info();
+
             $MailContent = new AtMailContent;
             $mailData = $MailContent->fetchMailContent(3);
             $mailData['body'] = str_replace("[COMPANY]", $_POST['companyname'], $mailData['body']);
             $mailData['body'] = str_replace("[WEBSITE]", $_POST['website'], $mailData['body']);
-            $mailData['body'] = str_replace("[[NAME]]", $_POST['name'], $mailData['body']);
+            $mailData['body'] = str_replace("[NAME]", $_POST['name'], $mailData['body']);
             $mailData['body'] = str_replace("[EMAIL]", $_POST['email'], $mailData['body']);
-            $mailData['body'] = str_replace("[[PHONE]]", $_POST['mobile'], $mailData['body']);
-            $mailData['body'] = str_replace("[[COMMENTS]]", $_POST['comments'], $mailData['body']);
+            $mailData['body'] = str_replace("[PHONE]", $_POST['mobile'], $mailData['body']);
+            $mailData['body'] = str_replace("[COMMENTS]", $_POST['comments'], $mailData['body']);
             $msg = $mailData['body'];
 
             $msg .= $mailData['footer'];
@@ -220,9 +219,9 @@ class AtUsersController extends Controller {
 
 
         if (isset($_POST) && count($_POST) > 3) {
-            
-          
-            
+
+
+
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $email = $_POST['email'];
@@ -258,40 +257,36 @@ class AtUsersController extends Controller {
                 Yii::app()->db->createCommand($sql)->execute();
                 $insertid = Yii::app()->db->getLastInsertID();
 
-                if(isset($_FILES['logo']))
-                {
+                if (isset($_FILES['logo'])) {
                     $tmp_name = $_FILES["logo"]["tmp_name"];
-                    $name = rand(0,9999).'-'.$_FILES["logo"]["name"];
-                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot']."/uploads/".$name);
-                    
-                            $MyImageCom = new ImageComponent();  
-                           $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$name);
-                           $MyImageCom->resize(200,200);//width,height,Red,Green,Blue
-                           $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$name);
-                    
+                    $name = rand(0, 9999) . '-' . $_FILES["logo"]["name"];
+                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot'] . "/uploads/" . $name);
+
+                    $MyImageCom = new ImageComponent();
+                    $MyImageCom->prepare(Yii::app()->params['webRoot'] . "/uploads/" . $name);
+                    $MyImageCom->resize(200, 200); //width,height,Red,Green,Blue
+                    $MyImageCom->save(Yii::app()->params['webRoot'] . "/uploads/" . $name);
                 }
-                
-                $activities=  implode(",",$_POST['activities']);
-                Yii::app()->db->createCommand("INSERT INTO `at_partner_details` (`user_id`, `activity_ids`,`logo`) VALUES ('".$insertid."', '".$activities."','".$name."')")->execute();
-                
-                
-                
-                if(isset($_FILES['image']))
-                {
+
+                $activities = implode(",", $_POST['activities']);
+                Yii::app()->db->createCommand("INSERT INTO `at_partner_details` (`user_id`, `activity_ids`,`logo`) VALUES ('" . $insertid . "', '" . $activities . "','" . $name . "')")->execute();
+
+
+
+                if (isset($_FILES['image'])) {
                     $tmp_name = $_FILES["image"]["tmp_name"];
-                    $name = rand(0,9999).'-'.$_FILES["image"]["name"];
-                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot']."/uploads/".$name);
-                    
-                            $MyImageCom = new ImageComponent();  
-                           $MyImageCom->prepare(Yii::app()->params['webRoot']."/uploads/".$name);
-                           $MyImageCom->resize(200,200);//width,height,Red,Green,Blue
-                           $MyImageCom->save(Yii::app()->params['webRoot']."/uploads/".$name);
-                    
+                    $name = rand(0, 9999) . '-' . $_FILES["image"]["name"];
+                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot'] . "/uploads/" . $name);
+
+                    $MyImageCom = new ImageComponent();
+                    $MyImageCom->prepare(Yii::app()->params['webRoot'] . "/uploads/" . $name);
+                    $MyImageCom->resize(200, 200); //width,height,Red,Green,Blue
+                    $MyImageCom->save(Yii::app()->params['webRoot'] . "/uploads/" . $name);
                 }
-                
-                
-                Yii::app()->db->createCommand("INSERT INTO `at_partner_images` (`user_id`, `image`) VALUES ('".$insertid."','".$name."')")->execute();
-                
+
+
+                Yii::app()->db->createCommand("INSERT INTO `at_partner_images` (`user_id`, `image`) VALUES ('" . $insertid . "','" . $name . "')")->execute();
+
                 //EMAIL=============================================================
 
 
@@ -329,17 +324,17 @@ class AtUsersController extends Controller {
 
         if (!isset($user_data) && count($user_data) == 0)
             $this->redirect(Yii::app()->createUrl('/site/index'));
-      
+
 
         $this->render('profiledtls', array(
             'model' => $model, 'user_data' => $user_data
         ));
     }
-    
+
     public function actionPartnerdtls() {
         Yii::app()->theme = 'activity';
         //$this->layout='adminmain';
-		$user_activity=array();
+        $user_activity = array();
         $model = new AtUsers('search');
         $model->unsetAttributes();  // clear any default values
 
@@ -347,25 +342,72 @@ class AtUsersController extends Controller {
             $model->attributes = $_GET['AtUsers'];
 
         $user_data = AtUsers::model()->findByPk($_SESSION['user_id']);
-		
-		$pertner_activity_sql="SELECT pa.id as aid,pa.*,ac.* FROM at_partner_activity pa LEFT JOIN at_activity ac ON ac.id=pa.activity_type_id WHERE pa.user_id='".$_SESSION['user_id']."'";
-		$activity_data = Yii::app()->db->createCommand($pertner_activity_sql)->queryAll();
 
-		if (!isset($user_data) && count($user_data) == 0)
-		$this->redirect(Yii::app()->createUrl('/site/index'));
+        $pertner_activity_sql = "SELECT pa.id as aid,pa.*,ac.* FROM at_partner_activity pa LEFT JOIN at_activity ac ON ac.id=pa.activity_type_id WHERE pa.user_id='" . $_SESSION['user_id'] . "'";
+        $activity_data = Yii::app()->db->createCommand($pertner_activity_sql)->queryAll();
 
-        $user_act="select activity_ids from at_partner_details where user_id='".$_SESSION['user_id']."'";
-        $Queryactivity= Yii::app()->db->createCommand($user_act)->queryRow();
-                
-        $sql="select * from at_activity where id in (".$Queryactivity['activity_ids'].")";		
+        if (!isset($user_data) && count($user_data) == 0)
+            $this->redirect(Yii::app()->createUrl('/site/index'));
+
+        $user_act = "select activity_ids from at_partner_details where user_id='" . $_SESSION['user_id'] . "'";
+        $Queryactivity = Yii::app()->db->createCommand($user_act)->queryRow();
+
+        $sql = "select * from at_activity where id in (" . $Queryactivity['activity_ids'] . ")";
         $user_activity = Yii::app()->db->createCommand($sql)->queryAll();
 
         $this->render('partnerdtls', array(
-            'model' => $model, 'user_data' => $user_data, 'activity_data'=>$activity_data,'user_selected_activity'=>$user_activity
+            'model' => $model, 'user_data' => $user_data, 'activity_data' => $activity_data, 'user_selected_activity' => $user_activity
         ));
-		
     }
 
+    public function actionUpdateprofilepic()
+    {
+        $model = new AtUsers('search');
+        $model->unsetAttributes();  // clear any default values
+        
+          if($_SESSION['user_type']=='Customer'){
+            if (isset($_FILES['profilepic'])) {
+                    $tmp_name = $_FILES["profilepic"]["tmp_name"];
+                    $name = rand(0, 9999) . '-' . $_FILES["profilepic"]["name"];
+                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot'] . "/uploads/" . $name);
+
+                    $MyImageCom = new ImageComponent();
+                    $MyImageCom->prepare(Yii::app()->params['webRoot'] . "/uploads/" . $name);
+                    $MyImageCom->resize(200, 200); //width,height,Red,Green,Blue
+                    $MyImageCom->save(Yii::app()->params['webRoot'] . "/uploads/" . $name);
+                }
+             $user_data = Array
+            (
+            'profilepic' => $name,
+            
+        );
+             
+                AtUsers::model()->updateByPk($_SESSION['user_id'], $user_data);
+          }
+          else
+          {
+              if (isset($_FILES['profilepic'])) {
+                    $tmp_name = $_FILES["profilepic"]["tmp_name"];
+                    $name = rand(0, 9999) . '-' . $_FILES["profilepic"]["name"];
+                    move_uploaded_file($tmp_name, Yii::app()->params['webRoot'] . "/uploads/" . $name);
+
+                    $MyImageCom = new ImageComponent();
+                    $MyImageCom->prepare(Yii::app()->params['webRoot'] . "/uploads/" . $name);
+                    $MyImageCom->resize(200, 200); //width,height,Red,Green,Blue
+                    $MyImageCom->save(Yii::app()->params['webRoot'] . "/uploads/" . $name);
+                }
+                Yii::app()->db->createCommand("UPDATE at_partner_details SET logo='".$name."' WHERE id='".$_SESSION['user_id']."'")->execute();
+                        
+          }
+                 Yii::app()->user->setFlash('successProfile', 'Record has been updated.');
+                 if($_SESSION['user_type']=='Customer')
+        $this->redirect(Yii::app()->createUrl('/atUsers/profiledtls'));
+        else {
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+        }
+                
+    }
+    
     public function actionUpdateProfile() {
 
         $model = new AtUsers('search');
@@ -385,8 +427,12 @@ class AtUsersController extends Controller {
         );
         AtUsers::model()->updateByPk($_SESSION['user_id'], $user_data);
 
-
+        Yii::app()->user->setFlash('successProfile', 'Record has been updated.');
+        if($_SESSION['user_type']=='Customer')
         $this->redirect(Yii::app()->createUrl('/atUsers/profiledtls'));
+        else {
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+        }
     }
 
     public function actionUpdateProfileAccount() {
@@ -401,21 +447,25 @@ class AtUsersController extends Controller {
         if ((isset($_POST['password']) && isset($_POST['password'])) && ($_POST['password'] == $_POST['con_password']) && !empty($_POST['con_password'])) {
             $user_data = Array
                 (
-                'username' => $_POST['username'],
+                //'username' => $_POST['username'],
                 'password' => md5($_POST['password'])
             );
         } else {
 
             $user_data = Array
-                (
-                'username' => $_POST['username'],
+                    (
+                    //'username' => $_POST['username'],
             );
         }
 
         AtUsers::model()->updateByPk($_SESSION['user_id'], $user_data);
 
-
+        Yii::app()->user->setFlash('successProfile', 'Record has been updated.');
+        if($_SESSION['user_type']=='Customer')
         $this->redirect(Yii::app()->createUrl('/atUsers/profiledtls'));
+        else {
+            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+        }
     }
 
     /**
@@ -443,28 +493,26 @@ class AtUsersController extends Controller {
         }
     }
 
-        
-        public function actionEmailFormSubmit() {
-            Yii::app()->theme = 'activity';
-            
-            $MailContent = new AtMailContent;
-                        $mailData = $MailContent->fetchMailContent(5);
-                        $mailData['body'] = str_replace("[MESSAGE]", $_POST['messagebody'], $mailData['body']);                     
-                        $msg = $mailData['body'];                       
-                        $msg .= $mailData['footer'];
-                        $emails[]=$_POST['email'];                     
-                        //print_r($mailData);
-                        ActivityCommon::atMailSend($emails,5,$msg,$mailData);
-                   
-            Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to '.$_POST['email']);
-            
-            if($_POST['usertype']=="partner")
-            $this->redirect(Yii::app()->createUrl('/atUsers/partner'));
-            else 
-            $this->redirect(Yii::app()->createUrl('/atUsers/admin'));    
+    public function actionEmailFormSubmit() {
+        Yii::app()->theme = 'activity';
 
+        $MailContent = new AtMailContent;
+        $mailData = $MailContent->fetchMailContent(5);
+        $mailData['body'] = str_replace("[MESSAGE]", $_POST['messagebody'], $mailData['body']);
+        $msg = $mailData['body'];
+        $msg .= $mailData['footer'];
+        $emails[] = $_POST['email'];
+        //print_r($mailData);
+        ActivityCommon::atMailSend($emails, 5, $msg, $mailData);
+
+        Yii::app()->user->setFlash('successMailPartner', 'Mail succesfully send to ' . $_POST['email']);
+
+        if ($_POST['usertype'] == "partner")
+            $this->redirect(Yii::app()->createUrl('/atUsers/partner'));
+        else
+            $this->redirect(Yii::app()->createUrl('/atUsers/admin'));
     }
-    
+
     function gridgeCountChilds($val) {
         $sql = "SELECT count(*) as tot from at_users_child where user_id='" . $val['id'] . "' ";
         $data = Yii::app()->db
@@ -491,8 +539,6 @@ class AtUsersController extends Controller {
                     . "</p>";
         }
     }
-
-    
 
     public function actionEmailForm() {
 
@@ -539,40 +585,37 @@ class AtUsersController extends Controller {
 
         echo $html;
     }
-    
-    
-    
-    public function actionAddPartnerActivity(){		
-		$activity_type_id=$_POST['activity_type_id'];
-		$age_range=$_POST['age_range'];
-		$activity_date=$_POST['activity_date'];
-		$activity_time=$_POST['activity_time'];
-		$user_id=$_SESSION['user_id'];
-		$address=$_POST['address'];
-		
-		if(empty($activity_date)){
-			Yii::app()->user->setFlash('errorAddActivity', 'Entere activity date.');
+
+    public function actionAddPartnerActivity() {
+        $activity_type_id = $_POST['activity_type_id'];
+        $age_range = $_POST['age_range'];
+        $activity_date = $_POST['activity_date'];
+        $activity_time = $_POST['activity_time'];
+        $user_id = $_SESSION['user_id'];
+        $address = $_POST['address'];
+
+        if (empty($activity_date)) {
+            Yii::app()->user->setFlash('errorAddActivity', 'Entere activity date.');
             $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
-		}
-		if(empty($activity_time)){
-			Yii::app()->user->setFlash('errorAddActivity', 'Entere activity time.');
+        }
+        if (empty($activity_time)) {
+            Yii::app()->user->setFlash('errorAddActivity', 'Entere activity time.');
             $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
-		}
-		if(empty($address)){
-			Yii::app()->user->setFlash('errorAddActivity', 'Entere activity location.');
+        }
+        if (empty($address)) {
+            Yii::app()->user->setFlash('errorAddActivity', 'Entere activity location.');
             $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
-		}
-		
-        if(isset($_POST['is_paid']) && $_POST['is_paid']=="Y") {
-		$is_paid="Y"; 
-		$price=$_POST['price'];
-		}
-		else {
-		$is_paid="N";
-		$price="";
-		}
-		
-            $sql = " INSERT INTO `at_partner_activity`(
+        }
+
+        if (isset($_POST['is_paid']) && $_POST['is_paid'] == "Y") {
+            $is_paid = "Y";
+            $price = $_POST['price'];
+        } else {
+            $is_paid = "N";
+            $price = "";
+        }
+
+        $sql = " INSERT INTO `at_partner_activity`(
             `user_id` ,
             `activity_type_id` ,
             `age_range` ,
@@ -585,17 +628,16 @@ class AtUsersController extends Controller {
             VALUES (
             '$user_id',  '$activity_type_id',  '$age_range','$address','$activity_date','$activity_time','$is_paid','$price')";
 
-            Yii::app()->db->createCommand($sql)->execute();
-            Yii::app()->user->setFlash('successAddActivity', 'Your activity is successfully added.');
-            $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+        Yii::app()->db->createCommand($sql)->execute();
+        Yii::app()->user->setFlash('successAddActivity', 'Your activity is successfully added.');
+        $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
     }
-	
-	public function actionActivityDelete(){	
-	$sql="DELETE FROM at_partner_activity WHERE id='".$_REQUEST['id']."'";	
-	Yii::app()->db->createCommand($sql)->execute();
-	Yii::app()->user->setFlash('successUpdateActivity', 'Your activity is successfully deleted.');
-	$this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
-	}
-	
-	
+
+    public function actionActivityDelete() {
+        $sql = "DELETE FROM at_partner_activity WHERE id='" . $_REQUEST['id'] . "'";
+        Yii::app()->db->createCommand($sql)->execute();
+        Yii::app()->user->setFlash('successUpdateActivity', 'Your activity is successfully deleted.');
+        $this->redirect(Yii::app()->createUrl('/atUsers/partnerdtls'));
+    }
+
 }

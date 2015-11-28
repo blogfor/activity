@@ -20,7 +20,7 @@
                         
                     ///USER LOGEDIN
                         echo '<li><a href="'.$profile_link.'" hidefocus="true" >';
-                        echo "<span> Hi " . $_SESSION['user_name'] . "</span>";
+                        echo "<span> Hi " . $_SESSION['user_firstname'] . "</span>";
                         echo '</a></li>';
                         ?>    
                         <li>
