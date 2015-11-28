@@ -48,11 +48,24 @@
                 <div class="modal-body">
 
 
+                    
                     <div class="alert alert-danger" role="alert" id="msg-error-login"></div>
 
                     <div class="panel panel-default">
                         <div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
+<div class="sk-cube-grid" id="loader-login">
+  <div class="sk-cube sk-cube1"></div>
+  <div class="sk-cube sk-cube2"></div>
+  <div class="sk-cube sk-cube3"></div>
+  <div class="sk-cube sk-cube4"></div>
+  <div class="sk-cube sk-cube5"></div>
+  <div class="sk-cube sk-cube6"></div>
+  <div class="sk-cube sk-cube7"></div>
+  <div class="sk-cube sk-cube8"></div>
+  <div class="sk-cube sk-cube9"></div>
+</div>
+                                
                                 <form name="login_form" id="login_form" method="post">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
@@ -88,6 +101,19 @@
                     <div class="panel panel-default">
                         <div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
+                                
+                                <div class="sk-cube-grid" id="loader-forgot">
+  <div class="sk-cube sk-cube1"></div>
+  <div class="sk-cube sk-cube2"></div>
+  <div class="sk-cube sk-cube3"></div>
+  <div class="sk-cube sk-cube4"></div>
+  <div class="sk-cube sk-cube5"></div>
+  <div class="sk-cube sk-cube6"></div>
+  <div class="sk-cube sk-cube7"></div>
+  <div class="sk-cube sk-cube8"></div>
+  <div class="sk-cube sk-cube9"></div>
+</div>
+                                
                                 <form name="forgot-form" id="forgot-form" method="post">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
@@ -141,8 +167,11 @@
     {
         if ($("#forgot-form").validationEngine('validate'))
         {
-                        $("#msg-error-forgot").show('hide');
+                        $("#msg-error-forgot").hide();
                         $("#msg-error-forgot").html('');
+                        
+                        $('#loader-forgot').show('fast');
+                        $("#forgot-form").hide('fast');
             $.ajax({
                 type: "POST",
                 url: "<?php echo Yii::app()->createUrl('site/siteforgot'); ?>",
@@ -151,7 +180,8 @@
                     if (msg == "0") {
                          $("#msg-error-forgot").show('slow');
                         $("#msg-error-forgot").html("Please check your email. Email does not exist in our record.");
-                       
+                       $('#loader-forgot').hide('fast');
+                        $("#forgot-form").show('fast');
                         $("#forgotemail").val('');
                         $("#forgotemail").focus();
                     } else {
@@ -160,7 +190,8 @@
                           $("#msg-error-forgot").addClass('alert-success');
                         $("#msg-error-forgot").html("Please check your inbox. New password has been send to your email.");
                         
-                        
+                        $('#loader-forgot').hide('fast');
+                        $("#forgot-form").show('fast');
                       
                         
                        
@@ -176,7 +207,12 @@
     {
         if ($("#login_form").validationEngine('validate'))
         {
-
+            
+                         $("#msg-error-login").hide();
+                        $("#msg-error-login").html('');
+                        
+                        $('#loader-login').show('fast');
+                        $("#login_form").hide('fast');
             $.ajax({
                 type: "POST",
                 url: "<?php echo Yii::app()->createUrl('site/sitelogin'); ?>",
@@ -186,6 +222,9 @@
                         document.location.reload(true);
                         return true;
                     } else {
+                        $('#loader-login').hide('fast');
+                        $("#login_form").show('fast');
+                        
                         $("#msg-error-login").show('slow');
                         $("#msg-error-login").html("Invalid email or wrong password.");
                         return false;
