@@ -268,7 +268,7 @@ class SiteController extends Controller
            
             echo "email_send";
             
-            Yii:app()->end();
+           return true;
         }
         
         
@@ -296,7 +296,7 @@ class SiteController extends Controller
                         $emails[]=$email;
                         ActivityCommon::atMailSend($emails,2,$msg,$mailData);
                         
-                Yii::app()->db->createCommand("UPDATE at_users SET password='".$password."'")->execute();
+                Yii::app()->db->createCommand("UPDATE at_users SET password='".$password."' WHERE email='".$email."'")->execute();
                 echo "1";
                 return;
             } else {
@@ -307,7 +307,7 @@ class SiteController extends Controller
             
            
             
-            Yii:app()->end();
+            return true;
         }
         
         public function actionActivateuser()
