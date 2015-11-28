@@ -3891,3 +3891,32 @@ Can this be done with Masonry options? */
 .search_from input[type="text"]{
     height: 33px !important;
 }
+
+.content-box{
+    padding-top: 30px;
+}
+.content-center h1, .content-center h2{
+    text-align: center;
+}
+.content-center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"] , .form-group input[type="phone"] {
+    line-height: 38px !important;
+    height: 40px !important;  
+    border-radius: 2px !important;
+}
+.form-group input[type="submit"]{
+    width:100%;
+    border-radius: 2px !important;
+    height: 40px !important; 
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 0;
+}
+
