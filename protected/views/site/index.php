@@ -15,8 +15,8 @@ $baseUrl = Yii::app()->theme->baseUrl;
             var settings = $.extend({
                 slideShow: true,
                 startOn: 0,
-                speed: 8000,
-                transition: 900,
+                speed:9500,
+                transition: 500,
                 arrows: true
             }, options);
 
@@ -150,7 +150,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
             <!-- Main Slider -->
             <div id="main-slider" class="main-slider carousel slide fade-effect invisible"></div>
 
-            <div class="slider">
+            <div class="slider" >
 
                 <?php foreach ($resultBANNER as $rBANNER): ?> 
 
@@ -229,7 +229,8 @@ $baseUrl = Yii::app()->theme->baseUrl;
         <div id="container">
 
             <div class="col-sm-12">
-                <h1> Browse by Activity </h1>
+                <div class="row"><h1> Browse by Activity </h1></div>
+                
                 <div class="grid-sizer"></div>
 
                 <?php
