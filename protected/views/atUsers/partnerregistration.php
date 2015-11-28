@@ -117,31 +117,31 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
                                 <form method="post" name="partner-form" id="partner-form" action="">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Company Name </label>
+<!--                                        <label for="exampleInputEmail1">Company Name </label>-->
                                         <input name="companyname" id="companyname" style="outline: medium none;" value=""  class="form-control validate[required]" placeholder="Company Name" type="text">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Website/facebook</label>
-                                        <input name="website" id="website"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Website/facebook" type="text">
+<!--                                        <label for="exampleInputEmail1">Website/facebook</label>-->
+                                        <input name="website" id="website"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Website/Facebook" type="text">
                                     </div>  
 
                                     <div class="form-group">
-                                        <label for="exampleInputMobile">Name</label>
+<!--                                        <label for="exampleInputMobile">Name</label>-->
                                         <input name="name" id="name"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Name" type="phone">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
+<!--                                        <label for="exampleInputEmail1">Email</label>-->
                                         <input name="email" id="email"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[email]]" placeholder="Email" type="email">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputMobile">Mobile</label>
-                                        <input name="mobile" id="mobile"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[number],maxSize[10]]" placeholder="Mobile" type="phone">
+<!--                                        <label for="exampleInputMobile">Mobile</label>-->
+                                        <input name="mobile" id="mobile"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[number],maxSize[10]]" placeholder="Phone" type="phone">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputMobile">Comments</label>
+<!--                                        <label for="exampleInputMobile">Comments</label>-->
                                         <textarea name="comments" id="comments"  style="outline: medium none;" hidefocus="true" class="form-control validate[required]" placeholder="Comments"></textarea>
                                     </div> 
 
