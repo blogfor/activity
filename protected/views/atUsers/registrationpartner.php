@@ -79,6 +79,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                                         }
                                         ?>
                                     </select>
+                                    <small> Press 'Ctrl' key to select multiple</small>
                                 </div> 
                                 
                                 <div class="form-group">

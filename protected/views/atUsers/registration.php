@@ -4,9 +4,9 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
 <div class="container">
 
-    <div class="row">
-        <h1>GET STARTED WITH ACTIVITYHERE</h1>
-        <div class="col-sm-12">
+   <div class="col-lg-6 col-md-8 col-sm-12 content-box content-center ">
+        <h3>GET STARTED WITH ACTIVITY HERE</h3>
+        <div class="col-lg-12">
 
 
             <?php if (Yii::app()->user->hasFlash('successMailPartner')): ?>
@@ -25,10 +25,10 @@ $baseUrl = Yii::app()->theme->baseUrl;
                 </div>
             <?php endif; ?>
 
-            <div class="col-sm-9" style="margin-top: 10px;">
+           
 
                 <!--REGISTRATION MODAL BOX-->
-                <div class="modal-body">
+                <div >
                     <div class="row reg-msg-error" style="color:red; padding-bottom: 10px; text-align: center;"></div>
                     <div class="row reg-msg-success" style="color:green; padding-bottom: 10px; text-align: center;"></div>
 
@@ -40,24 +40,24 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
                                 <form method="post" name="reg-form" id="reg-form">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">First Name</label>
+<!--                                        <label for="exampleInputEmail1">First Name</label>-->
                                         <input name="firstname" id="firstname" style="outline: medium none;" value=""  class="form-control validate[required]" placeholder="First Name" type="text">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Last Name</label>
+<!--                                        <label for="exampleInputEmail1">Last Name</label>-->
                                         <input name="lastname" id="lastname"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Last Name" type="text">
                                     </div>  
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
+<!--                                        <label for="exampleInputEmail1">Email</label>-->
                                         <input name="email" id="email"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[email]]" placeholder="Email" type="email">
                                     </div>   
                                     <div class="form-group">
-                                        <label for="exampleInputMobile">Mobile</label>
+<!--                                        <label for="exampleInputMobile">Mobile</label>-->
                                         <input name="mobile" id="mobile"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[number],maxSize[10]]" placeholder="Mobile" type="phone">
                                     </div> 
 
                                     <div class="form-group">
-                                        <label for="exampleInputMobile">Password</label>
+<!--                                        <label for="exampleInputMobile">Password</label>-->
                                         <input name="password" id="password"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Password" type="password">
                                     </div> 
                                     <input type="hidden" name="ctype" value="Customer" checked="checked">
@@ -69,7 +69,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                                     
                                     <div id="ageGroup1" style="display: none;">
                                         <div class="form-group">
-                                        <label for="exampleInputMobile">Select number of children</label>
+<!--                                        <label for="exampleInputMobile">Select number of children</label>-->
                                         <select name="nochildren" id="nochildren"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" onchange="javascript:noAge(this.value);">
                                             <option value="">Select number of children</option>
                                             <option value="1">1</option>
@@ -113,15 +113,16 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
 
                                     <div class="form-group" id="agen4" style="display: none;">
-                                        <label for="exampleInputMobile">Name of child </label>
+<!--                                        <label for="exampleInputMobile">Name of child </label>-->
                                         <input name="childname4" id="childname4"  style="outline: medium none;" value="" hidefocus="true" class="form-control" placeholder="Child Name(four)" type="text">
                                     </div> 
                                     <div class="form-group" id="age4" style="display: none;">
                                         <label for="exampleInputMobile">Child’s Date of Birth</label>
                                         <input name="childage4" id="childage4"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[custom[number],maxSize[2]]" placeholder="Child Age(four)" type="text">
                                     </div>
-                                   
+                                   <div class="form-group">
                                     <input type="submit" class="btn btn-black btn-small btn-transparent" style="background-color: #f79646; padding: 5px 10px;" onclick="javascript:return site_registration();" value="Submit"/>
+                                   </div> 
                                 </form>
 
                             </div>
@@ -129,8 +130,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     </div>
                 </div>        
 
-            </div>
-
+           
         </div>
     </div>
 </div>
