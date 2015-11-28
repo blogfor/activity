@@ -3925,3 +3925,21 @@ Can this be done with Masonry options? */
     border: 0;
 }
 
+.list-table thead tr td{
+ background-color: #4F81BD !important; 
+ color: #FFF !important; 
+ line-height: 35px;
+ font-weight: bold;
+ font-size: 14px;
+}
+
+.list-table tbody tr td{
+ line-height: 35px;
+  font-size: 14px;
+  border-top: 1px #ddd solid;
+}
+.list-table tbody tr:hover td{
+    background-color: #f1f1f1;
+    
+}
+
