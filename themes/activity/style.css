@@ -3771,6 +3771,11 @@ Can this be done with Masonry options? */
     padding: 5px 40px 5px 40px ;
 }
 
+.home-media-block{
+    text-align: center;
+    padding: 5px 53px 5px 53px ;
+}
+
 .media-thumb{
     margin: 0 auto;
     width: 120px;

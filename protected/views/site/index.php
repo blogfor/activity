@@ -239,7 +239,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     ?>
 
 
-                    <div class="col-sm-<?php echo ($i == 3 || $i == 4 || $i == 7) ? '3' : '3'; ?>">
+                    <div class="col-lg-3 col-mg-6 col-sm-6 <?php //echo ($i == 3 || $i == 4 || $i == 7) ? '3' : '3'; ?>">
                         <div class="item">
                             <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rActivity['activity_image']; ?>" class="image" alt="">
                             <a class="overlay" href="<?php echo Yii::app()->getBaseUrl(true); ?>/atActivity/searchactivity/<?php echo $rActivity['id']; ?>">
@@ -263,17 +263,20 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
 
             </div>
+            
+            
         </div>
 
     </div>      
 
 
-
-
+    
+    
     <!--/ PostList 3 Columns -->
     <section class="how_work" id="howtowork"> 
         <div class="">
             <div class="col-sm-12">
+                <br clear="all">
                 <h1> How it Works </h1>
                 <div class="row">
 
@@ -282,7 +285,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                         ?>
 
                         <div class="col-sm-6 work">
-                            <div class="media-block">
+                            <div class="home-media-block">
                                 <div class="media-thumb">
                                     <a href="<?php echo Yii::app()->createUrl('/pages/view', array('p' => 'how_it_works')); ?>">
                                         <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rHIW['hwt_image']; ?>" alt="<?php echo $rHIW['hwt_name']; ?>">
@@ -306,7 +309,8 @@ $baseUrl = Yii::app()->theme->baseUrl;
         </div>
     </section>
 
-
+   <br clear="all">
+    
     <section class="how_work" style="background-color:#f2f2f2;"> 
         <div class="container">
             <h1> Discover New Kids Activities </h1>
@@ -317,7 +321,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     ?>
 
                     <div class="col-sm-6 work">
-                        <div class="media-block">
+                        <div class="home-media-block">
                             <div class="media-thumb">
                                 <a href="javascript:void(0);">
                                     <img class="media-object" src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $rKIA['kids_image']; ?>" alt="<?php echo $rKIA['kids_name']; ?>">
@@ -336,7 +340,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
             </div>  
         </div>
     </section>
-
+<br clear="all">
 
 </div>
 <!--/ Main -->
