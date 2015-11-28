@@ -102,7 +102,7 @@ class AtUsers extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($type)
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
@@ -125,7 +125,8 @@ class AtUsers extends CActiveRecord
 		$criteria->compare('status',$this->status);
 		$criteria->compare('createdby',$this->createdby);
 		$criteria->compare('modifiedby',$this->modifiedby);
-
+                $criteria->compare('user_type',$type);
+                $criteria->addCondition('id!=1');
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

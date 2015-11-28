@@ -171,7 +171,7 @@ $('.search-form form').submit(function(){
                 <?php
                 $this->widget('zii.widgets.grid.CGridView', array(
                     'id' => 'at-users-grid',
-                    'dataProvider' => $model->search(),
+                    'dataProvider' => $model->search('Customer'),
                     'itemsCssClass' => 'table table-striped table-bordered table-hover',
                     /* 'filter'=>$model, */
                     'columns' => array(
