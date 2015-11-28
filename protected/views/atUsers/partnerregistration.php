@@ -6,8 +6,9 @@ $baseUrl = Yii::app()->theme->baseUrl;
 </style>
 <div class="container">
 
-    <div class="row">
-        <h1>WHY USE ACTIVITYHERE?</h1>
+    <div class="col-lg-12 col-md-12 col-sm-12 content-box content-center">
+        
+        <h2>WHY USE ACTIVITYHERE?</h2>
         <div class="col-sm-12">
 
             <div id="statusMsg">
@@ -97,7 +98,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
             </div>
 
-            <div class="row" style="margin-top: 10px;">
+            <div class="col-lg-8 col-md-8 col-sm-12 content-center " >
 
 
                 <div class="modal-body col-sm-8" style="margin:0 20%;">
@@ -105,14 +106,14 @@ $baseUrl = Yii::app()->theme->baseUrl;
                     <div class="row reg-msg-success" style="color:green; padding-bottom: 10px; text-align: center;"></div>
 
 
-                    <div class="col-sm-12" style="background-color: #4e80bc; padding: 5px 5px;">
+                    <div class="col-sm-12" style="background-color: #4f81bd; color: #fff;  padding: 5px 5px; line-height: 30px; font-size:18px; text-align: center;">
                         Please fill in the form below and our team will contact you
                     </div>
 
+                    <br clear="all">
+                    <div class="panel panel-default" style="padding:10px 10px 10px 10px;">
 
-                    <div class="panel panel-default">
-
-                        <div style="height: auto;" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                        <div  id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
 
                                 <form method="post" name="partner-form" id="partner-form" action="">
@@ -146,8 +147,10 @@ $baseUrl = Yii::app()->theme->baseUrl;
                                     </div> 
 
 
-
+                                    <div class="form-group">
                                     <input type="submit" class="btn btn-black btn-small btn-transparent" style="background-color: #f79646; padding: 5px 10px;" value="GET IN TOUCH"/>
+                                    </div>
+                                    
                                 </form>
 
                             </div>

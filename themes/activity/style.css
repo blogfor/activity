@@ -1185,20 +1185,24 @@ address {
 	width:85%;
 }
 .search_fil input{
-	width:100% !important;
-	border-radius: 0 !important;
-	font-family:'Conv_MyriadPro-Regular',Sans-Serif;   
+    width:100% !important;
+    border-radius: 0 !important;
+    font-family:'Conv_MyriadPro-Regular',Sans-Serif;   
 }
 .search_from{
-	margin:0px !important;
-	width:100%;
+    margin:0px !important;
+    width:100%;
 }
 .search_submit{
-	background:#4f81bd !important;
-	padding:4px 25px !important;
-	color:#fff;
-	text-transform:uppercase;
-	border-radius: 0;
+    background:#4f81bd !important;
+    padding:4px 25px !important;
+    color:#fff;
+    text-transform:uppercase;
+    border-radius: 0;
+}
+
+.search_from .form-text-control{
+    height: 35px !important;
 }
 .search_option{
 	background:#fff;
@@ -1207,6 +1211,7 @@ address {
 	height:33px;
 	text-align:left;
 }
+
 .caret{
 	text-align:right;
 	margin-left: 115px;
@@ -3763,7 +3768,7 @@ Can this be done with Masonry options? */
 
 .media-block{
     text-align: center;
-    padding: 5px 50px 5px 50px ;
+    padding: 5px 40px 5px 40px ;
 }
 
 .media-thumb{
@@ -3895,7 +3900,7 @@ Can this be done with Masonry options? */
 .content-box{
     padding-top: 30px;
 }
-.content-center h1, .content-center h2{
+.content-center h1, .content-center h2,  .content-center h3{
     text-align: center;
 }
 .content-center {
@@ -3913,7 +3918,7 @@ Can this be done with Masonry options? */
 .form-group input[type="submit"]{
     width:100%;
     border-radius: 2px !important;
-    height: 40px !important; 
+    height: 40px; 
     color: #fff;
     font-size: 20px;
     margin-top: 10px;
