@@ -25,7 +25,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
     <div class="profile_section"> 
 
         <div class="container"> 
-            <h3 class="hading">Partner Dashboard</h3>
+            <h3 class="hading">Dashboard</h3>
 
             <div class="col-sm-2 pull-left profile-img"> 
 

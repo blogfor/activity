@@ -1,0 +1,439 @@
+2015/11/26 17:13:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 17:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 17:16:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:02:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "atUsers".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('atUsers')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('atUsers')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/atUsers/pa...')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/atUsers/partnerregistration
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/site/index
+---
+2015/11/26 20:04:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:04:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:04:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:06:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:06:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:31:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:31:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "atUsers".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('atUsers')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('atUsers')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/atUsers/pa...')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/atUsers/partnerregistration
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/site/index
+---
+2015/11/26 20:45:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:51:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/26 20:56:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 01:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/
+---
+2015/11/27 02:10:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 02:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "atUsers".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('atUsers')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('atUsers')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/atUsers/pa...')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/atUsers/partnerregistration
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/site/index
+---
+2015/11/27 02:14:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "atUsers".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('atUsers')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('atUsers')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/atUsers/pa...')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/atUsers/partnerregistration
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/site/index
+---
+2015/11/27 02:15:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "atUsers".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('atUsers')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('atUsers')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/atUsers/pa...')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/atUsers/partnerregistration
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/site/index
+---
+2015/11/27 02:15:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 02:15:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 02:15:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 02:15:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 03:01:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 03:02:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/admin
+---
+2015/11/27 03:24:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 03:26:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 10:06:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 16:37:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 16:38:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 16:38:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "atUsers".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php:483
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CController.php(270): CController->missingAction('atUsers')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(282): CController->run('atUsers')
+#2 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('site/atUsers/re...')
+#3 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/demo/activity/site/atUsers/registration
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/site/index
+---
+2015/11/27 16:38:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 16:40:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 18:27:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 18:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 18:30:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 18:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 18:32:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 18:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 20:24:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 21:28:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/27 21:38:22 [warning] [application] Failed to set unsafe attribute "site_email_from" of "AtSiteSettings".
+in /home/blogfordeveloper/public_html/demo/activity/protected/controllers/AtSiteSettingsController.php (102)
+in /home/blogfordeveloper/public_html/demo/activity/index.php (14)
+2015/11/29 19:42:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/30 04:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/30 04:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---
+2015/11/30 04:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/activity/images/arr.png".' in /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/blogfordeveloper/public_html/demo/activity/framework/web/CWebApplication.php(141): CWebApplication->runController('themes/activity...')
+#1 /home/blogfordeveloper/public_html/demo/activity/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/blogfordeveloper/public_html/demo/activity/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/demo/activity/themes/activity/images/arr.png
+HTTP_REFERER=http://blogfordeveloper.com/demo/activity/themes/activity/style.css
+---

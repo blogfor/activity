@@ -1195,10 +1195,10 @@
 									line_time(h, m);
 								}
 							}
-						} else {							for (i = 0; i < options.allowTimes.length; i += 1) {
+						} else {
+							for (i = 0; i < options.allowTimes.length; i += 1) {
 								h = _xdsoft_datetime.strtotime(options.allowTimes[i]).getHours();
 								m = _xdsoft_datetime.strtotime(options.allowTimes[i]).getMinutes();
-								
 								line_time(h, m);
 							}
 						}

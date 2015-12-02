@@ -91,7 +91,7 @@ if (isset($_POST['firstName'])) {
     <div class="profile_section"> 
 
         <div class="container"> 
-            <h3 class="hading">Update Profile</h3>
+            <h3 class="hading">Dashboard</h3>
 
             <div class="col-sm-2 pull-left profile-img"> 
                 <?php if($user_data['profilepic']!=''){?> 
@@ -463,6 +463,60 @@ if (isset($_POST['firstName'])) {
                     </div>
 
 
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                   Booked Classes
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                
+                                <table style="width:100%;" class="list-table" >
+                                    <tr style="background-color: #4F81BD !important; color: #FFF !important;">
+                                        <td>&nbsp;Sl </td>
+                                        <td>Activity Name</td>
+                                        <td>Date </td>
+                                        <td>Booking Date </td>
+                                        <td>Details</td>
+                                        
+
+                                    </tr>
+                                    <tbody>
+                                        <?php
+                                        
+                                        $usermembership = Yii::app()->db->createCommand("SELECT * FROM activity_booking as a JOIN at_partner_activity as b ON a.partner_activity_id=b.id WHERE a.booked_by='" . $user_data['id'] . "'")->queryAll();
+
+                                        if (count($usermembership) == 0)
+                                            echo "<tr><td colspan=6> No record found </td></tr>";
+                                        else {
+                                            $i = 1;
+                                            foreach ($usermembership as $data) {
+                                                ?>
+                                                <tr>
+                                                    <td>&nbsp;<?php echo $i; ?> </td>
+                                                    <td>Partner Name</td>
+                                                    <td><?php echo getDateFormat($data['activity_date']); ?> </td>
+                                                    <td><?php echo getDateFormat($data['created']); ?> </td>
+                                                    <td>Details</td>
+                                                   
+                                                </tr>			
+                                                <?php
+                                                $i++;
+                                            }
+                                        }
+                                        ?>	
+                                    </tbody>	
+                                </table>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
 

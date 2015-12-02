@@ -1,3 +1,3 @@
-$(document).ready(function() { 
-		$('ul.sf-menu').superfish();
-	}); 
+$(document).ready(function() { 
+		$('ul.sf-menu').superfish();
+	}); 

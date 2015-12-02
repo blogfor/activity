@@ -99,6 +99,21 @@ class AtActivityController extends Controller
 		));
 	}
 
+        public function actionBook()
+        {
+            if(isset($_POST['uid']) && isset($_POST['aid'])){
+             
+                Yii::app()->db->createCommand("INSERT INTO `activity_booking` (`partner_activity_id`, `booked_by`, `created`) VALUES ('".$_POST['aid']."','".$_POST['uid']."',NOW())")->execute();
+                echo "0";
+                return true;
+            }
+            else
+            {
+                echo "1";
+                return true;
+            }
+        }
+        
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
