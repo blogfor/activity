@@ -1,72 +1,337 @@
-@media screen and (min-width: 601px) {
-   .mobileview-title{
-   		display:none;
-   }
-  
-}
-
-@media screen and (min-width: 400px) and (max-width: 600px) {
-	
-   .activity-catitem{
-		width:48% !important;
-		float:left;
-		padding:0  !important;
-		margin:2px !important;   
-   }   
-   .activity-catitem .item{
-		padding:0 0 0 0 !important;
-		margin:0 0 0 0  !important;   
-		overflow:hidden;
-		height:160px !important;
-		border:1px #ccc solid;
-	
-   }
-    .activity-catitem .item img{
-		height:160px !important;
-		width:100%;
-	}   
-   .slider,  #spinner{display:none;}
-   .search_submit{width:100%;}
-   .mobileview-title{
-		position: absolute;
-		padding: 10px;
-		color:#333;
-		text-shadow: 1px 1px white;	
-   }
-  
-   
-}
-
-
-@media screen and (min-width: 200px) and (max-width: 399px) {
-	
-  .activity-catitem{
-   width:48% !important;
-   float:left;
-   padding:0  !important;
-   margin:2px !important;   
-   }   
-   .activity-catitem .item{
-   padding:0 0 0 0 !important;
-   margin:0 0 0 0  !important;   
-   overflow:hidden;
-   height:120px !important;
-   border:1px #ccc solid;
-   }   
-   .activity-catitem .item img{
-   height:120px !important;
-   width:100%;
-   }
-   
-   .slider,  #spinner{display:none;}
-   .search_submit{width:100%;}  	
-   .mobileview-title{
-		position: absolute;
-		padding: 10px;
-		color:#333;
-		text-shadow: 1px 1px white;	
-   }
-	
-	
-
+   td img.image{
+   margin-top:10px;
+   margin-bottom:10px;
+   }
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+	
 }
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+	.navbar-form{
+		padding:0 !important; 
+	}
+}
+
+
+@media screen and (min-width: 801px) {
+   .mobileview-title{
+   		display:none;
+   }
+   
+	.activity-catitem .item, .activity-catitem .item img{
+		height:220px !important;
+		width:100% !important;
+	}  
+	  
+    
+   /*
+   .activity-catitem .item img{ 
+   width :20% !important;
+   
+   }
+   
+   .activity-catitem .item{
+   width:20% !important;
+   }
+   */
+   #flex1 vcard td:nth-child(1){
+   width:10% !important;
+   }
+   
+   #flex1 vcard td:nth-child(2){
+   width:35% !important;
+   }
+   
+   #flex1 vcard td:nth-child(3){
+   width:15% !important;
+   }
+   
+   #flex1 vcard td:nth-child(4){
+   width:10% !important;
+   }
+   
+   
+  				
+}
+
+@media screen and (min-width: 400px) and (max-width: 640px) {
+	
+   .activity-catitem{
+		width:48% !important;
+		float:left;
+		padding:0  !important;
+		margin:2px !important;   
+   }   
+   .activity-catitem .item{
+		padding:0 0 0 0 !important;
+		margin:0 0 0 0  !important;   
+		overflow:hidden;
+		height:160px !important;
+		border:1px #ccc solid;
+	
+   }
+    .activity-catitem .item img{
+		height:160px !important;
+		width:100%;
+	}   
+   .slider,  #spinner{display:none;}
+   .search_submit{width:100%;}
+   .mobileview-title{
+		position: absolute;
+		padding: 10px;
+		color:#333;
+		text-shadow: 1px 1px white;	
+   }
+   
+   #flex1 .vcard td{
+   width:100% !important;
+   padding-left:10px;
+   }  
+   
+  
+   
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 399px) {
+	
+  .activity-catitem{
+   width:48% !important;
+   float:left;
+   padding:0  !important;
+   margin:2px !important;   
+   }   
+   .activity-catitem .item{
+   padding:0 0 0 0 !important;
+   margin:0 0 0 0  !important;   
+   overflow:hidden;
+   height:120px !important;
+   border:1px #ccc solid;
+   }   
+   .activity-catitem .item img{
+   height:120px !important;
+   width:100%;
+   }
+   
+   .slider, #spinner{display:none;}
+   .search_submit{width:100%;}  	
+   .mobileview-title{
+		position: absolute;
+		padding: 10px;
+		color:#333;
+		text-shadow: 1px 1px white;	
+   }
+   
+     #flex1 .vcard td{
+   width:100% !important;
+   padding-left:10px;
+   }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+	
+  .activity-catitem{
+   width:24% !important;
+   float:left;
+   padding:0  !important;
+   margin:2px !important;   
+   }   
+   .activity-catitem .item{
+   padding:0 0 0 0 !important;
+   margin:0 0 0 0  !important;   
+   overflow:hidden;
+   height:120px !important;
+   border:1px #ccc solid;
+   }   
+   .activity-catitem .item img{
+   height:120px !important;
+   width:100%;
+   }
+   
+   .slider,  #spinner{display:none;}
+   .search_submit{width:100%;}  	
+   .mobileview-title{
+		position: absolute;
+		padding: 10px;
+		color:#333;
+		text-shadow: 1px 1px white;	
+   }
+   
+   
+   .form-group.search_fil, .navbar-form navbar-left search_from .form-text-control{
+   width:100% !important;
+   }
+   
+   #flex1 .vcard td{
+   width:100% !important;
+   padding-left:10px;
+   }
+   
+     #flex1 vcard td:nth-child(1){
+   width:20% !important;
+   }
+   
+   #flex1 vcard td:nth-child(2){
+   width:30% !important;
+   }
+   
+   #flex1 vcard td:nth-child(3){
+   width:10% !important;
+   }
+   
+   #flex1 vcard td:nth-child(4){
+   width:10% !important;
+   }
+   
+   /*---SEARCH BOX---------------------------------*/
+	.search-dropdown{
+	width:100%;
+	margin-bottom:5px;
+	}   
+	.search-dropdown .dropdown{
+	/* margin:0 16px;*/
+	}
+	
+	.search-dropdown .form-control{
+	padding:0 16px;
+	}
+   
+}
+
+
+
+
+/*
+td.learge_view{  
+  content: "&nbsp;" !important; 
+}
+  */ 
+
+
+
+
+
+
+ 
+ /* flex CSS ---------------------------------------------------------------------*/
+ 
+
+
+
+#flex1 {
+  border-style: none;
+  border-top-width: 0;
+  width: auto;
+}
+#flex1 tr {
+  border-style: none;
+  border-bottom-width: 0;
+}
+#flex1 th, #flex1 td {
+  border-style: none;
+  padding-right: .1em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  text-align: left;
+  min-width: 50px;
+  vertical-align: top;
+}
+#flex1 th.tool, #flex1 td.tool {
+  padding: 0 1em;
+}
+#flex1 th + th,
+#flex1 th + td,
+#flex1 td + th,
+#flex1 td + td {
+  border-left-width: 1px;
+}
+#flex1 thead tr:last-child {
+ /* border-bottom-width: 2px; */
+}
+#flex1 thead th,
+#flex1 tr.index th {
+  font-size: 1.13333em;
+  line-height: 1.41176em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+#flex1 thead th {
+  border-bottom: 1px solid;
+  padding-bottom: .25em;
+}
+#flex1 tr.index th {
+  font-size: 1.33333em;
+  line-height: 1.2em;
+}
+#flex1 tbody:first-of-type tr.index th {
+  padding-top: 1em;
+}
+#flex1 tbody th {
+  font-weight: normal;
+}
+
+@media (max-width: 64em) {
+  #flex1 {
+    border: 0;
+   /* border-bottom-width: 0.0625em;*/
+    border-bottom-style: solid;
+    padding-bottom: 1.4375em;
+    padding-bottom: 0;
+    display: block;
+    width: 100%;
+    /*
+     * make everything display block so it 
+     * aligns vertically
+     */
+    /* Labeling
+     * adding a data-title attribute to the cells
+     * lets us add text before the content to provide
+     * the missing context
+     * 
+     * Markup: 
+     *   <td data-title="Column Header">Content Here</td>
+     * 
+     * Display:
+     *   Column Header: Content Here
+     */
+  }
+  #flex1 caption {
+    display: block;
+  }
+  #flex1 thead {
+    display: none;
+    visibility: hidden;
+  }
+  #flex1 tbody, #flex1 tr, #flex1 th, #flex1 td {
+    border: 0;
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  #flex1 tr {
+    margin-bottom: 1.5em;
+  }
+  #flex1 th[data-title]:before,
+  #flex1 td[data-title]:before {
+    /* content: attr(data-title) ": ";*/
+    font-weight: bold;
+  }
+  #flex1 th:not([data-title]) {
+    font-weight: bold;
+  }
+  #flex1 td:empty {
+    display: none;
+  }
+}
+
+ 
+ 
+ 
+ 
+   
+   

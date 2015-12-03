@@ -46,7 +46,9 @@ Author URI:
 }
 
 /*-----------------------------------*/
-/* Global Reset */
+/* Global Reset tr,
+th,
+td, */ 
 /*-----------------------------------*/
 html,
 body,
@@ -106,9 +108,7 @@ caption,
 tbody,
 tfoot,
 thead,
-tr,
-th,
-td,
+
 article,
 aside,
 canvas,
@@ -3945,7 +3945,7 @@ Can this be done with Masonry options? */
 }
 
 .list-table tbody tr td{
- line-height: 35px;
+ line-height: 25px;
   font-size: 14px;
   border-top: 1px #ddd solid;
 }

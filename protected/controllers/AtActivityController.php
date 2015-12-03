@@ -243,6 +243,7 @@ class AtActivityController extends Controller
      $search_sql="SELECT pc.id as aid, pc.*,ac.*,u.* FROM at_partner_activity pc
      LEFT JOIN at_activity ac ON pc.activity_type_id=ac.id
      LEFT JOIN at_users u ON u.id=pc.user_id
+	 LEFT JOIN at_partner_details pd ON pd.user_id=pc.user_id
      WHERE pc.activity_type_id='".$_POST['activity_id']."'";
      
      if(!isset($_SESSION['user_name'])) $search_sql.=" AND pc.is_paid='N' ";     
