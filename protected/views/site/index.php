@@ -210,7 +210,7 @@ $baseUrl = Yii::app()->theme->baseUrl;
                         <input type="hidden" name="activity_id" id="activity_id" value="">
                     </div>
                 </div>
-                <div class="col-sm-9 search-dropdown"> 
+                <div class="col-sm-9"> 
                     <span class="navbar-form navbar-left search_from" role="search">
                         <div class="form-group search_fil">
                             <input type="text" name="search_text" class="form-text-control" placeholder="Search by keywords like Address,Name " style="height:35px !important;">

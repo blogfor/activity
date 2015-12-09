@@ -2,17 +2,16 @@ html {
     overflow-y: scroll;
 }
 
-/*
 .masanary_section .item {
     float: left;
     position: relative;
     line-height: 1em;
 }
-*/
+
 
 .masanary_section .grid-sizer { width: 20%; }
-.masanary_section .item { width: 100%; height:250px; margin-top:30px; }
-.masanary_section .item img { width: 100%; height:250px; }
+.masanary_section .item { width: 100%; /*height:200px;*/ margin-top:30px; }
+.masanary_section .item img { width: 100%; /*height:200px;*/ }
 
 .slide-caption{
     margin: 0px auto;
@@ -31,7 +30,7 @@ html {
   .masanary_section .grid-sizer { width: 33.33%; }
   .masanary_section .item { width: 33.33%;  }
   
-
+  
 
 }
 
@@ -53,6 +52,8 @@ html {
         width:75%;
     }
 }
+
+
 
 @media screen and (max-width: 720px) {
   /* 10 columns for larger screens */

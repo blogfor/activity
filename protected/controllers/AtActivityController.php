@@ -240,7 +240,7 @@ class AtActivityController extends Controller
         
 
 
-     $search_sql="SELECT pc.id as aid, pc.*,ac.*,u.* FROM at_partner_activity pc
+     $search_sql="SELECT pc.id as aid, pc.*,ac.*,u.*,pd.logo FROM at_partner_activity pc
      LEFT JOIN at_activity ac ON pc.activity_type_id=ac.id
      LEFT JOIN at_users u ON u.id=pc.user_id
 	 LEFT JOIN at_partner_details pd ON pd.user_id=pc.user_id
