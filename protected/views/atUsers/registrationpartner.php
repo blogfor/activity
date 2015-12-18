@@ -4,11 +4,11 @@ $baseUrl = Yii::app()->theme->baseUrl;
 
 <div class="container">
 
-    <div class="col-lg-8 col-md-8 col-sm-12 content-box content-center ">
+    <div class="col-lg-6 col-md-8 col-sm-12 content-box content-center ">
         <h1>BECOME A PARTNER</h1>
         
         
-        <div class="content-center" >
+        <div class="col-lg-12" >
 
 
             <?php if (Yii::app()->user->hasFlash('successMailPartner')): ?>
@@ -42,12 +42,12 @@ $baseUrl = Yii::app()->theme->baseUrl;
                             <form method="post" name="reg-form-partner" id="reg-form-partner" enctype="multipart/form-data">
                                 <div class="form-group">
 <!--                                    <label for="exampleInputEmail1">First Name</label>-->
-                                    <input name="firstname" id="firstname" style="outline: medium none;" value=""  class="form-control validate[required]" placeholder="First Name" type="text">
+                                    <input name="firstname" id="firstname" style="outline: medium none;" value=""  class="form-control validate[required]" placeholder="Partner Name" type="text">
                                 </div>
-                                <div class="form-group">
-<!--                                    <label for="exampleInputEmail1">Last Name</label>-->
+<!--                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Last Name</label>
                                     <input name="lastname" id="lastname"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required]" placeholder="Last Name" type="text">
-                                </div>  
+                                </div>  -->
                                 <div class="form-group">
 <!--                                    <label for="exampleInputEmail1">Email</label>-->
                                     <input name="email" id="email"  style="outline: medium none;" value="" hidefocus="true" class="form-control validate[required,custom[email]]" placeholder="Email" type="email">
