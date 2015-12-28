@@ -35,17 +35,13 @@
 		<?php echo $form->label($model,'created'); ?>
 		<?php echo $form->textField($model,'created'); ?>
 	</div>
-
 	<div class="form-group">
 		<?php echo $form->label($model,'modified'); ?>
 		<?php echo $form->textField($model,'modified'); ?>
 	</div>-->
-
 	<div class="form-group buttons">
 		<?php echo CHtml::submitButton('Search',array('class'=>"btn btn-primary")); ?>
 	</div>
-
 <?php $this->endWidget(); ?>
-
 </div><!-- search-form -->
 </div>

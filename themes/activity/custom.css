@@ -13,6 +13,17 @@
 	.activity-catitem .item img{	
 	width:100%;
 	}
+        
+.site-footer .footer-paralux {
+   background: url(images/temp/footer_bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+  background-size: contain !important;
+  background-color: #9a9a9a;
+}
+
+
 }
 
 @media screen and (min-width: 1024px){
@@ -25,6 +36,10 @@
 	.activity-catitem .item img{	
 	width:100%;
 	}
+        
+        #flex1 tbody tr td{
+            width: 150px !important;
+        }
 }   
   
      
@@ -66,7 +81,17 @@
 
 @media screen and (min-width: 400px) and (max-width: 640px) {
 	
-   .activity-catitem{
+    .site-footer .footer-paralux {
+    background: url(images/temp/footer_bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+    background-color: #9a9a9a;
+    }
+
+
+    .activity-catitem{
    /*width:48% !important;*/
    float:left;
    padding:0  !important;
@@ -140,7 +165,17 @@
 
 
 @media screen and (min-width: 601px) and (max-width: 800px) {
-	
+
+  .site-footer .footer-paralux {
+   background: url(images/temp/footer_bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: contain !important;
+  -moz-background-size: contain !important;
+  -o-background-size: contain !important;
+  background-size: contain !important;
+  background-color: #9a9a9a;
+  }
+
+
   .activity-catitem{
     padding: 10px !important;
     width: 33% !important;
@@ -245,7 +280,10 @@ td.learge_view{
   text-align: left;
   min-width: 50px;
   vertical-align: top;
+  
 }
+
+
 #flex1 th.tool, #flex1 td.tool {
   padding: 0 1em;
 }
@@ -310,6 +348,7 @@ td.learge_view{
   #flex1 caption {
     display: block;
   }
+ 
   #flex1 thead {
     display: none;
     visibility: hidden;
@@ -326,7 +365,7 @@ td.learge_view{
   }
   #flex1 th[data-title]:before,
   #flex1 td[data-title]:before {
-    /* content: attr(data-title) ": ";*/
+    /* content: attr(data-title) ":ï¿½";*/
     font-weight: bold;
   }
   #flex1 th:not([data-title]) {

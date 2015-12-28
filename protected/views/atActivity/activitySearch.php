@@ -96,14 +96,14 @@ $(document).ready(function(){
 			//print_r($data);
 			?>
 			<tr>
-				<td valign="top">&nbsp;<?php echo $i;?> </td>
-                <td>
+                            <td valign="top" style="line-height: 30px;">&nbsp;<?php echo $i;?> </td>
+                <td valign="top">
 				<?php if(!empty($data['logo'])){  ?>
                      <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $data['logo'];?>" class="image" style="width: 140px !important; float: left; padding-right: 5px;"/>
 				<?php }else{ ?>
                      <i class="fa fa-user"  style="width: 40px !important; float: left; padding-right: 5px;"></i>
                 <?php } ?>						
-				</td>
+		</td>
 					
 				<td colspan="6" valign="top">
 				
@@ -111,10 +111,10 @@ $(document).ready(function(){
 					<table id="flex1" style="width:100%; padding:0; margin:0" >	
 					<tbody>
 					<tr class="vcard">			
-							<td data-title=""><?php echo $data['firstname']." ".$data['lastname']; ?></td>
-							<td data-title="" ><?php echo getDateFormat($data['activity_date']); ?><br /><?php echo $data['activity_time']; ?></td>
+							<td valign="top" data-title=""><?php echo $data['firstname']." ".$data['lastname']; ?></td>
+							<td valign="top" data-title="" ><?php echo getDateFormat($data['activity_date']); ?><br /><?php echo $data['activity_time']; ?></td>
 							
-							<td data-title="" > <i data-toggle="modal" data-target="#myMap" onclick="initialize_map('<?php echo $data['address']; ?> ');" class="fa fa-map-marker" style="font-size:22px; color: red; width: 25px; cursor: pointer;"></i>
+							<td valign="top" data-title="" > <i data-toggle="modal" data-target="#myMap" onclick="initialize_map('<?php echo $data['address']; ?> ');" class="fa fa-map-marker" style="font-size:22px; color: red; width: 25px; cursor: pointer;"></i>
 											<?php echo $data['address']; ?> 
 											</td>									
 							<td data-title="" ><?php echo $data['price']; ?>$</td>
