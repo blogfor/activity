@@ -54,6 +54,11 @@
             </li>
             
              <li>
+                <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i> Additional Membership Value', array('atAuthvalueChild/admin'), array('class' => '')); ?>
+
+            </li>
+            
+             <li>
                 <?php echo CHtml::link('<i class="fa fa-list fa-fw"></i>User Membership', array('atMembershipInfo/admin'), array('class' => '')); ?>
 
             </li>
