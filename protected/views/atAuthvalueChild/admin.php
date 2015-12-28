@@ -1,15 +1,15 @@
 <?php
-/* @var $this AtAuthvalueController */
-/* @var $model AtAuthvalue */
+/* @var $this AtAuthvalueChildController */
+/* @var $model AtAuthvalueChild */
 
 //$this->breadcrumbs=array(
-//	'At Authvalues'=>array('index'),
+//	'At Authvalue Children'=>array('index'),
 //	'Manage',
 //);
 //
 //$this->menu=array(
-//	array('label'=>'List AtAuthvalue', 'url'=>array('index')),
-//	array('label'=>'Create AtAuthvalue', 'url'=>array('create')),
+//	array('label'=>'List AtAuthvalueChild', 'url'=>array('index')),
+//	array('label'=>'Create AtAuthvalueChild', 'url'=>array('create')),
 //);
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#at-authvalue-grid').yiiGridView('update', {
+	$('#at-authvalue-child-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -27,7 +27,7 @@ $('.search-form form').submit(function(){
 ?>
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Manage Membership</h1>
+        <h1 class="page-header">Manage Additional Membership</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -47,9 +47,14 @@ $('.search-form form').submit(function(){
 <?php endif; ?>
 </div>
     
-  
+  <div class="col-lg-2" style="float: right;">
+        <?php echo CHtml::link('Add Membership', array('atAuthvalueChild/create'), array('class' => 'btn btn-primary')); ?>
+    </div>
 
     <div class="col-lg-12">
+        
+    
+        
         <?php //echo CHtml::link('Advanced Search', '#', array('class' => 'search-button')); ?>
         <div class="search-form" style="display:none">
             <?php
@@ -70,7 +75,7 @@ $('.search-form form').submit(function(){
 		'name',
 		'value',
 		'membership_desc',
-		'number_of_reg',
+		'classes',
 //		'is_active',
 		/*
 		'membership_duration',
