@@ -70,18 +70,14 @@ $(document).ready(function(){
                     
                 <thead>
 		<tr>
-		<td width="5%">&nbsp;Sl </td>
-		<td width="20%">Partner Details</td>
-		<td width="10%"></td>
+<!--		<td width="5%">&nbsp;Sl </td>-->
+                <td colspan="5">&nbsp;&nbsp; Partner Details</td>
+<!--		<td width="15%"></td>
+                <td width="10%" align="right" class="learge_view"> </td>
 		<td width="10%" class="learge_view"></td>		
-		<td width="35%" class="learge_view"> </td>
-		<td width="10%" align="right" class="learge_view"> </td>
-		<td width="10%" class="learge_view"> </td>
-		<!--
-		<td width="10%" class="learge_view">Date Time</td>		
-		<td width="35%" class="learge_view">Location </td>
-		<td width="10%" align="right" class="learge_view">Price </td>
-		-->
+		<td width="35%" class="learge_view"> </td>		
+		<td width="10%" class="learge_view"> </td>-->
+		
 		</tr>
         </thead>    
 				
@@ -96,13 +92,13 @@ $(document).ready(function(){
 			//print_r($data);
 			?>
 			<tr>
-                            <td valign="top" style="line-height: 30px;">&nbsp;<?php echo $i;?> </td>
-                <td valign="top">
-				<?php if(!empty($data['logo'])){  ?>
-                     <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $data['logo'];?>" class="image" style="width: 140px !important; float: left; padding-right: 5px;"/>
-				<?php }else{ ?>
-                     <i class="fa fa-user"  style="width: 40px !important; float: left; padding-right: 5px;"></i>
-                <?php } ?>						
+<!--                            <td valign="top">&nbsp;<?php //echo $i;?> </td>-->
+                <td valign="top" class="picture_logo">
+		    <?php if(!empty($data['logo'])){  ?>
+                    <img src="<?php echo Yii::app()->getBaseUrl(true); ?>/uploads/<?php echo $data['logo'];?>" class="image" />
+		    <?php }else{ ?>
+                     <i class="fa fa-user"></i>
+                    <?php } ?>						
 		</td>
 					
 				<td colspan="6" valign="top">
@@ -111,14 +107,19 @@ $(document).ready(function(){
 					<table id="flex1" style="width:100%; padding:0; margin:0" >	
 					<tbody>
 					<tr class="vcard">			
-							<td valign="top" data-title=""><?php echo $data['firstname']." ".$data['lastname']; ?></td>
-							<td valign="top" data-title="" ><?php echo getDateFormat($data['activity_date']); ?><br /><?php echo $data['activity_time']; ?></td>
-							
-							<td valign="top" data-title="" > <i data-toggle="modal" data-target="#myMap" onclick="initialize_map('<?php echo $data['address']; ?> ');" class="fa fa-map-marker" style="font-size:22px; color: red; width: 25px; cursor: pointer;"></i>
-											<?php echo $data['address']; ?> 
-											</td>									
-							<td data-title="" ><?php echo $data['price']; ?>$</td>
-							<td data-title="" ></td>
+                                        <td valign="top" data-title="" class="partner_name"><?php echo $data['firstname']." ".$data['lastname']; ?></td>
+                                        <td data-title="" ><?php echo $data['price']; ?>$</td>
+                                        <td valign="top" data-title="" ><?php echo getDateFormat($data['activity_date']); ?><br /><?php echo $data['activity_time']; ?></td>
+
+                                        <td valign="top" data-title="" > 
+                                            <i data-toggle="modal" data-target="#myMap" title="Google Map" onclick="initialize_map('<?php echo $data['address']; ?> ');" class="fa fa-map-marker" style="font-size:22px; color: red; width: 25px; cursor: pointer;"></i>
+                                        <?php echo $data['address'];?> 
+                                        </td>									
+
+                                        <td data-title="" > 
+                                            <?php if(isset($_SESSION['user_firstname'])){ ?>
+                                            <input type="submit" class="btn search_submit" value="Book Now"></td>
+                                            <?php } ?>
 					</tr>
 					</tbody>
 					</table>
@@ -165,7 +166,7 @@ $(document).ready(function(){
 <script type="text/javascript">
   var geocoder;
   var map;
-  var address ="101 Thomson Road #01-30, Singapore 307591";
+  var address ="";
   function initialize_map(address_var) {
     address=address_var;
     
@@ -201,10 +202,10 @@ $(document).ready(function(){
             });
 
           } else {
-            alert("No results found");
+            //alert("No results found");
           }
         } else {
-          alert("Geocode was not successful for the following reason: " + status);
+          //alert("Geocode was not successful for the following reason: " + status);
         }
       });
     }

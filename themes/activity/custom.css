@@ -376,6 +376,33 @@ td.learge_view{
   }
 }
 
+
+.picture_logo{
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+.picture_logo img{
+    width: 140px !important; 
+    float: left; 
+    padding-right: 5px;
+}
+
+.picture_logo i{
+    width: 140px !important; 
+    float: left; 
+    font-size: 60px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+.partner_name{
+    font-size:16px !important;
+    color: #333;
+}
+
+
  
  
  
