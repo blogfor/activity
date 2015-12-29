@@ -491,3 +491,26 @@ Stack trace:
 #13 {main}
 REQUEST_URI=/activity/
 ---
+2015/12/29 08:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/admin
+---
+2015/12/29 08:56:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\xampp\htdocs\activity\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\activity\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\xampp\htdocs\activity\framework\web\CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 C:\xampp\htdocs\activity\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\activity\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/activity/site/admin
+---
+2015/12/29 08:59:36 [warning] [application] Failed to set unsafe attribute "site_email_from" of "AtSiteSettings".
+in C:\xampp\htdocs\activity\protected\controllers\AtSiteSettingsController.php (102)
+in C:\xampp\htdocs\activity\index.php (14)
